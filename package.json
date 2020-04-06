@@ -1,0 +1,24 @@
+{
+  "name": "loot-list-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tylermwatts/loot-list-bot.git"
+  },
+  "author": "tylermwatts",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tylermwatts/loot-list-bot/issues"
+  },
+  "homepage": "https://github.com/tylermwatts/loot-list-bot#readme",
+  "dependencies": {
+    "discord.js": "^12.1.1",
+    "dotenv": "^8.2.0"
+  }
+}
