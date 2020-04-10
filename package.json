@@ -19,6 +19,7 @@
   "homepage": "https://github.com/tylermwatts/loot-list-bot#readme",
   "dependencies": {
     "discord.js": "^12.1.1",
-    "dotenv": "^8.2.0"
+    "dotenv": "^8.2.0",
+    "lodash": "^4.17.15"
   }
 }

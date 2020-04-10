@@ -2,6 +2,9 @@ const { Client } = require('discord.js')
 const dotenv = require('dotenv')
 dotenv.config()
 
+const commandHandler = require('./handlers/commandHandler')
+const reactionHandler = require('./handlers/reactionHandler')
+
 const token = process.env.TOKEN
 
 const bot = new Client()
@@ -27,17 +30,14 @@ bot.once('ready', () => {
 
 bot.on('message', async (message) => {
 	if (message.content[0] === '!') {
-		if (message.content === '!test') {
-			message.channel.send('Test successful')
-		}
-		if (message.content === '!userid') {
-			message.channel.send(`<@${message.author.id}>`)
-		}
+		commandHandler(message)
 	}
 })
 
-bot.on('messageReactionAdd', async (messageReaction, user) => {
-	await messageReaction.remove([user])
+bot.on('messageReactionAdd', async (reaction, user) => {
+	if (user.id !== '696457530439893072') {
+		await reactionHandler(reaction, user)
+	}
 })
 
 bot.login(token)
