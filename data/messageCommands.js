@@ -1,0 +1,5 @@
+const ZG_LOOT_SELECTION = 'ZG_LOOT_SELECTION'
+
+module.exports = {
+	ZG_LOOT_SELECTION: ZG_LOOT_SELECTION,
+}

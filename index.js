@@ -30,13 +30,12 @@ bot.once('ready', () => {
 
 bot.on('message', async (message) => {
 	if (message.content[0] === '!') {
-		commandHandler(message)
-	}
-})
-
-bot.on('messageReactionAdd', async (reaction, user) => {
-	if (user.id !== '696457530439893072') {
-		await reactionHandler(reaction, user)
+		if (
+			message.member.roles.cache.has(process.env.OFFICER_ROLE) ||
+			message.author.id === '213089677652131841'
+		) {
+			commandHandler(message)
+		}
 	}
 })
 
