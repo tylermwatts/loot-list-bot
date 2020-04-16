@@ -10,7 +10,7 @@ const itemStringCreator = (boss) =>
 		.map((item, index) => `${numberReacts[index]}. ${item.name}`)
 		.join('\n')
 
-const verifyItem = async (user, boss, item, reactionCollector) => {
+const verifyItem = async (user, boss, item, date, reactionCollector) => {
 	const sentMessage = await user.send(
 		`You selected **${item.name}** - ${item.wowhead_link}\nIs this correct? You have 90 seconds to verify whether this is the item you wish to reserve.\n:one:. Yes\n:two:. No`
 	)
@@ -25,6 +25,7 @@ const verifyItem = async (user, boss, item, reactionCollector) => {
 	const reaction = collected.first()
 	if (reaction._emoji.name === '1️⃣') {
 		const upsertedCount = await dbService.insertItem(
+			date,
 			user.id,
 			boss.name,
 			item.name
@@ -44,6 +45,7 @@ const verifyItem = async (user, boss, item, reactionCollector) => {
 }
 
 module.exports = async (reaction, user) => {
+	const date = reaction.message.content.split('\n')[0].replace(/`/g, '')
 	const userReactions = reaction.message.reactions.cache.filter((reaction) =>
 		reaction.users.cache.has(user.id)
 	)
@@ -58,24 +60,24 @@ module.exports = async (reaction, user) => {
 
 	switch (reaction._emoji.name) {
 		case '❔': {
-			const itemRecord = await dbService.retrieveItem(user.id)
+			const itemRecord = await dbService.retrieveItem(date, user.id)
 			if (itemRecord) {
 				user.send(
 					`Your currently reserved item is **${itemRecord.item}**, dropped from **${itemRecord.boss}**. To change your reserved item, return to the channel and click the reaction that corresponds to the boss that drops the item you want.`
 				)
 			} else {
-				user.send('You currently have no items reserved for this event.')
+				user.send('You currently have no item reserved for this event.')
 			}
 			break
 		}
 		case '❌': {
-			const success = await dbService.deleteItem(user.id)
+			const success = await dbService.deleteItem(date, user.id)
 			if (success === 1) {
 				user.send(
 					'Your reserved item has been successfully cleared. You may go back to the channel and use a boss reaction to reserve a new item or you may verify that your item has been cleared by going back to the channel and reacting with ❔.'
 				)
 			} else {
-				user.send('You currently have no item reserved.')
+				user.send('You currently have no item reserved for this event.')
 			}
 			break
 		}
@@ -104,7 +106,7 @@ module.exports = async (reaction, user) => {
 				const emoji = reaction.emoji.name
 				const itemIndex = _.findKey(numberReacts, (r) => r === emoji)
 				const item = boss.items[itemIndex]
-				verifyItem(user, boss, item, reactionCollector)
+				verifyItem(user, boss, item, date, reactionCollector)
 			})
 			break
 	}

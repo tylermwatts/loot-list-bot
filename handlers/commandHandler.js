@@ -1,15 +1,27 @@
-const messageCreator = require('../helpers/messageCreator')
-const reactionHandler = require('../handlers/reactionHandler')
-const messageCommands = require('../data/messageCommands')
-const zgLoot = require('../data/zg.json')
+const moment = require('moment')
+const _ = require('lodash')
 const dotenv = require('dotenv')
 dotenv.config()
 
+const messageCreator = require('../helpers/messageCreator')
+const itemListCreator = require('../helpers/itemListCreator')
+const reactionHandler = require('../handlers/reactionHandler')
+const messageCommands = require('../data/messageCommands')
+const dbService = require('../services/dbService')
+
+const zgLoot = require('../data/zg.json')
+const numberReacts = require('../data/numberReacts.json')
+
 module.exports = async (message) => {
 	switch (message.content) {
+		case '!help':
+			message.author.send(
+				`__Available commands__\n!\`zg-loot\` - Begin the process of creating a new ZG loot list\n\`!print-list\` - Begins the process of selecting a loot list to be printed `
+			)
+			break
 		case '!zg-loot':
 			const sentMessage = await message.author.send(
-				`Using the MM-DD-YYYY format, please enter the date that this raid will take place. You will have 3 minutes to respond. Invalid date formatting will not be accepted. When a valid date is given in the proper format, you will be asked to confirm this date.`
+				`Using the MM-DD-YYYY format including leading zeros (ex: 02-28-2020), please enter the date that this raid will take place. You will have 3 minutes to respond. Invalid date formatting will not be accepted. When a valid date is given in the proper format, you will be asked to confirm this date.`
 			)
 			const filter = (m) => {
 				const index = m.content.search(
@@ -27,7 +39,9 @@ module.exports = async (message) => {
 			)
 			dateCollector.on('collect', async (m) => {
 				const confirmMessage = await sentMessage.channel.send(
-					`${m.content} is the date that you entered. Is this correct? You have 90 seconds to confirm. When you confirm, a collection will be created in the database and the loot selection message will be posted in the channel, so please be 100% certain.\n\n:one: Yes\n:two: No`
+					`${moment(m.content, 'MM-DD-YYYY').format(
+						'dddd, MMMM Do YYYY'
+					)} is the date that you requested. Is this correct? You have 90 seconds to confirm via reaction to this message. When you confirm, a collection will be created in the database and the loot selection message will be posted in the channel, so please be 100% certain.\n\n:one: Yes\n:two: No`
 				)
 				const filter = (reaction, user) => user.id !== process.env.BOT_ID
 				confirmMessage.react('1️⃣').then(() => confirmMessage.react('2️⃣'))
@@ -70,6 +84,56 @@ module.exports = async (message) => {
 
 			message.delete()
 			break
+		case '!print-list': {
+			const user = message.author
+			const channel = message.channel
+			const events = await dbService.retrieveAllEvents()
+			const eventSelectString = events
+				.map((event, index) => {
+					return `${numberReacts[index]} ${moment(event, 'MM-DD-YYYY').format(
+						'dddd, MMMM Do YYYY'
+					)}`
+				})
+				.join('\n')
+			const sentMessage = await user.send(
+				`The following events were found in the database. Please use reactions to select the event for which you would like to print the list. **This will not cause the list to print. There will be a verification step before the list is printed.**\n\n${eventSelectString}`
+			)
+			events.forEach((e, i) => sentMessage.react(numberReacts[i]))
+			const filter = (reaction, user) => user.id !== process.env.BOT_ID
+			const eventReactionCollector = sentMessage.createReactionCollector(
+				filter,
+				{ max: 1, time: 9000, errors: ['time'] }
+			)
+			eventReactionCollector.on('collect', async (reaction, user) => {
+				const emoji = reaction.emoji.name
+				const eventIndex = _.findKey(numberReacts, (r) => r === emoji)
+				const event = events[eventIndex]
+				const eventVerifyMessage = await user.send(
+					`You have selected the event ${moment(event, 'MM-DD-YYYY').format(
+						'dddd, MMMM Do YYYY'
+					)}.\n\nWhen you react to confirm this, **the full item list will be printed in the public channel** so please be certain you are ready to print the list.\n\n:one: Yes\n:two: No`
+				)
+				eventVerifyMessage
+					.react('1️⃣')
+					.then(() => eventVerifyMessage.react('2️⃣'))
+				const collected = await eventVerifyMessage.awaitReactions(filter, {
+					max: 1,
+					time: 90000,
+					errors: ['time'],
+				})
+				const confirmReaction = collected.first()
+				if (confirmReaction._emoji.name === '1️⃣') {
+					const dbList = await dbService.retrieveList(event)
+					const itemList = itemListCreator(dbList)
+					channel.send(itemList)
+				}
+				if (confirmReaction._emoji.name === '2️⃣') {
+					user.send('List printing aborted.')
+				}
+			})
+			message.delete()
+			break
+		}
 		case '!clear':
 			message.channel.bulkDelete(25)
 			break

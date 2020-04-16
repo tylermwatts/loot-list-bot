@@ -6,11 +6,8 @@ dotenv.config()
 const url = process.env.DB_URI
 
 const dbName = 'zg-loot-list'
-const collectionName = 'zg-loot'
 
-const insertDocument = async (db, document) => {
-	const collection = db.collection(collectionName)
-
+const insertDocument = async (collection, document) => {
 	const result = await collection.updateOne(
 		{ user: document.user },
 		{ $set: { boss: document.boss, item: document.item } },
@@ -20,33 +17,26 @@ const insertDocument = async (db, document) => {
 	return result.upsertedCount
 }
 
-const retrieveDocument = async (db, userId) => {
-	const collection = db.collection(collectionName)
-
+const retrieveDocument = async (collection, userId) => {
 	const res = await collection.findOne({ user: userId })
 	return res
 }
 
-const deleteDocument = async (db, userId) => {
-	const collection = db.collection(collectionName)
-
+const deleteDocument = async (collection, userId) => {
 	let res = await collection.deleteOne({ user: userId })
 	return res.result.n
 }
 
-const findAllDocuments = (db, callback) => {
-	const collection = db.collection(collectionName)
-
-	collection.find({}).toArray((err, docs) => {
-		assert.equal(err, null)
-		console.log('Found the following records')
-		console.log(docs)
-		callback(docs)
-	})
+const retrieveAllCollections = async (db) => {
+	const allCollections = await db.collections()
+	const sanitizedCollectionNames = allCollections
+		.map((c) => c.collectionName)
+		.filter((n) => /\d\d-\d\d-\d\d\d\d/.test(n))
+	return sanitizedCollectionNames
 }
 
 module.exports = {
-	insertItem: async (userId, bossName, itemName) => {
+	insertItem: async (collectionName, userId, bossName, itemName) => {
 		let modified
 		const client = new MongoClient(url, {
 			useNewUrlParser: true,
@@ -58,7 +48,8 @@ module.exports = {
 				console.log('Connected successfully to server.')
 			})
 			const db = client.db(dbName)
-			modified = await insertDocument(db, {
+			const collection = db.collection(collectionName)
+			modified = await insertDocument(collection, {
 				user: userId,
 				boss: bossName,
 				item: itemName,
@@ -70,7 +61,7 @@ module.exports = {
 			return modified
 		}
 	},
-	retrieveItem: async (userId) => {
+	retrieveItem: async (collectionName, userId) => {
 		let record
 		const client = new MongoClient(url, { useUnifiedTopology: true })
 		try {
@@ -79,7 +70,8 @@ module.exports = {
 				console.log('Connected successfully to server.')
 			})
 			const db = client.db(dbName)
-			record = await retrieveDocument(db, userId)
+			const collection = db.collection(collectionName)
+			record = await retrieveDocument(collection, userId)
 		} catch (err) {
 			console.log(err)
 		} finally {
@@ -87,7 +79,7 @@ module.exports = {
 			return record
 		}
 	},
-	deleteItem: async (userId) => {
+	deleteItem: async (collectionName, userId) => {
 		const client = new MongoClient(url, { useUnifiedTopology: true })
 		let success
 		try {
@@ -96,7 +88,8 @@ module.exports = {
 				console.log('Connected successfully to server.')
 			})
 			const db = client.db(dbName)
-			success = await deleteDocument(db, userId)
+			const collection = db.collection(collectionName)
+			success = await deleteDocument(collection, userId)
 		} catch (err) {
 			console.log(err)
 		} finally {
@@ -104,15 +97,35 @@ module.exports = {
 			return success
 		}
 	},
-	retrieveList: () => {
+	retrieveAllEvents: async () => {
+		const client = new MongoClient(url, { useUnifiedTopology: true })
+		try {
+			client.connect((err) => {
+				assert.equal(null, err)
+				console.log('Connected successfully to server.')
+			})
+			const db = client.db(dbName)
+			return await retrieveAllCollections(db)
+		} catch (err) {
+			console.log(err)
+		} finally {
+			client.close()
+		}
+	},
+	retrieveList: async (collectionName) => {
 		const client = new MongoClient(url, { useUnifiedTopology: true })
 		client.connect((err) => {
 			assert.equal(null, err)
 			console.log('Connected successfully to server.')
-
-			const db = client.db(dbName)
-
-			findAllDocuments(db, () => client.close())
 		})
+		const db = client.db(dbName)
+		try {
+			const documents = await db.collection(collectionName).find({}).toArray()
+			return documents
+		} catch (err) {
+			console.log(err)
+		} finally {
+			client.close()
+		}
 	},
 }
