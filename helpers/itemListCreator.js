@@ -13,7 +13,7 @@ module.exports = (list) => {
 		}
 	})
 
-	const bosses = list.map((record) => record.boss)
+	const bosses = Object.keys(lootListObj)
 
 	const itemsByBoss = bosses
 		.map(

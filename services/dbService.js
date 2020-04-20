@@ -45,7 +45,7 @@ module.exports = {
 		try {
 			client.connect((err) => {
 				assert.equal(err, null)
-				console.log('Connected successfully to server.')
+				console.log('Insert Item: Connected successfully to server.')
 			})
 			const db = client.db(dbName)
 			const collection = db.collection(collectionName)
@@ -67,7 +67,7 @@ module.exports = {
 		try {
 			client.connect((err) => {
 				assert.equal(err, null)
-				console.log('Connected successfully to server.')
+				console.log('Retrieve Item: Connected successfully to server.')
 			})
 			const db = client.db(dbName)
 			const collection = db.collection(collectionName)
@@ -85,7 +85,7 @@ module.exports = {
 		try {
 			client.connect((err) => {
 				assert.equal(err, null)
-				console.log('Connected successfully to server.')
+				console.log('Delete Item: Connected successfully to server.')
 			})
 			const db = client.db(dbName)
 			const collection = db.collection(collectionName)
@@ -102,7 +102,7 @@ module.exports = {
 		try {
 			client.connect((err) => {
 				assert.equal(null, err)
-				console.log('Connected successfully to server.')
+				console.log('Retrieve All Lists: Connected successfully to server.')
 			})
 			const db = client.db(dbName)
 			return await retrieveAllCollections(db)
@@ -116,12 +116,27 @@ module.exports = {
 		const client = new MongoClient(url, { useUnifiedTopology: true })
 		client.connect((err) => {
 			assert.equal(null, err)
-			console.log('Connected successfully to server.')
+			console.log('Retrieve Specific List: Connected successfully to server.')
 		})
 		const db = client.db(dbName)
 		try {
 			const documents = await db.collection(collectionName).find({}).toArray()
 			return documents
+		} catch (err) {
+			console.log(err)
+		} finally {
+			client.close()
+		}
+	},
+	deleteList: async (listName) => {
+		const client = new MongoClient(url, { useUnifiedTopology: true })
+		client.connect((err) => {
+			assert.equal(null, err)
+			console.log('Delete Specific List: Connected successfully to server.')
+		})
+		const db = client.db(dbName)
+		try {
+			await db.dropCollection(listName)
 		} catch (err) {
 			console.log(err)
 		} finally {

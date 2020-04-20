@@ -5,6 +5,7 @@ dotenv.config()
 
 const messageCreator = require('../helpers/messageCreator')
 const itemListCreator = require('../helpers/itemListCreator')
+const eventCleanup = require('../helpers/eventCleanup')
 const reactionHandler = require('../handlers/reactionHandler')
 const messageCommands = require('../data/messageCommands')
 const dbService = require('../services/dbService')
@@ -16,8 +17,9 @@ module.exports = async (message) => {
 	switch (message.content) {
 		case '!help':
 			message.author.send(
-				`__Available commands__\n!\`zg-loot\` - Begin the process of creating a new ZG loot list\n\`!print-list\` - Begins the process of selecting a loot list to be printed `
+				`__Available commands__\n\`!zg-loot\` - Begin the process of creating a new ZG loot list\n\`!print-list\` - Begins the process of selecting a loot list to be printed `
 			)
+			message.delete()
 			break
 		case '!zg-loot':
 			const sentMessage = await message.author.send(
@@ -109,9 +111,9 @@ module.exports = async (message) => {
 				const eventIndex = _.findKey(numberReacts, (r) => r === emoji)
 				const event = events[eventIndex]
 				const eventVerifyMessage = await user.send(
-					`You have selected the event ${moment(event, 'MM-DD-YYYY').format(
+					`You have selected the event **${moment(event, 'MM-DD-YYYY').format(
 						'dddd, MMMM Do YYYY'
-					)}.\n\nWhen you react to confirm this, **the full item list will be printed in the public channel** so please be certain you are ready to print the list.\n\n:one: Yes\n:two: No`
+					)}**.\n\nWhen you react to confirm this, **the full item list will be printed in the public channel** so please be certain you are ready to print the list.\n\n:one: Yes\n:two: No`
 				)
 				eventVerifyMessage
 					.react('1️⃣')
@@ -136,6 +138,9 @@ module.exports = async (message) => {
 		}
 		case '!clear':
 			message.channel.bulkDelete(25)
+			break
+		case '!test-drop':
+			await eventCleanup.clearOldEvents()
 			break
 		default:
 			return

@@ -1,11 +1,16 @@
 const { Client } = require('discord.js')
+const { RecurrenceRule, scheduleJob } = require('node-schedule')
 const dotenv = require('dotenv')
 dotenv.config()
 
 const commandHandler = require('./handlers/commandHandler')
-const reactionHandler = require('./handlers/reactionHandler')
+const eventCleanup = require('./helpers/eventCleanup')
 
 const token = process.env.TOKEN
+
+const everyMidnight = new RecurrenceRule()
+everyMidnight.hour = 5
+everyMidnight.minute = 1
 
 const bot = new Client()
 
@@ -26,16 +31,18 @@ bot.once('ready', () => {
 		},
 		status: 'online',
 	})
+	scheduleJob(everyMidnight, async () => {
+		await eventCleanup.clearOldEvents()
+	})
 })
 
 bot.on('message', async (message) => {
-	if (message.content[0] === '!') {
-		if (
-			message.member.roles.cache.has(process.env.OFFICER_ROLE) ||
-			message.author.id === '213089677652131841'
-		) {
-			commandHandler(message)
-		}
+	if (
+		message.channel.id === process.env.OPERATING_CHANNEL &&
+		message.member.roles.cache.has(process.env.OFFICER_ROLE)
+	) {
+		if (!message.content.startsWith('!') || message.author.bot) return
+		await commandHandler(message)
 	}
 })
 

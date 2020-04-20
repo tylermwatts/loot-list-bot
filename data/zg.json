@@ -211,24 +211,6 @@
       ]
     },
     {
-      "name": "Gri'lek",
-      "reaction": "👺",
-      "items": [
-        {
-          "name": "Gri'lek's Carver",
-          "slot": "Two-Hand",
-          "type": "Axe",
-          "wowhead_link": "https://classic.wowhead.com/item=19962/grileks-carver"
-        },
-        {
-          "name": "Gri'lek's Grinder",
-          "slot": "One-Hand",
-          "type": "Mace",
-          "wowhead_link": "https://classic.wowhead.com/item=19961/grileks-grinder"
-        }
-      ]
-    },
-    {
       "name": "Hakkar",
       "reaction": "🦜",
       "items": [
@@ -321,24 +303,6 @@
           "slot": "Two-Hand",
           "type": "Sword",
           "wowhead_link": "https://classic.wowhead.com/item=19854/zinrokh-destroyer-of-worlds"
-        }
-      ]
-    },
-    {
-      "name": "Hazza'rah",
-      "reaction": "👻",
-      "items": [
-        {
-          "name": "Fiery Retributer",
-          "slot": "Main Hand",
-          "type": "Sword",
-          "wowhead_link": "https://classic.wowhead.com/item=19968/fiery-retributer"
-        },
-        {
-          "name": "Thoughtblighter",
-          "slot": "Ranged",
-          "type": "Wand",
-          "wowhead_link": "https://classic.wowhead.com/item=19967/thoughtblighter"
         }
       ]
     },
@@ -633,42 +597,6 @@
           "slot": "Head",
           "type": "Cloth",
           "wowhead_link": "https://classic.wowhead.com/item=19886/the-hexxers-cover"
-        }
-      ]
-    },
-    {
-      "name": "Renataki",
-      "reaction": "🗡️",
-      "items": [
-        {
-          "name": "Pitchfork of Madness",
-          "slot": "Two-Hand",
-          "type": "Polearm",
-          "wowhead_link": "https://classic.wowhead.com/item=19963/pitchfork-of-madness"
-        },
-        {
-          "name": "Renataki's Soul Conduit",
-          "slot": "Main Hand",
-          "type": "Sword",
-          "wowhead_link": "https://classic.wowhead.com/item=19964/renatakis-soul-conduit"
-        }
-      ]
-    },
-    {
-      "name": "Wushoolay",
-      "reaction": "☣️",
-      "items": [
-        {
-          "name": "Hoodoo Hunting Bow",
-          "slot": "Ranged",
-          "type": "Bow",
-          "wowhead_link": "https://classic.wowhead.com/item=19993/hoodoo-hunting-bow"
-        },
-        {
-          "name": "Wushoolay's Poker",
-          "slot": "Main Hand",
-          "type": "Dagger",
-          "wowhead_link": "https://classic.wowhead.com/item=19965/wushoolays-poker"
         }
       ]
     }
