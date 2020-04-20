@@ -20,7 +20,7 @@ module.exports = (event, list) => {
 	const itemsByBoss = bosses
 		.map(
 			(bossName) =>
-				`**__${bossName}__**\n${Object.keys(lootListObj[bossName]).map(
+				`__${bossName}__\n${Object.keys(lootListObj[bossName]).map(
 					(itemName) =>
 						`${itemName} - ${lootListObj[bossName][itemName].join(', ')}`
 				)}`
@@ -28,9 +28,9 @@ module.exports = (event, list) => {
 		.join('\n')
 
 	const message =
-		`Zul'Gurub Loot List for ${moment(event, 'MM-DD-YYYY').format(
+		`__**Zul'Gurub Loot List for ${moment(event, 'MM-DD-YYYY').format(
 			'dddd, MMMM Do YYYY'
-		)}\n\n` + itemsByBoss
+		)}**__\n\n` + itemsByBoss
 
 	return message
 }
