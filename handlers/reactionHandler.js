@@ -16,12 +16,11 @@ const verifyItem = async (user, boss, item, date, reactionCollector) => {
 	)
 
 	const filter = (reaction, user) => user.id !== process.env.BOT_ID
-	sentMessage.react('1️⃣').then(() => sentMessage.react('2️⃣'))
 	const collected = await sentMessage.awaitReactions(filter, {
-		max: 1,
 		time: 90000,
 		errors: ['time'],
 	})
+	sentMessage.react('1️⃣').then(() => sentMessage.react('2️⃣'))
 	const reaction = collected.first()
 	if (reaction._emoji.name === '1️⃣') {
 		const upsertedCount = await dbService.insertItem(
@@ -99,14 +98,14 @@ module.exports = async (reaction, user) => {
 				time: 180000,
 				errors: ['time'],
 			})
-			boss.items.forEach((_, index) => {
-				sentMessage.react(numberReacts[index])
-			})
 			reactionCollector.on('collect', (reaction, user) => {
 				const emoji = reaction.emoji.name
 				const itemIndex = _.findKey(numberReacts, (r) => r === emoji)
 				const item = boss.items[itemIndex]
 				verifyItem(user, boss, item, date, reactionCollector)
+			})
+			boss.items.forEach((_, index) => {
+				sentMessage.react(numberReacts[index])
 			})
 			break
 	}

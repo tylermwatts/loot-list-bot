@@ -45,12 +45,12 @@ module.exports = async (message) => {
 					)} is the date that you requested. Is this correct? You have 90 seconds to confirm via reaction to this message. When you confirm, a collection will be created in the database and the loot selection message will be posted in the channel, so please be 100% certain.\n\n:one: Yes\n:two: No`
 				)
 				const filter = (reaction, user) => user.id !== process.env.BOT_ID
-				confirmMessage.react('1️⃣').then(() => confirmMessage.react('2️⃣'))
 				const collected = await confirmMessage.awaitReactions(filter, {
 					max: 1,
 					time: 90000,
 					errors: ['time'],
 				})
+				confirmMessage.react('1️⃣').then(() => confirmMessage.react('2️⃣'))
 				const reaction = collected.first()
 				if (reaction._emoji.name === '1️⃣') {
 					confirmMessage.channel.send('Date is confirmed.')
@@ -99,7 +99,7 @@ module.exports = async (message) => {
 			const sentMessage = await user.send(
 				`The following events were found in the database. Please use reactions to select the event for which you would like to print the list. **This will not cause the list to print. There will be a verification step before the list is printed.**\n\n${eventSelectString}`
 			)
-			events.forEach((e, i) => sentMessage.react(numberReacts[i]))
+
 			const filter = (reaction, user) => user.id !== process.env.BOT_ID
 			const eventReactionCollector = sentMessage.createReactionCollector(
 				filter,
@@ -114,24 +114,28 @@ module.exports = async (message) => {
 						'dddd, MMMM Do YYYY'
 					)}**.\n\nWhen you react to confirm this, **the full item list will be printed in the public channel** so please be certain you are ready to print the list.\n\n:one: Yes\n:two: No`
 				)
+				const eventVerifyReactionCollector = eventVerifyMessage.createReactionCollector(
+					filter,
+					{ time: 180000, errors: ['time'] }
+				)
+				eventVerifyReactionCollector.on(
+					'collect',
+					async (verifyReaction, user) => {
+						if (verifyReaction.emoji.name === '1️⃣') {
+							const dbList = await dbService.retrieveList(event)
+							const itemList = itemListCreator(event, dbList)
+							channel.send(itemList)
+						}
+						if (verifyReaction.emoji.name === '2️⃣') {
+							user.send('List printing aborted.')
+						}
+					}
+				)
 				eventVerifyMessage
 					.react('1️⃣')
 					.then(() => eventVerifyMessage.react('2️⃣'))
-				const collected = await eventVerifyMessage.awaitReactions(filter, {
-					max: 1,
-					time: 90000,
-					errors: ['time'],
-				})
-				const confirmReaction = collected.first()
-				if (confirmReaction._emoji.name === '1️⃣') {
-					const dbList = await dbService.retrieveList(event)
-					const itemList = itemListCreator(event, dbList)
-					channel.send(itemList)
-				}
-				if (confirmReaction._emoji.name === '2️⃣') {
-					user.send('List printing aborted.')
-				}
 			})
+			events.forEach((e, i) => sentMessage.react(numberReacts[i]))
 			message.delete()
 			break
 		}
