@@ -1,7 +1,7 @@
 const moment = require('moment')
 const dbService = require('../services/dbService')
 
-const today = moment()
+const today = moment().startOf('day')
 
 const THREE_DAYS_OLD = today.clone().subtract(3, 'days').startOf('day')
 
