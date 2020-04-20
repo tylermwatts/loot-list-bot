@@ -16,7 +16,7 @@ module.exports = async (message) => {
 	switch (message.content) {
 		case '!help':
 			message.author.send(
-				`__Available commands__\n\`!zgloot\` - Begin the process of creating a new ZG loot list\n\`!print\` - Begins the process of selecting a loot list to be printed `
+				`__Available commands__\n\`!zgloot\` - Begin the process of creating a new ZG loot list\n\`!zgprint\` - Begins the process of selecting a loot list to be printed `
 			)
 			message.delete()
 			break
@@ -85,7 +85,7 @@ module.exports = async (message) => {
 
 			message.delete()
 			break
-		case '!print': {
+		case '!zgprint': {
 			const user = message.author
 			const channel = message.channel
 			const events = await dbService.retrieveAllEvents()
