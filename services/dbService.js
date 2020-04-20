@@ -32,6 +32,7 @@ const retrieveAllCollections = async (db) => {
 	const sanitizedCollectionNames = allCollections
 		.map((c) => c.collectionName)
 		.filter((n) => /\d\d-\d\d-\d\d\d\d/.test(n))
+		.sort()
 	return sanitizedCollectionNames
 }
 

@@ -5,7 +5,6 @@ dotenv.config()
 
 const messageCreator = require('../helpers/messageCreator')
 const itemListCreator = require('../helpers/itemListCreator')
-const eventCleanup = require('../helpers/eventCleanup')
 const reactionHandler = require('../handlers/reactionHandler')
 const messageCommands = require('../data/messageCommands')
 const dbService = require('../services/dbService')
@@ -17,11 +16,11 @@ module.exports = async (message) => {
 	switch (message.content) {
 		case '!help':
 			message.author.send(
-				`__Available commands__\n\`!zg-loot\` - Begin the process of creating a new ZG loot list\n\`!print-list\` - Begins the process of selecting a loot list to be printed `
+				`__Available commands__\n\`!zgloot\` - Begin the process of creating a new ZG loot list\n\`!print\` - Begins the process of selecting a loot list to be printed `
 			)
 			message.delete()
 			break
-		case '!zg-loot':
+		case '!zgloot':
 			const sentMessage = await message.author.send(
 				`Using the MM-DD-YYYY format including leading zeros (ex: 02-28-2020), please enter the date that this raid will take place. You will have 3 minutes to respond. Invalid date formatting will not be accepted. When a valid date is given in the proper format, you will be asked to confirm this date.`
 			)
@@ -86,7 +85,7 @@ module.exports = async (message) => {
 
 			message.delete()
 			break
-		case '!print-list': {
+		case '!print': {
 			const user = message.author
 			const channel = message.channel
 			const events = await dbService.retrieveAllEvents()
@@ -136,12 +135,6 @@ module.exports = async (message) => {
 			message.delete()
 			break
 		}
-		case '!clear':
-			message.channel.bulkDelete(25)
-			break
-		case '!test-drop':
-			await eventCleanup.clearOldEvents()
-			break
 		default:
 			return
 	}
