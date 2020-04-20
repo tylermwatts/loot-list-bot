@@ -5,6 +5,12 @@
       "reaction": "💀",
       "items": [
         {
+          "name": "Primal Hakkari Idol (Enchant piece)",
+          "slot": "Head/Leg",
+          "type": "Misc",
+          "wowhead_link": "https://classic.wowhead.com/item=22637/primal-hakkari-idol"
+        },
+        {
           "name": "Band of Servitude",
           "slot": "Finger",
           "type": "Misc",
