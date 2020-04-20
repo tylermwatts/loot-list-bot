@@ -104,7 +104,7 @@ module.exports = async (message) => {
 			const filter = (reaction, user) => user.id !== process.env.BOT_ID
 			const eventReactionCollector = sentMessage.createReactionCollector(
 				filter,
-				{ max: 1, time: 9000, errors: ['time'] }
+				{ time: 180000, errors: ['time'] }
 			)
 			eventReactionCollector.on('collect', async (reaction, user) => {
 				const emoji = reaction.emoji.name
