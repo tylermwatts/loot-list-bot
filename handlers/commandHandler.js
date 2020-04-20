@@ -125,7 +125,7 @@ module.exports = async (message) => {
 				const confirmReaction = collected.first()
 				if (confirmReaction._emoji.name === '1️⃣') {
 					const dbList = await dbService.retrieveList(event)
-					const itemList = itemListCreator(dbList)
+					const itemList = itemListCreator(event, dbList)
 					channel.send(itemList)
 				}
 				if (confirmReaction._emoji.name === '2️⃣') {

@@ -1,4 +1,6 @@
-module.exports = (list) => {
+const moment = require('moment')
+
+module.exports = (event, list) => {
 	const lootListObj = {}
 	list.forEach((r) => {
 		if (!lootListObj.hasOwnProperty(r.boss)) {
@@ -25,5 +27,10 @@ module.exports = (list) => {
 		)
 		.join('\n')
 
-	return itemsByBoss
+	const message =
+		`Zul'Gurub Loot List for ${moment(event, 'MM-DD-YYYY').format(
+			'dddd, MMMM Do YYYY'
+		)}\n\n` + itemsByBoss
+
+	return message
 }
