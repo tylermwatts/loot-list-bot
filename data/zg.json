@@ -1,6 +1,66 @@
 {
   "bosses": [
     {
+      "name": "Primal Hakkari Tokens (Class-Specific Set Pieces)",
+      "reaction": "©️",
+      "items": [
+        {
+          "name": "Primal Hakkari Sash (Priest, Warlock, Druid)",
+          "slot": "Waist",
+          "type": "Misc",
+          "wowhead_link": "https://classic.wowhead.com/item=19720/primal-hakkari-sash"
+        },
+        {
+          "name": "Primal Hakkari Stanchion (Priest, Warlock, Druid)",
+          "slot": "Wrist",
+          "type": "Misc",
+          "wowhead_link": "https://classic.wowhead.com/item=19718/primal-hakkari-stanchion"
+        },
+        {
+          "name": "Primal Hakkari Tabard (Paladin, Shaman, Druid)",
+          "slot": "Chest",
+          "type": "Misc",
+          "wowhead_link": "https://classic.wowhead.com/item=19722/primal-hakkari-tabard"
+        },
+        {
+          "name": "Primal Hakkari Bindings (Paladin, Hunter, Mage)",
+          "slot": "Wrist",
+          "type": "Misc",
+          "wowhead_link": "https://classic.wowhead.com/item=19716/primal-hakkari-bindings"
+        },
+        {
+          "name": "Primal Hakkari Shawl (Paladin, Hunter, Mage)",
+          "slot": "Shoulders",
+          "type": "Misc",
+          "wowhead_link": "https://classic.wowhead.com/item=19721/primal-hakkari-shawl"
+        },
+        {
+          "name": "Primal Hakkari Aegis (Hunter, Rogue, Priest)",
+          "slot": "Chest",
+          "type": "Misc",
+          "wowhead_link": "https://classic.wowhead.com/item=19724/primal-hakkari-aegis"
+        },
+        {
+          "name": "Primal Hakkari Kossack (Warrior, Mage, Warlock)",
+          "slot": "Chest",
+          "type": "Misc",
+          "wowhead_link": "https://classic.wowhead.com/item=19723/primal-hakkari-kossack"
+        },
+        {
+          "name": "Primal Hakkari Armsplint (Warrior, Rogue, Shaman)",
+          "slot": "Wrist",
+          "type": "Misc",
+          "wowhead_link": "https://classic.wowhead.com/item=19717/primal-hakkari-armsplint"
+        },
+        {
+          "name": "Primal Hakkari Girdle (Warrior, Rogue, Shaman)",
+          "slot": "Waist",
+          "type": "Misc",
+          "wowhead_link": "https://classic.wowhead.com/item=19719/primal-hakkari-girdle"
+        }
+      ]
+    },
+    {
       "name": "Zone Drops / Multiple Bosses",
       "reaction": "💀",
       "items": [
@@ -75,60 +135,6 @@
           "slot": "One-Hand",
           "type": "Mace",
           "wowhead_link": "https://classic.wowhead.com/item=19908/sceptre-of-smiting"
-        },
-        {
-          "name": "Primal Hakkari Sash (Priest, Warlock, Druid)",
-          "slot": "Waist",
-          "type": "Misc",
-          "wowhead_link": "https://classic.wowhead.com/item=19720/primal-hakkari-sash"
-        },
-        {
-          "name": "Primal Hakkari Stanchion (Priest, Warlock, Druid)",
-          "slot": "Wrist",
-          "type": "Misc",
-          "wowhead_link": "https://classic.wowhead.com/item=19718/primal-hakkari-stanchion"
-        },
-        {
-          "name": "Primal Hakkari Tabard (Paladin, Shaman, Druid)",
-          "slot": "Chest",
-          "type": "Misc",
-          "wowhead_link": "https://classic.wowhead.com/item=19722/primal-hakkari-tabard"
-        },
-        {
-          "name": "Primal Hakkari Bindings (Paladin, Hunter, Mage)",
-          "slot": "Wrist",
-          "type": "Misc",
-          "wowhead_link": "https://classic.wowhead.com/item=19716/primal-hakkari-bindings"
-        },
-        {
-          "name": "Primal Hakkari Shawl (Paladin, Hunter, Mage)",
-          "slot": "Shoulders",
-          "type": "Misc",
-          "wowhead_link": "https://classic.wowhead.com/item=19721/primal-hakkari-shawl"
-        },
-        {
-          "name": "Primal Hakkari Aegis (Hunter, Rogue, Priest)",
-          "slot": "Chest",
-          "type": "Misc",
-          "wowhead_link": "https://classic.wowhead.com/item=19724/primal-hakkari-aegis"
-        },
-        {
-          "name": "Primal Hakkari Kossack (Warrior, Mage, Warlock)",
-          "slot": "Chest",
-          "type": "Misc",
-          "wowhead_link": "https://classic.wowhead.com/item=19723/primal-hakkari-kossack"
-        },
-        {
-          "name": "Primal Hakkari Armsplint (Warrior, Rogue, Shaman)",
-          "slot": "Wrist",
-          "type": "Misc",
-          "wowhead_link": "https://classic.wowhead.com/item=19717/primal-hakkari-armsplint"
-        },
-        {
-          "name": "Primal Hakkari Girdle (Warrior, Rogue, Shaman)",
-          "slot": "Waist",
-          "type": "Misc",
-          "wowhead_link": "https://classic.wowhead.com/item=19719/primal-hakkari-girdle"
         }
       ]
     },
