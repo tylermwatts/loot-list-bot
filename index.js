@@ -48,7 +48,11 @@ bot.on('message', async (message) => {
 })
 
 bot.on('messageReactionAdd', async (reaction, user) => {
-	if (user.id === process.env.BOT_ID) return
+	if (
+		user.id === process.env.BOT_ID ||
+		reaction.message.author.id !== process.env.BOT_ID
+	)
+		return
 	const datePattern = /^`\d\d-\d\d-\d\d\d\d`/
 	if (reaction.partial) {
 		try {
