@@ -10,37 +10,42 @@ const itemStringCreator = (boss) =>
 		.map((item, index) => `${numberReacts[index]}. ${item.name}`)
 		.join('\n')
 
-const verifyItem = async (user, boss, item, date, reactionCollector) => {
-	const sentMessage = await user.send(
+const verifyItem = async (user, boss, item, date) => {
+	const message = await user.send(
 		`You selected **${item.name}** - ${item.wowhead_link}\nIs this correct? You have 90 seconds to verify whether this is the item you wish to reserve.\n:one:. Yes\n:two:. No`
 	)
 
 	const filter = (reaction, user) => user.id !== process.env.BOT_ID
-	const collected = await sentMessage.awaitReactions(filter, {
+	const verifyCollector = message.createReactionCollector(filter, {
+		max: 1,
 		time: 90000,
 		errors: ['time'],
 	})
-	sentMessage.react('1️⃣').then(() => sentMessage.react('2️⃣'))
-	const reaction = collected.first()
-	if (reaction._emoji.name === '1️⃣') {
-		const upsertedCount = await dbService.insertItem(
-			date,
-			user.id,
-			boss.name,
-			item.name
-		)
-		if (upsertedCount === 1) {
-			sentMessage.channel.send(`Your item has been reserved. Thank you.`)
-		} else {
-			sentMessage.channel.send('Your reserved item has been updated.')
+	verifyCollector.on('collect', async (reaction, user) => {
+		if (reaction.partial) {
+			console.log('Partial reaction')
 		}
-	}
-	if (reaction._emoji.name === '2️⃣') {
-		sentMessage.channel.send(
-			'Please go back to the channel and start the process over by clicking the reaction for the boss you want.'
-		)
-	}
-	reactionCollector.stop()
+		if (reaction.emoji.name === '1️⃣') {
+			const upsertedCount = await dbService.insertItem(
+				date,
+				user.id,
+				boss.name,
+				item.name
+			)
+			if (upsertedCount === 1) {
+				user.send(`Your item has been reserved. Thank you.`)
+			} else {
+				user.send('Your reserved item has been updated.')
+			}
+		}
+		if (reaction.emoji.name === '2️⃣') {
+			user.send(
+				'Please go back to the channel and start the process over by clicking the reaction for the boss you want.'
+			)
+		}
+	})
+
+	message.react('1️⃣').then(() => message.react('2️⃣'))
 }
 
 module.exports = async (reaction, user) => {
@@ -92,21 +97,25 @@ module.exports = async (reaction, user) => {
 					boss
 				)}`
 			)
+
 			const filter = (reaction, user) => user.id !== process.env.BOT_ID
 			const reactionCollector = sentMessage.createReactionCollector(filter, {
 				max: 1,
 				time: 180000,
 				errors: ['time'],
 			})
+
 			reactionCollector.on('collect', (reaction, user) => {
 				const emoji = reaction.emoji.name
 				const itemIndex = _.findKey(numberReacts, (r) => r === emoji)
 				const item = boss.items[itemIndex]
-				verifyItem(user, boss, item, date, reactionCollector)
+				verifyItem(user, boss, item, date)
 			})
-			boss.items.forEach((_, index) => {
-				sentMessage.react(numberReacts[index])
+
+			boss.items.forEach(async (_, index) => {
+				await sentMessage.react(numberReacts[index])
 			})
+
 			break
 	}
 }

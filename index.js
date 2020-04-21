@@ -4,6 +4,7 @@ const dotenv = require('dotenv')
 dotenv.config()
 
 const commandHandler = require('./handlers/commandHandler')
+const reactionHandler = require('./handlers/reactionHandler')
 const eventCleanup = require('./helpers/eventCleanup')
 
 const token = process.env.TOKEN
@@ -12,7 +13,7 @@ const everyMidnight = new RecurrenceRule()
 everyMidnight.hour = 5
 everyMidnight.minute = 1
 
-const bot = new Client()
+const bot = new Client({ partials: ['MESSAGE', 'CHANNEL', 'REACTION'] })
 
 require('http')
 	.createServer(async (req, res) => {
@@ -43,6 +44,27 @@ bot.on('message', async (message) => {
 	) {
 		if (!message.content.startsWith('!') || message.author.bot) return
 		await commandHandler(message)
+	}
+})
+
+bot.on('messageReactionAdd', async (reaction, user) => {
+	if (user.id === process.env.BOT_ID) return
+	const datePattern = /^`\d\d-\d\d-\d\d\d\d`/
+	if (reaction.partial) {
+		try {
+			await reaction.fetch()
+		} catch (err) {
+			console.log('Could not fetch: ', err)
+			return
+		}
+		if (datePattern.test(reaction.message.content)) {
+			await reactionHandler(reaction, user)
+		}
+		reaction.users.remove(user.id)
+	} else {
+		if (datePattern.test(reaction.message.content)) {
+			await reactionHandler(reaction, user)
+		}
 	}
 })
 
