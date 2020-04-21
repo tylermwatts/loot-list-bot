@@ -57,14 +57,14 @@ bot.on('messageReactionAdd', async (reaction, user) => {
 			console.log('Could not fetch: ', err)
 			return
 		}
-		if (!reaction.message.author.id === process.env.BOT_ID) return
 		if (datePattern.test(reaction.message.content)) {
 			await reactionHandler(reaction, user)
+			reaction.users.remove(user.id)
 		}
-		reaction.users.remove(user.id)
 	} else {
 		if (datePattern.test(reaction.message.content)) {
 			await reactionHandler(reaction, user)
+			reaction.users.remove(user.id)
 		}
 	}
 })
