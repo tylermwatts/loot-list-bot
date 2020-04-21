@@ -71,40 +71,64 @@
           "wowhead_link": "https://classic.wowhead.com/item=22713/zulian-scepter-of-rites"
         },
         {
-          "name": "Gurubashi Helm",
-          "slot": "Head",
-          "type": "Plate",
-          "wowhead_link": "https://classic.wowhead.com/item=20263/gurubashi-helm"
-        },
-        {
           "name": "Sceptre of Smiting",
           "slot": "One-Hand",
           "type": "Mace",
           "wowhead_link": "https://classic.wowhead.com/item=19908/sceptre-of-smiting"
         },
         {
-          "name": "Shadow Panther Hide Belt",
+          "name": "Primal Hakkari Sash (Priest, Warlock, Druid)",
           "slot": "Waist",
-          "type": "Leather",
-          "wowhead_link": "https://classic.wowhead.com/item=20261/shadow-panther-hide-belt"
+          "type": "Misc",
+          "wowhead_link": "https://classic.wowhead.com/item=19720/primal-hakkari-sash"
         },
         {
-          "name": "Shadow Panther Hide Gloves",
-          "slot": "Hands",
-          "type": "Leather",
-          "wowhead_link": "https://classic.wowhead.com/item=20259/shadow-panther-hide-gloves"
+          "name": "Primal Hakkari Stanchion (Priest, Warlock, Druid)",
+          "slot": "Wrist",
+          "type": "Misc",
+          "wowhead_link": "https://classic.wowhead.com/item=19718/primal-hakkari-stanchion"
         },
         {
-          "name": "Zulian Ceremonial Staff",
-          "slot": "Two-Hand",
-          "type": "Staff",
-          "wowhead_link": "https://classic.wowhead.com/item=20258/zulian-ceremonial-staff"
+          "name": "Primal Hakkari Tabard (Paladin, Shaman, Druid)",
+          "slot": "Chest",
+          "type": "Misc",
+          "wowhead_link": "https://classic.wowhead.com/item=19722/primal-hakkari-tabard"
         },
         {
-          "name": "Zulian Hacker",
-          "slot": "One-Hand",
-          "type": "Axe",
-          "wowhead_link": "https://classic.wowhead.com/item=19921/zulian-hacker"
+          "name": "Primal Hakkari Bindings (Paladin, Hunter, Mage)",
+          "slot": "Wrist",
+          "type": "Misc",
+          "wowhead_link": "https://classic.wowhead.com/item=19716/primal-hakkari-bindings"
+        },
+        {
+          "name": "Primal Hakkari Shawl (Paladin, Hunter, Mage)",
+          "slot": "Shoulders",
+          "type": "Misc",
+          "wowhead_link": "https://classic.wowhead.com/item=19721/primal-hakkari-shawl"
+        },
+        {
+          "name": "Primal Hakkari Aegis (Hunter, Rogue, Priest)",
+          "slot": "Chest",
+          "type": "Misc",
+          "wowhead_link": "https://classic.wowhead.com/item=19724/primal-hakkari-aegis"
+        },
+        {
+          "name": "Primal Hakkari Kossack (Warrior, Mage, Warlock)",
+          "slot": "Chest",
+          "type": "Misc",
+          "wowhead_link": "https://classic.wowhead.com/item=19723/primal-hakkari-kossack"
+        },
+        {
+          "name": "Primal Hakkari Armsplint (Warrior, Rogue, Shaman)",
+          "slot": "Wrist",
+          "type": "Misc",
+          "wowhead_link": "https://classic.wowhead.com/item=19717/primal-hakkari-armsplint"
+        },
+        {
+          "name": "Primal Hakkari Girdle (Warrior, Rogue, Shaman)",
+          "slot": "Waist",
+          "type": "Misc",
+          "wowhead_link": "https://classic.wowhead.com/item=19719/primal-hakkari-girdle"
         }
       ]
     },
