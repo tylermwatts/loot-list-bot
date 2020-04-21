@@ -48,11 +48,7 @@ bot.on('message', async (message) => {
 })
 
 bot.on('messageReactionAdd', async (reaction, user) => {
-	if (
-		user.id === process.env.BOT_ID ||
-		reaction.message.author.id !== process.env.BOT_ID
-	)
-		return
+	if (user.id === process.env.BOT_ID) return
 	const datePattern = /^`\d\d-\d\d-\d\d\d\d`/
 	if (reaction.partial) {
 		try {
@@ -61,6 +57,7 @@ bot.on('messageReactionAdd', async (reaction, user) => {
 			console.log('Could not fetch: ', err)
 			return
 		}
+		if (!reaction.message.author.id === process.env.BOT_ID) return
 		if (datePattern.test(reaction.message.content)) {
 			await reactionHandler(reaction, user)
 		}
