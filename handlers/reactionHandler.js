@@ -112,8 +112,8 @@ module.exports = async (reaction, user) => {
 				verifyItem(user, boss, item, date)
 			})
 
-			boss.items.forEach(async (_, index) => {
-				await sentMessage.react(numberReacts[index])
+			boss.items.forEach((_, index) => {
+				sentMessage.react(numberReacts[index])
 			})
 
 			break
