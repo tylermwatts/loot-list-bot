@@ -50,22 +50,16 @@ bot.on('message', async (message) => {
 bot.on('messageReactionAdd', async (reaction, user) => {
 	if (user.id === process.env.BOT_ID) return
 	const datePattern = /^`\d\d-\d\d-\d\d\d\d`/
-	if (reaction.partial) {
-		try {
-			await reaction.fetch()
-		} catch (err) {
-			console.log('Could not fetch: ', err)
-			return
-		}
-		if (datePattern.test(reaction.message.content)) {
-			await reactionHandler(reaction, user)
-			reaction.users.remove(user.id)
-		}
-	} else {
-		if (datePattern.test(reaction.message.content)) {
-			await reactionHandler(reaction, user)
-			reaction.users.remove(user.id)
-		}
+	if (!reaction.partial) return
+	try {
+		await reaction.fetch()
+	} catch (err) {
+		console.log('Could not fetch: ', err)
+		return
+	}
+	if (datePattern.test(reaction.message.content)) {
+		await reactionHandler(reaction, user)
+		reaction.users.remove(user.id)
 	}
 })
 
