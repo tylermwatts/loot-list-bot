@@ -64,24 +64,12 @@ module.exports = async (message) => {
 						)
 
 						channel.send(lootTable).then((sentMessage) => {
-							const filter = (reaction, user) => user.id !== process.env.BOT_ID
-							const reactionCollector = sentMessage.createReactionCollector(
-								filter,
-								{
-									maxUsers: 30,
-								}
-							)
-
 							zgLoot.bosses.forEach((boss) => {
 								sentMessage.react(boss.reaction)
 							})
 
 							sentMessage.react('❔')
 							sentMessage.react('❌')
-
-							reactionCollector.on('collect', (reaction, user) => {
-								reactionHandler(reaction, user)
-							})
 						})
 					}
 
