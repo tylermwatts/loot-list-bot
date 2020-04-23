@@ -60,7 +60,7 @@ module.exports = async (message) => {
 
 						const lootTable = messageCreator(
 							messageCommands.ZG_LOOT_SELECTION,
-							m.content
+							message.content
 						)
 
 						channel.send(lootTable).then((sentMessage) => {
