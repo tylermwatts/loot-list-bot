@@ -22,9 +22,6 @@ const verifyItem = async (user, boss, item, date) => {
 		errors: ['time'],
 	})
 	verifyCollector.on('collect', async (reaction, user) => {
-		if (reaction.partial) {
-			console.log('Partial reaction')
-		}
 		if (reaction.emoji.name === '1️⃣') {
 			const upsertedCount = await dbService.insertItem(
 				date,

@@ -22,14 +22,13 @@ module.exports = (event, list) => {
 		.map(
 			(bossName) =>
 				`__${bossName}__\n${Object.keys(lootListObj[bossName])
-					.map(
-						(itemName) => `${itemName} - ${lootListObj[bossName][itemName]}\n`
-					)
+					.map((itemName) => {
+						const userString = lootListObj[bossName][itemName].join(', ')
+						return `${itemName} - ${userString}\n`
+					})
 					.join('')}\n`
 		)
 		.join('')
-
-	console.log(itemsByBoss)
 
 	const message =
 		`__**Zul'Gurub Loot List for ${moment(event, 'MM-DD-YYYY').format(

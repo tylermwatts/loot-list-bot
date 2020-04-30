@@ -5,7 +5,6 @@ dotenv.config()
 
 const messageCreator = require('../helpers/messageCreator')
 const itemListCreator = require('../helpers/itemListCreator')
-const reactionHandler = require('../handlers/reactionHandler')
 const messageCommands = require('../data/messageCommands')
 const dbService = require('../services/dbService')
 
