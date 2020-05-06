@@ -4,7 +4,6 @@ const dotenv = require('dotenv')
 dotenv.config()
 
 const messageCreator = require('../helpers/messageCreator')
-const itemListCreator = require('../helpers/itemListCreator')
 const messageCommands = require('../data/messageCommands')
 const dbService = require('../services/dbService')
 
@@ -17,17 +16,12 @@ const returnFormatedDateString = (hyphenatedDate) => {
 
 module.exports = async (message) => {
 	switch (message.content) {
-		case '!help':
-			message.author.send(
-				`__Available commands__\n\`!zgloot\` - Begin the process of creating a new ZG loot list\n\`!zgprint\` - Begins the process of selecting a loot list to be printed `
-			)
-			message.delete()
-			break
 		case '!zgloot': {
 			const channel = message.channel
-			const sentMessage = await message.author.send(
-				`Using the MM-DD-YYYY format including leading zeros (ex: 02-28-2020), please enter the date that this raid will take place. You will have 3 minutes to respond. Invalid date formatting will not be accepted. When a valid date is given in the proper format, you will be asked to confirm this date.`
+			const createDateSelectMessage = messageCreator(
+				messageCommands.CREATE_DATE_SELECT
 			)
+			const sentMessage = await message.author.send(createDateSelectMessage)
 
 			const filter = (m) =>
 				/^(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])-(19|20)\d\d$/.test(m.content)
@@ -59,7 +53,7 @@ module.exports = async (message) => {
 
 						const lootTable = messageCreator(
 							messageCommands.ZG_LOOT_SELECTION,
-							message.content
+							{ date: message.content }
 						)
 
 						channel.send(lootTable).then((sentMessage) => {
@@ -124,7 +118,10 @@ module.exports = async (message) => {
 					async (verifyReaction, user) => {
 						if (verifyReaction.emoji.name === '1️⃣') {
 							const dbList = await dbService.retrieveList(event)
-							const itemList = itemListCreator(event, dbList)
+							const itemList = messageCreator(
+								messageCommands.CREATE_ITEM_LIST,
+								{ event: event, list: dbList }
+							)
 							channel.send(itemList)
 						}
 						if (verifyReaction.emoji.name === '2️⃣') {
@@ -165,8 +162,14 @@ module.exports = async (message) => {
 				const event = events[eventIndex]
 				const eventList = await dbService.retrieveList(event)
 				const usersString = eventList
-					.map((record, index) => `${index + 1}. <@${record.user}>`)
-					.join('\n')
+					.filter((record) => message.guild.member(record.user))
+					.map((record, index) => {
+						const member = message.guild.member(record.user)
+						return `${index + 1}. <@${record.user}> (${
+							member.nickName || member.user.username
+						})\n`
+					})
+					.join('')
 				user.send(
 					`Here is the list of users who have items reserved for **${returnFormatedDateString(
 						event
@@ -177,7 +180,17 @@ module.exports = async (message) => {
 			message.delete()
 			break
 		}
-		default:
-			return
+		case messageCommands.HELP: {
+			const helpMessage = messageCreator(messageCommands.HELP)
+			message.author.send(helpMessage)
+			message.delete()
+			break
+		}
+		default: {
+			const helpMessage = messageCreator(messageCommands.HELP)
+			message.author.send(helpMessage)
+			message.delete()
+			break
+		}
 	}
 }
