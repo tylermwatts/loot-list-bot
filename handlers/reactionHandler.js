@@ -42,6 +42,14 @@ const verifyItem = async (user, boss, item, date) => {
 		}
 	})
 
+	verifyCollector.on('end', (collected, reason) => {
+		if (reason === 'time') {
+			user.send(
+				`**You did not confirm your selected item so no item has been reserved for you.** Please go back to the loot selection message and select the appropriate reaction to select your item. After you select the item, you **must confirm** that this is the item you wish to reserve by reacting to the confirmation message within 90 seconds.`
+			)
+		}
+	})
+
 	message.react('1️⃣').then(() => message.react('2️⃣'))
 }
 
