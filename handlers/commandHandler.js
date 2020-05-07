@@ -166,9 +166,7 @@ module.exports = async (message) => {
 					.map((record, index) => {
 						const member = message.guild.member(record.user)
 						return `${index + 1}. <@${record.user}>` + member.nickName
-							? member.nickName === member.user.username
-								? `\n`
-								: `(${member.nickName})\n`
+							? ` (${member.nickName})\n`
 							: `\n`
 					})
 					.join('')
