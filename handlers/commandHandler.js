@@ -165,9 +165,10 @@ module.exports = async (message) => {
 					.filter((record) => message.guild.member(record.user))
 					.map((record, index) => {
 						const member = message.guild.member(record.user)
-						return `${index + 1}. <@${record.user}>` + member.nickname
-							? ` (${member.nickname})\n`
-							: `\n`
+						const nickName = member.nickname ? ` (${member.nickname})\n` : `\n`
+						const userWithNickname =
+							`${index + 1}. <@${record.user}>` + nickName
+						return userWithNickname
 					})
 					.join('')
 				user.send(
