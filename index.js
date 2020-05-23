@@ -48,7 +48,7 @@ bot.on('message', async (message) => {
 })
 
 bot.on('messageReactionAdd', async (reaction, user) => {
-	if (user.id === process.env.BOT_ID) return
+	if (user.bot) return
 	const datePattern = /^`\d\d-\d\d-\d\d\d\d`/
 	if (reaction.partial) {
 		try {
@@ -68,5 +68,9 @@ bot.on('messageReactionAdd', async (reaction, user) => {
 		}
 	}
 })
+
+setInterval(() => {
+	require('http').get(`https://${process.env.PROJECT_DOMAIN}.glitch.me/`)
+}, 280000)
 
 bot.login(token)

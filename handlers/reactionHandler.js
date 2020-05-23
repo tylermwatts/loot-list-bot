@@ -15,7 +15,7 @@ const verifyItem = async (user, boss, item, date) => {
 		`You selected **${item.name}** - ${item.wowhead_link}\nIs this correct? You have 90 seconds to verify whether this is the item you wish to reserve.\n:one:. Yes\n:two:. No`
 	)
 
-	const filter = (reaction, user) => user.id !== process.env.BOT_ID
+	const filter = (reaction, user) => !user.bot
 	const verifyCollector = message.createReactionCollector(filter, {
 		max: 1,
 		time: 90000,
@@ -103,7 +103,7 @@ module.exports = async (reaction, user) => {
 				)}`
 			)
 
-			const filter = (reaction, user) => user.id !== process.env.BOT_ID
+			const filter = (reaction, user) => !user.bot
 			const reactionCollector = sentMessage.createReactionCollector(filter, {
 				max: 1,
 				time: 180000,

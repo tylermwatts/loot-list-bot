@@ -41,7 +41,7 @@ module.exports = async (message) => {
 					)} is the date that you requested. Is this correct? You have 90 seconds to confirm via reaction to this message. When you confirm, a collection will be created in the database and the loot selection message will be posted in the channel, so please be 100% certain.\n\n:one: Yes\n:two: No`
 				)
 
-				const filter = (reaction, user) => user.id !== process.env.BOT_ID
+				const filter = (reaction, user) => !user.bot
 				const dateConfirmCollector = confirmMessage.createReactionCollector(
 					filter,
 					{ max: 1, time: 90000, errors: ['time'] }
@@ -92,7 +92,7 @@ module.exports = async (message) => {
 				`The following events were found in the database. Please use reactions to select the event for which you would like to print the list. **This will not cause the list to print. There will be a verification step before the list is printed.**\n\n${eventSelectString}`
 			)
 
-			const filter = (reaction, user) => user.id !== process.env.BOT_ID
+			const filter = (reaction, user) => !user.bot
 			const eventReactionCollector = sentMessage.createReactionCollector(
 				filter,
 				{ time: 180000, errors: ['time'] }
@@ -150,7 +150,7 @@ module.exports = async (message) => {
 				`The following events were found in the database. Please use reactions to select the event for which you would like to see a list of users who have items reserved.\n\n${eventSelectString}`
 			)
 
-			const filter = (reaction, user) => user.id !== process.env.BOT_ID
+			const filter = (reaction, user) => !user.bot
 			const eventReactionCollector = sentMessage.createReactionCollector(
 				filter,
 				{ max: 1, time: 180000, errors: ['time'] }
