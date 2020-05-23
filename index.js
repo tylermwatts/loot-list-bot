@@ -17,7 +17,7 @@ const bot = new Client({ partials: ['MESSAGE', 'CHANNEL', 'REACTION'] })
 
 require('http')
 	.createServer(async (req, res) => {
-		console.log(req)
+		console.log('Received request')
 		res.statusCode = 200
 		res.write('ok')
 		res.end()
@@ -70,7 +70,7 @@ bot.on('messageReactionAdd', async (reaction, user) => {
 })
 
 setInterval(() => {
-	require('http').get(`https://${process.env.PROJECT_DOMAIN}.glitch.me/`)
+	require('http').get(`http://${process.env.PROJECT_DOMAIN}.glitch.me/`)
 }, 280000)
 
 bot.login(token)
