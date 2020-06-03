@@ -69,8 +69,4 @@ bot.on('messageReactionAdd', async (reaction, user) => {
 	}
 })
 
-setInterval(() => {
-	require('http').get(`http://${process.env.PROJECT_DOMAIN}.glitch.me/`)
-}, 280000)
-
 bot.login(token)

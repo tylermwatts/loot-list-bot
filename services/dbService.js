@@ -46,7 +46,7 @@ module.exports = {
 		try {
 			client.connect((err) => {
 				assert.equal(err, null)
-				console.log('Insert Item: Connected successfully to server.')
+				console.log('Insert Item: Connected successfully to database.')
 			})
 			const db = client.db(dbName)
 			const collection = db.collection(collectionName)
@@ -68,7 +68,7 @@ module.exports = {
 		try {
 			client.connect((err) => {
 				assert.equal(err, null)
-				console.log('Retrieve Item: Connected successfully to server.')
+				console.log('Retrieve Item: Connected successfully to database.')
 			})
 			const db = client.db(dbName)
 			const collection = db.collection(collectionName)
@@ -86,7 +86,7 @@ module.exports = {
 		try {
 			client.connect((err) => {
 				assert.equal(err, null)
-				console.log('Delete Item: Connected successfully to server.')
+				console.log('Delete Item: Connected successfully to database.')
 			})
 			const db = client.db(dbName)
 			const collection = db.collection(collectionName)
@@ -103,7 +103,7 @@ module.exports = {
 		try {
 			client.connect((err) => {
 				assert.equal(null, err)
-				console.log('Retrieve All Lists: Connected successfully to server.')
+				console.log('Retrieve All Lists: Connected successfully to database.')
 			})
 			const db = client.db(dbName)
 			return await retrieveAllCollections(db)
@@ -117,7 +117,7 @@ module.exports = {
 		const client = new MongoClient(url, { useUnifiedTopology: true })
 		client.connect((err) => {
 			assert.equal(null, err)
-			console.log('Retrieve Specific List: Connected successfully to server.')
+			console.log('Retrieve Specific List: Connected successfully to database.')
 		})
 		const db = client.db(dbName)
 		try {
@@ -133,7 +133,7 @@ module.exports = {
 		const client = new MongoClient(url, { useUnifiedTopology: true })
 		client.connect((err) => {
 			assert.equal(null, err)
-			console.log('Delete Specific List: Connected successfully to server.')
+			console.log('Delete Specific List: Connected successfully to database.')
 		})
 		const db = client.db(dbName)
 		try {
