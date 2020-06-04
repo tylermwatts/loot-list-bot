@@ -7,8 +7,6 @@ const commandHandler = require('./handlers/commandHandler')
 const reactionHandler = require('./handlers/reactionHandler')
 const eventCleanup = require('./helpers/eventCleanup')
 
-const token = process.env.TOKEN
-
 const everyMidnight = new RecurrenceRule()
 everyMidnight.hour = 5
 everyMidnight.minute = 1
@@ -69,4 +67,4 @@ bot.on('messageReactionAdd', async (reaction, user) => {
 	}
 })
 
-bot.login(token)
+bot.login(process.env.TOKEN)
