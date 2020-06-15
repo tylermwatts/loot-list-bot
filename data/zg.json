@@ -461,6 +461,12 @@
           "wowhead_link": "https://classic.wowhead.com/item=19912/overlords-onyx-band"
         },
         {
+          "name": "Panther Hide Sack",
+          "slot": "Bag",
+          "type": "Bag",
+          "wowhead_link": "https://classic.wowhead.com/item=19914/panther-hide-sack"
+        },
+        {
           "name": "Will of Arlokk",
           "slot": "Two-Hand",
           "type": "Staff",
