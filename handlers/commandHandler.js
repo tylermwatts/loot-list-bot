@@ -10,72 +10,75 @@ const dbService = require('../services/dbService')
 const zgLoot = require('../data/zg.json')
 const numberReacts = require('../data/numberReacts.json')
 
-const returnFormatedDateString = (hyphenatedDate) => {
+const returnFormattedDateString = (hyphenatedDate) => {
 	return moment(hyphenatedDate, 'MM-DD-YYYY').format('dddd, MMMM Do YYYY')
+}
+
+const makeNewLootTable = async (message, messageCommand, lootData) => {
+	const channel = message.channel
+	const createDateSelectMessage = messageCreator(
+		messageCommands.CREATE_DATE_SELECT
+	)
+	const sentMessage = await message.author.send(createDateSelectMessage)
+
+	const filter = (m) =>
+		/^(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])-(19|20)\d\d$/.test(m.content)
+	const dateCollector = await sentMessage.channel.createMessageCollector(
+		filter,
+		{
+			max: 1,
+			time: 180000,
+			errors: ['time'],
+		}
+	)
+
+	dateCollector.on('collect', async (message) => {
+		const confirmMessage = await sentMessage.channel.send(
+			`${returnFormattedDateString(
+				message.content
+			)} is the date that you requested. Is this correct? You have 90 seconds to confirm via reaction to this message. When you confirm, a collection will be created in the database and the loot selection message will be posted in the channel, so please be 100% certain.\n\n:one: Yes\n:two: No`
+		)
+
+		const filter = (reaction, user) => !user.bot
+		const dateConfirmCollector = confirmMessage.createReactionCollector(
+			filter,
+			{ max: 1, time: 90000, errors: ['time'] }
+		)
+
+		dateConfirmCollector.on('collect', (reaction, user) => {
+			if (reaction.emoji.name === '1️⃣') {
+				confirmMessage.channel.send('Date is confirmed.')
+
+				const lootTable = messageCreator(messageCommand, {
+					date: message.content,
+				})
+
+				channel.send(lootTable).then((sentMessage) => {
+					lootData.bosses.forEach((boss) => {
+						sentMessage.react(boss.reaction)
+					})
+
+					sentMessage.react('❔')
+					sentMessage.react('❌')
+				})
+			}
+
+			if (reaction.emoji.name === '2️⃣') {
+				confirmMessage.channel.send(
+					'Well, you done fucked up buddy. Start over.'
+				)
+			}
+		})
+
+		confirmMessage.react('1️⃣').then(() => confirmMessage.react('2️⃣'))
+	})
+	message.delete()
 }
 
 module.exports = async (message) => {
 	switch (message.content) {
 		case '!zgloot': {
-			const channel = message.channel
-			const createDateSelectMessage = messageCreator(
-				messageCommands.CREATE_DATE_SELECT
-			)
-			const sentMessage = await message.author.send(createDateSelectMessage)
-
-			const filter = (m) =>
-				/^(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])-(19|20)\d\d$/.test(m.content)
-			const dateCollector = await sentMessage.channel.createMessageCollector(
-				filter,
-				{
-					max: 1,
-					time: 180000,
-					errors: ['time'],
-				}
-			)
-
-			dateCollector.on('collect', async (message) => {
-				const confirmMessage = await sentMessage.channel.send(
-					`${returnFormatedDateString(
-						message.content
-					)} is the date that you requested. Is this correct? You have 90 seconds to confirm via reaction to this message. When you confirm, a collection will be created in the database and the loot selection message will be posted in the channel, so please be 100% certain.\n\n:one: Yes\n:two: No`
-				)
-
-				const filter = (reaction, user) => !user.bot
-				const dateConfirmCollector = confirmMessage.createReactionCollector(
-					filter,
-					{ max: 1, time: 90000, errors: ['time'] }
-				)
-
-				dateConfirmCollector.on('collect', (reaction, user) => {
-					if (reaction.emoji.name === '1️⃣') {
-						confirmMessage.channel.send('Date is confirmed.')
-
-						const lootTable = messageCreator(
-							messageCommands.ZG_LOOT_SELECTION,
-							{ date: message.content }
-						)
-
-						channel.send(lootTable).then((sentMessage) => {
-							zgLoot.bosses.forEach((boss) => {
-								sentMessage.react(boss.reaction)
-							})
-
-							sentMessage.react('❔')
-							sentMessage.react('❌')
-						})
-					}
-
-					if (reaction.emoji.name === '2️⃣') {
-						confirmMessage.channel.send(
-							'Well, you done fucked up buddy. Start over.'
-						)
-					}
-				})
-
-				confirmMessage.react('1️⃣').then(() => confirmMessage.react('2️⃣'))
-			})
-			message.delete()
+			await makeNewLootTable(message, messageCommands.ZG_LOOT_SELECTION, zgLoot)
 			break
 		}
 		case '!zgprint': {
@@ -84,7 +87,7 @@ module.exports = async (message) => {
 			const events = await dbService.retrieveAllEvents()
 			const eventSelectString = events
 				.map((event, index) => {
-					return `${numberReacts[index]} ${returnFormatedDateString(event)}`
+					return `${numberReacts[index]} ${returnFormattedDateString(event)}`
 				})
 				.join('\n')
 
@@ -103,7 +106,7 @@ module.exports = async (message) => {
 				const eventIndex = _.findKey(numberReacts, (r) => r === emoji)
 				const event = events[eventIndex]
 				const eventVerifyMessage = await user.send(
-					`You have selected the event **${returnFormatedDateString(
+					`You have selected the event **${returnFormattedDateString(
 						event
 					)}**.\n\nWhen you react to confirm this, **the full item list will be printed in the public channel** so please be certain you are ready to print the list.\n\n:one: Yes\n:two: No`
 				)
@@ -143,7 +146,7 @@ module.exports = async (message) => {
 			const events = await dbService.retrieveAllEvents()
 			const eventSelectString = events
 				.map((event, index) => {
-					return `${numberReacts[index]} ${returnFormatedDateString(event)}`
+					return `${numberReacts[index]} ${returnFormattedDateString(event)}`
 				})
 				.join('\n')
 			const sentMessage = await user.send(
@@ -175,7 +178,7 @@ module.exports = async (message) => {
 					})
 					.join('')
 				user.send(
-					`Here is the list of users who have items reserved for **${returnFormatedDateString(
+					`Here is the list of users who have items reserved for **${returnFormattedDateString(
 						event
 					)}**\n\n${usersString}`
 				)
