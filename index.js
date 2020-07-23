@@ -36,10 +36,12 @@ bot.once('ready', () => {
 })
 
 bot.on('message', async (message) => {
-	if (
-		message.channel.id === process.env.OPERATING_CHANNEL &&
-		message.member.roles.cache.has(process.env.OFFICER_ROLE)
-	) {
+	const member = message.member
+	const hasRole = member.roles.cache.some(
+		(role) => role.id === process.env.OFFICER_ROLE
+	)
+	if (hasRole) {
+		console.log('fired')
 		if (!message.content.startsWith('!') || message.author.bot) return
 		await commandHandler(message)
 	}

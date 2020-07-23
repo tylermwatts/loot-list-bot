@@ -54,7 +54,10 @@ const verifyItem = async (user, boss, item, date) => {
 }
 
 module.exports = async (reaction, user) => {
-	const date = reaction.message.content.split('\n')[0].replace(/`/g, '')
+	const raidPlusDate = reaction.message.content.split('\n')[0].replace(/`/g, '')
+	const indexOfFirstDash = raidPlusDate.indexOf('-')
+	const raid = raidPlusDate.split(0, indexOfFirstDash)
+	const date = raidPlusDate.split(indexOfFirstDash + 1)
 	const userReactions = reaction.message.reactions.cache.filter((reaction) =>
 		reaction.users.cache.has(user.id)
 	)

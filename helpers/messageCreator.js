@@ -20,7 +20,7 @@ module.exports = (command, params = defaultParams) => {
 					return `**${boss.name}** - ${boss.reaction}`
 				})
 				.join('\n')
-			return `\`${date}\`\n__**ZG Loot Selection**__\nThis list is for the ZG raid happening on **${moment(
+			return `\`ZG-${date}\`\n__**ZG Loot Selection**__\nThis list is for the ZG raid happening on **${moment(
 				date,
 				'MM-DD-YYYY'
 			).format(
