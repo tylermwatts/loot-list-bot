@@ -1,4 +1,6 @@
 {
+  "abbreviation": "zg",
+  "zone": "Zul'Gurub",
   "bosses": [
     {
       "name": "Primal Hakkari Tokens (Class-Specific Set Pieces)",
@@ -6,56 +8,38 @@
       "items": [
         {
           "name": "Primal Hakkari Sash (Priest, Warlock, Druid)",
-          "slot": "Waist",
-          "type": "Misc",
           "wowhead_link": "https://classic.wowhead.com/item=19720/primal-hakkari-sash"
         },
         {
           "name": "Primal Hakkari Stanchion (Priest, Warlock, Druid)",
-          "slot": "Wrist",
-          "type": "Misc",
           "wowhead_link": "https://classic.wowhead.com/item=19718/primal-hakkari-stanchion"
         },
         {
           "name": "Primal Hakkari Tabard (Paladin, Shaman, Druid)",
-          "slot": "Chest",
-          "type": "Misc",
           "wowhead_link": "https://classic.wowhead.com/item=19722/primal-hakkari-tabard"
         },
         {
           "name": "Primal Hakkari Bindings (Paladin, Hunter, Mage)",
-          "slot": "Wrist",
-          "type": "Misc",
           "wowhead_link": "https://classic.wowhead.com/item=19716/primal-hakkari-bindings"
         },
         {
           "name": "Primal Hakkari Shawl (Paladin, Hunter, Mage)",
-          "slot": "Shoulders",
-          "type": "Misc",
           "wowhead_link": "https://classic.wowhead.com/item=19721/primal-hakkari-shawl"
         },
         {
           "name": "Primal Hakkari Aegis (Hunter, Rogue, Priest)",
-          "slot": "Chest",
-          "type": "Misc",
           "wowhead_link": "https://classic.wowhead.com/item=19724/primal-hakkari-aegis"
         },
         {
           "name": "Primal Hakkari Kossack (Warrior, Mage, Warlock)",
-          "slot": "Chest",
-          "type": "Misc",
           "wowhead_link": "https://classic.wowhead.com/item=19723/primal-hakkari-kossack"
         },
         {
           "name": "Primal Hakkari Armsplint (Warrior, Rogue, Shaman)",
-          "slot": "Wrist",
-          "type": "Misc",
           "wowhead_link": "https://classic.wowhead.com/item=19717/primal-hakkari-armsplint"
         },
         {
           "name": "Primal Hakkari Girdle (Warrior, Rogue, Shaman)",
-          "slot": "Waist",
-          "type": "Misc",
           "wowhead_link": "https://classic.wowhead.com/item=19719/primal-hakkari-girdle"
         }
       ]
@@ -66,74 +50,50 @@
       "items": [
         {
           "name": "Primal Hakkari Idol (Enchant piece)",
-          "slot": "Head/Leg",
-          "type": "Misc",
           "wowhead_link": "https://classic.wowhead.com/item=22637/primal-hakkari-idol"
         },
         {
           "name": "Band of Servitude",
-          "slot": "Finger",
-          "type": "Misc",
           "wowhead_link": "https://classic.wowhead.com/item=22721/band-of-servitude"
         },
         {
           "name": "Belt of Untapped Power",
-          "slot": "Waist",
-          "type": "Cloth",
           "wowhead_link": "https://classic.wowhead.com/item=22716/belt-of-untapped-power"
         },
         {
           "name": "Blooddrenched Mask",
-          "slot": "Head",
-          "type": "Leather",
           "wowhead_link": "https://classic.wowhead.com/item=22718/blooddrenched-mask"
         },
         {
           "name": "Cloak of the Hakkari Worshipers",
-          "slot": "Back",
-          "type": "Cloth",
           "wowhead_link": "https://classic.wowhead.com/item=22711/cloak-of-the-hakkari-worshipers"
         },
         {
           "name": "Gloves of the Tormented",
-          "slot": "Hands",
-          "type": "Mail",
           "wowhead_link": "https://classic.wowhead.com/item=22715/gloves-of-the-tormented"
         },
         {
           "name": "Might of the Tribe",
-          "slot": "Back",
-          "type": "Cloth",
           "wowhead_link": "https://classic.wowhead.com/item=22712/might-of-the-tribe"
         },
         {
           "name": "Sacrificial Gauntlets",
-          "slot": "Hands",
-          "type": "Plate",
           "wowhead_link": "https://classic.wowhead.com/item=22714/sacrificial-gauntlets"
         },
         {
           "name": "Seal of the Gurubashi Berserker",
-          "slot": "Finger",
-          "type": "Misc",
           "wowhead_link": "https://classic.wowhead.com/item=22722/seal-of-the-gurubashi-berserker"
         },
         {
           "name": "Zulian Headdress",
-          "slot": "Head",
-          "type": "Cloth",
           "wowhead_link": "https://classic.wowhead.com/item=22720/zulian-headdress"
         },
         {
           "name": "Zulian Scepter of Rites",
-          "slot": "One-Hand",
-          "type": "Mace",
           "wowhead_link": "https://classic.wowhead.com/item=22713/zulian-scepter-of-rites"
         },
         {
           "name": "Sceptre of Smiting",
-          "slot": "One-Hand",
-          "type": "Mace",
           "wowhead_link": "https://classic.wowhead.com/item=19908/sceptre-of-smiting"
         }
       ]
@@ -144,74 +104,50 @@
       "items": [
         {
           "name": "Animist's Leggings",
-          "slot": "Legs",
-          "type": "Leather",
           "wowhead_link": "https://classic.wowhead.com/item=19877/animists-leggings"
         },
         {
           "name": "Blooddrenched Grips",
-          "slot": "Hands",
-          "type": "Leather",
           "wowhead_link": "https://classic.wowhead.com/item=19869/blooddrenched-grips"
         },
         {
           "name": "Bloodlord's Defender",
-          "slot": "Main Hand",
-          "type": "Sword",
           "wowhead_link": "https://classic.wowhead.com/item=19867/bloodlords-defender"
         },
         {
           "name": "Bloodsoaked Pauldrons",
-          "slot": "Shoulder",
-          "type": "Plate",
           "wowhead_link": "https://classic.wowhead.com/item=19878/bloodsoaked-pauldrons"
         },
         {
           "name": "Bloodtinged Kilt",
-          "slot": "Legs",
-          "type": "Cloth",
           "wowhead_link": "https://classic.wowhead.com/item=19895/bloodtinged-kilt"
         },
         {
           "name": "Hakkari Loa Cloak",
-          "slot": "Back",
-          "type": "Cloth",
           "wowhead_link": "https://classic.wowhead.com/item=19870/hakkari-loa-cloak"
         },
         {
           "name": "Halberd of Smiting",
-          "slot": "Two-Hand",
-          "type": "Polearm",
           "wowhead_link": "https://classic.wowhead.com/item=19874/halberd-of-smiting"
         },
         {
           "name": "Mandokir's Sting",
-          "slot": "Ranged",
-          "type": "Bow",
           "wowhead_link": "https://classic.wowhead.com/item=20038/mandokirs-sting"
         },
         {
           "name": "Overlord's Crimson Band",
-          "slot": "Finger",
-          "type": "Misc",
           "wowhead_link": "https://classic.wowhead.com/item=19873/overlords-crimson-band"
         },
         {
           "name": "Primalist's Seal",
-          "slot": "Finger",
-          "type": "Misc",
           "wowhead_link": "https://classic.wowhead.com/item=19863/primalists-seal"
         },
         {
           "name": "Warblade of the Hakkari",
-          "slot": "Off Hand",
-          "type": "Sword",
           "wowhead_link": "https://classic.wowhead.com/item=19866/warblade-of-the-hakkari"
         },
         {
           "name": "Zanzil's Seal",
-          "slot": "Finger",
-          "type": "Misc",
           "wowhead_link": "https://classic.wowhead.com/item=19893/zanzils-seal"
         }
       ]
@@ -222,26 +158,18 @@
       "items": [
         {
           "name": "Foror's Eyepatch",
-          "slot": "Head",
-          "type": "Leather",
           "wowhead_link": "https://classic.wowhead.com/item=19945/forors-eyepatch"
         },
         {
           "name": "Nat Pagle's Broken Reel",
-          "slot": "Trinket",
-          "type": "Misc",
           "wowhead_link": "https://classic.wowhead.com/item=19947/nat-pagles-broken-reel"
         },
         {
           "name": "Nat Pagle's Fish Terminator",
-          "slot": "Two-Hand",
-          "type": "Staff",
           "wowhead_link": "https://classic.wowhead.com/item=19944/nat-pagles-fish-terminator"
         },
         {
           "name": "Tigule's Harpoon",
-          "slot": "Two-Hand",
-          "type": "Polearm",
           "wowhead_link": "https://classic.wowhead.com/item=19946/tigules-harpoon"
         }
       ]
@@ -252,92 +180,62 @@
       "items": [
         {
           "name": "Aegis of the Blood God",
-          "slot": "Off Hand",
-          "type": "Shield",
           "wowhead_link": "https://classic.wowhead.com/item=19862/aegis-of-the-blood-god"
         },
         {
           "name": "Ancient Hakkari Manslayer",
-          "slot": "One-Hand",
-          "type": "Axe",
           "wowhead_link": "https://classic.wowhead.com/item=19852/ancient-hakkari-manslayer"
         },
         {
           "name": "Bloodcaller",
-          "slot": "Main Hand",
-          "type": "Sword",
           "wowhead_link": "https://classic.wowhead.com/item=19864/bloodcaller"
         },
         {
           "name": "Bloodsoaked Legplates",
-          "slot": "Legs",
-          "type": "Plate",
           "wowhead_link": "https://classic.wowhead.com/item=19855/bloodsoaked-legplates"
         },
         {
           "name": "Cloak of Consumption",
-          "slot": "Back",
-          "type": "Cloth",
           "wowhead_link": "https://classic.wowhead.com/item=19857/cloak-of-consumption"
         },
         {
           "name": "Fang of the Faceless",
-          "slot": "One-Hand",
-          "type": "Dagger",
           "wowhead_link": "https://classic.wowhead.com/item=19859/fang-of-the-faceless"
         },
         {
           "name": "Gurubashi Dwarf Destroyer",
-          "slot": "Ranged",
-          "type": "Gun",
           "wowhead_link": "https://classic.wowhead.com/item=19853/gurubashi-dwarf-destroyer"
         },
         {
           "name": "Heart of Hakkar (Zandalarian Hero trinket)",
-          "slot": "Trinket",
-          "type": "Misc",
           "wowhead_link": "https://classic.wowhead.com/quest=8183/the-heart-of-hakkar"
         },
         {
           "name": "Peacekeeper Gauntlets",
-          "slot": "Hands",
-          "type": "Plate",
           "wowhead_link": "https://classic.wowhead.com/item=20264/peacekeeper-gauntlets"
         },
         {
           "name": "Seafury Gauntlets",
-          "slot": "Hands",
-          "type": "Mail",
           "wowhead_link": "https://classic.wowhead.com/item=20257/seafury-gauntlets"
         },
         {
           "name": "Soul Corrupter's Necklace",
-          "slot": "Neck",
-          "type": "Misc",
           "wowhead_link": "https://classic.wowhead.com/item=19876/soul-corrupters-necklace"
         },
         {
           "name": "The Eye of Hakkar",
-          "slot": "Neck",
-          "type": "Misc",
           "wowhead_link": "https://classic.wowhead.com/item=19856/the-eye-of-hakkar"
         },
         {
           "name": "Touch of Chaos",
-          "slot": "Ranged",
-          "type": "Wand",
           "wowhead_link": "https://classic.wowhead.com/item=19861/touch-of-chaos"
         },
         {
           "name": "Warblade of the Hakkari",
-          "slot": "Main Hand",
-          "type": "Sword",
           "wowhead_link": "https://classic.wowhead.com/item=19865/warblade-of-the-hakkari"
         },
         {
           "name": "Zin'rokh, Destroyer of Worlds",
-          "slot": "Two-Hand",
-          "type": "Sword",
           "wowhead_link": "https://classic.wowhead.com/item=19854/zinrokh-destroyer-of-worlds"
         }
       ]
@@ -348,44 +246,30 @@
       "items": [
         {
           "name": "Betrayer's Boots",
-          "slot": "Feet",
-          "type": "Cloth",
           "wowhead_link": "https://classic.wowhead.com/item=19897/betrayers-boots"
         },
         {
           "name": "Peacekeeper Leggings",
-          "slot": "Legs",
-          "type": "Plate",
           "wowhead_link": "https://classic.wowhead.com/item=20266/peacekeeper-leggings"
         },
         {
           "name": "Ritualistic Legguards",
-          "slot": "Legs",
-          "type": "Cloth",
           "wowhead_link": "https://classic.wowhead.com/item=19899/ritualistic-legguards"
         },
         {
           "name": "Seafury Leggings",
-          "slot": "Legs",
-          "type": "Mail",
           "wowhead_link": "https://classic.wowhead.com/item=20260/seafury-leggings"
         },
         {
           "name": "Seal of Jin",
-          "slot": "Finger",
-          "type": "Misc",
           "wowhead_link": "https://classic.wowhead.com/item=19898/seal-of-jin"
         },
         {
           "name": "Thekal's Grasp",
-          "slot": "Main Hand",
-          "type": "Fist Weapon",
           "wowhead_link": "https://classic.wowhead.com/item=19896/thekals-grasp"
         },
         {
           "name": "Zulian Slicer",
-          "slot": "One-Hand",
-          "type": "Sword",
           "wowhead_link": "https://classic.wowhead.com/item=19901/zulian-slicer"
         }
       ]
@@ -396,38 +280,26 @@
       "items": [
         {
           "name": "Blooddrenched Footpads",
-          "slot": "Feet",
-          "type": "Leather",
           "wowhead_link": "https://classic.wowhead.com/item=19906/blooddrenched-footpads"
         },
         {
           "name": "Fang of Venoxis",
-          "slot": "Main Hand",
-          "type": "Dagger",
           "wowhead_link": "https://classic.wowhead.com/item=19903/fang-of-venoxis"
         },
         {
           "name": "Runed Bloodstained Hauberk",
-          "slot": "Chest",
-          "type": "Mail",
           "wowhead_link": "https://classic.wowhead.com/item=19904/runed-bloodstained-hauberk"
         },
         {
           "name": "Zanzil's Band",
-          "slot": "Finger",
-          "type": "Misc",
           "wowhead_link": "https://classic.wowhead.com/item=19905/zanzils-band"
         },
         {
           "name": "Zulian Stone Axe",
-          "slot": "Two-Hand",
-          "type": "Axe",
           "wowhead_link": "https://classic.wowhead.com/item=19900/zulian-stone-axe"
         },
         {
           "name": "Zulian Tigerhide Cloak",
-          "slot": "Back",
-          "type": "Cloth",
           "wowhead_link": "https://classic.wowhead.com/item=19907/zulian-tigerhide-cloak"
         }
       ]
@@ -438,38 +310,26 @@
       "items": [
         {
           "name": "Arlokk's Grasp",
-          "slot": "Off Hand",
-          "type": "Fist Weapon",
           "wowhead_link": "https://classic.wowhead.com/item=19910/arlokks-grasp"
         },
         {
           "name": "Arlokk's Hoodoo Stick",
-          "slot": "Off Hand",
-          "type": "Misc",
           "wowhead_link": "https://classic.wowhead.com/item=19922/arlokks-hoodoo-stick"
         },
         {
           "name": "Bloodsoaked Greaves",
-          "slot": "Feet",
-          "type": "Plate",
           "wowhead_link": "https://classic.wowhead.com/item=19913/bloodsoaked-greaves"
         },
         {
           "name": "Overlord's Onyx Band",
-          "slot": "Finger",
-          "type": "Misc",
           "wowhead_link": "https://classic.wowhead.com/item=19912/overlords-onyx-band"
         },
         {
           "name": "Panther Hide Sack",
-          "slot": "Bag",
-          "type": "Bag",
           "wowhead_link": "https://classic.wowhead.com/item=19914/panther-hide-sack"
         },
         {
           "name": "Will of Arlokk",
-          "slot": "Two-Hand",
-          "type": "Staff",
           "wowhead_link": "https://classic.wowhead.com/item=19909/will-of-arlokk"
         }
       ]
@@ -480,44 +340,30 @@
       "items": [
         {
           "name": "Animist's Spaulders",
-          "slot": "Shoulder",
-          "type": "Leather",
           "wowhead_link": "https://classic.wowhead.com/item=19928/animists-spaulders"
         },
         {
           "name": "Jeklik's Crusher",
-          "slot": "Two-Hand",
-          "type": "Mace",
           "wowhead_link": "https://classic.wowhead.com/item=19918/jekliks-crusher"
         },
         {
           "name": "Jeklik's Opaline Talisman",
-          "slot": "Neck",
-          "type": "Misc",
           "wowhead_link": "https://classic.wowhead.com/item=19923/jekliks-opaline-talisman"
         },
         {
           "name": "Peacekeeper Boots",
-          "slot": "Feet",
-          "type": "Plate",
           "wowhead_link": "https://classic.wowhead.com/item=20265/peacekeeper-boots"
         },
         {
           "name": "Primalist's Band",
-          "slot": "Finger",
-          "type": "Misc",
           "wowhead_link": "https://classic.wowhead.com/item=19920/primalists-band"
         },
         {
           "name": "Seafury Boots",
-          "slot": "Feet",
-          "type": "Mail",
           "wowhead_link": "https://classic.wowhead.com/item=20262/seafury-boots"
         },
         {
           "name": "Zulian Defender",
-          "slot": "Off Hand",
-          "type": "Shield",
           "wowhead_link": "https://classic.wowhead.com/item=19915/zulian-defender"
         }
       ]
@@ -528,38 +374,26 @@
       "items": [
         {
           "name": "Band of Jin",
-          "slot": "Finger",
-          "type": "Misc",
           "wowhead_link": "https://classic.wowhead.com/item=19925/band-of-jin"
         },
         {
           "name": "Bloodstained Greaves",
-          "slot": "Feet",
-          "type": "Mail",
           "wowhead_link": "https://classic.wowhead.com/item=19919/bloodstained-greaves"
         },
         {
           "name": "Flowing Ritual Robes",
-          "slot": "Chest",
-          "type": "Cloth",
           "wowhead_link": "https://classic.wowhead.com/item=20032/flowing-ritual-robes"
         },
         {
           "name": "Mar'li's Eye",
-          "slot": "Trinket",
-          "type": "Misc",
           "wowhead_link": "https://classic.wowhead.com/item=19930/marlis-eye"
         },
         {
           "name": "Mar'li's Touch",
-          "slot": "Ranged",
-          "type": "Wand",
           "wowhead_link": "https://classic.wowhead.com/item=19927/marlis-touch"
         },
         {
           "name": "Talisman of Protection",
-          "slot": "Neck",
-          "type": "Misc",
           "wowhead_link": "https://classic.wowhead.com/item=19871/talisman-of-protection"
         }
       ]
@@ -570,74 +404,50 @@
       "items": [
         {
           "name": "Animist's Boots",
-          "slot": "Feet",
-          "type": "Leather",
           "wowhead_link": "https://classic.wowhead.com/item=19892/animists-boots"
         },
         {
           "name": "Blooddrenched Leggings",
-          "slot": "Legs",
-          "type": "Leather",
           "wowhead_link": "https://classic.wowhead.com/item=19889/blooddrenched-leggings"
         },
         {
           "name": "Bloodsoaked Gauntlets",
-          "slot": "Hands",
-          "type": "Plate",
           "wowhead_link": "https://classic.wowhead.com/item=19894/bloodsoaked-gauntlets"
         },
         {
           "name": "Bloodstained Coif",
-          "slot": "Head",
-          "type": "Mail",
           "wowhead_link": "https://classic.wowhead.com/item=19875/bloodstained-coif"
         },
         {
           "name": "Bloodstained Legplates",
-          "slot": "Legs",
-          "type": "Mail",
           "wowhead_link": "https://classic.wowhead.com/item=19887/bloodstained-legplates"
         },
         {
           "name": "Bloodtinged Gloves",
-          "slot": "Hands",
-          "type": "Cloth",
           "wowhead_link": "https://classic.wowhead.com/item=19929/bloodtinged-gloves"
         },
         {
           "name": "Jin'do's Bag of Whammies",
-          "slot": "Off Hand",
-          "type": "Misc",
           "wowhead_link": "https://classic.wowhead.com/item=19891/jindos-bag-of-whammies"
         },
         {
           "name": "Jin'do's Evil Eye",
-          "slot": "Neck",
-          "type": "Misc",
           "wowhead_link": "https://classic.wowhead.com/item=19885/jindos-evil-eye"
         },
         {
           "name": "Jin'do's Hexxer",
-          "slot": "Main Hand",
-          "type": "Mace",
           "wowhead_link": "https://classic.wowhead.com/item=19890/jindos-hexxer"
         },
         {
           "name": "Jin'do's Judgement",
-          "slot": "Two-Hand",
-          "type": "Staff",
           "wowhead_link": "https://classic.wowhead.com/item=19884/jindos-judgement"
         },
         {
           "name": "Overlord's Embrace",
-          "slot": "Back",
-          "type": "Cloth",
           "wowhead_link": "https://classic.wowhead.com/item=19888/overlords-embrace"
         },
         {
           "name": "The Hexxer's Cover",
-          "slot": "Head",
-          "type": "Cloth",
           "wowhead_link": "https://classic.wowhead.com/item=19886/the-hexxers-cover"
         }
       ]
