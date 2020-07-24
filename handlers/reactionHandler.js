@@ -10,54 +10,26 @@ const itemStringCreator = (boss) =>
 		.map((item, index) => `${numberReacts[index]}. ${item.name}`)
 		.join('\n')
 
-const verifyItem = async (user, boss, item, date) => {
-	const message = await user.send(
-		`You selected **${item.name}** - ${item.wowhead_link}\nIs this correct? You have 90 seconds to verify whether this is the item you wish to reserve.\n:one:. Yes\n:two:. No`
+const verifyItem = async (user, boss, item, raidEvent) => {
+	const upsertedCount = await dbService.insertItem(
+		raidEvent,
+		user.id,
+		boss.name,
+		item.name
 	)
-
-	const filter = (reaction, user) => !user.bot
-	const verifyCollector = message.createReactionCollector(filter, {
-		max: 1,
-		time: 90000,
-		errors: ['time'],
-	})
-	verifyCollector.on('collect', async (reaction, user) => {
-		if (reaction.emoji.name === '1️⃣') {
-			const upsertedCount = await dbService.insertItem(
-				date,
-				user.id,
-				boss.name,
-				item.name
-			)
-			if (upsertedCount === 1) {
-				user.send(`Your item has been reserved. Thank you.`)
-			} else {
-				user.send('Your reserved item has been updated.')
-			}
-		}
-		if (reaction.emoji.name === '2️⃣') {
-			user.send(
-				'Please go back to the channel and start the process over by clicking the reaction for the boss you want.'
-			)
-		}
-	})
-
-	verifyCollector.on('end', (collected, reason) => {
-		if (reason === 'time') {
-			user.send(
-				`**You did not confirm your selected item so no item has been reserved for you.** Please go back to the loot selection message and select the appropriate reaction to select your item. After you select the item, you **must confirm** that this is the item you wish to reserve by reacting to the confirmation message within 90 seconds.`
-			)
-		}
-	})
-
-	message.react('1️⃣').then(() => message.react('2️⃣'))
+	if (upsertedCount === 1) {
+		user.send(
+			`You have reserved **${item.name}** - ${item.wowhead_link}\nIf you wish to change your item reservation you may do so by clicking the appropriate reaction in the raid channel.`
+		)
+	} else {
+		user.send(
+			`Your reserved item has been updated to **${item.name}** - ${item.wowhead_link}.`
+		)
+	}
 }
 
 module.exports = async (reaction, user) => {
-	const raidPlusDate = reaction.message.content.split('\n')[0].replace(/`/g, '')
-	const indexOfFirstDash = raidPlusDate.indexOf('-')
-	const raid = raidPlusDate.split(0, indexOfFirstDash)
-	const date = raidPlusDate.split(indexOfFirstDash + 1)
+	const raidEvent = reaction.message.content.split('\n')[0].replace(/`/g, '')
 	const userReactions = reaction.message.reactions.cache.filter((reaction) =>
 		reaction.users.cache.has(user.id)
 	)
@@ -72,7 +44,7 @@ module.exports = async (reaction, user) => {
 
 	switch (reaction._emoji.name) {
 		case '❔': {
-			const itemRecord = await dbService.retrieveItem(date, user.id)
+			const itemRecord = await dbService.retrieveItem(raidEvent, user.id)
 			if (itemRecord) {
 				user.send(
 					`Your currently reserved item is **${itemRecord.item}**, dropped from **${itemRecord.boss}**. To change your reserved item, return to the channel and click the reaction that corresponds to the boss that drops the item you want.`
@@ -83,7 +55,7 @@ module.exports = async (reaction, user) => {
 			break
 		}
 		case '❌': {
-			const success = await dbService.deleteItem(date, user.id)
+			const success = await dbService.deleteItem(raidEvent, user.id)
 			if (success === 1) {
 				user.send(
 					'Your reserved item has been successfully cleared. You may go back to the channel and use a boss reaction to reserve a new item or you may verify that your item has been cleared by going back to the channel and reacting with ❔.'
@@ -117,7 +89,7 @@ module.exports = async (reaction, user) => {
 				const emoji = reaction.emoji.name
 				const itemIndex = _.findKey(numberReacts, (r) => r === emoji)
 				const item = boss.items[itemIndex]
-				verifyItem(user, boss, item, date)
+				verifyItem(user, boss, item, raidEvent)
 			})
 
 			boss.items.forEach((_, index) => {

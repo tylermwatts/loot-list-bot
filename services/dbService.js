@@ -36,6 +36,16 @@ const retrieveAllCollections = async (db) => {
 	return sanitizedCollectionNames
 }
 
+const retrieveCollectionsByRaid = async (db, raidName) => {
+	const raidRegex = RegExp('^' + raidName)
+	const allCollections = await db.collections()
+	const filteredCollectionNames = allCollections
+		.filter((c) => raidRegex.test(c.collectionName))
+		.map((e) => e.collectionName.replace(/^(\w|\d)+-/, ''))
+		.sort()
+	return filteredCollectionNames
+}
+
 module.exports = {
 	insertItem: async (collectionName, userId, bossName, itemName) => {
 		let modified
@@ -96,6 +106,23 @@ module.exports = {
 		} finally {
 			client.close()
 			return success
+		}
+	},
+	retrieveEventsByRaid: async (raidName) => {
+		const client = new MongoClient(url, { useUnifiedTopology: true })
+		try {
+			client.connect((err) => {
+				assert.equal(null, err)
+				console.log(
+					'Retrieve Events By Raid: Connected successfully to database.'
+				)
+			})
+			const db = client.db(dbName)
+			return await retrieveCollectionsByRaid(db, raidName)
+		} catch (err) {
+			console.log(err)
+		} finally {
+			client.close()
 		}
 	},
 	retrieveAllEvents: async () => {
