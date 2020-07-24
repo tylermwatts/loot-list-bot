@@ -68,7 +68,6 @@
         }
       ]
     },
-
     {
       "name": "Vaelastrasz the Corrupt",
       "reaction": "",
@@ -135,7 +134,6 @@
         }
       ]
     },
-
     {
       "name": "Broodlord Lashlayer",
       "reaction": "",
@@ -206,7 +204,6 @@
         }
       ]
     },
-
     {
       "name": "3 Drakes Shared Loot",
       "reaction": "",
@@ -237,7 +234,6 @@
         }
       ]
     },
-
     {
       "name": "Firemaw",
       "reaction": "",
@@ -312,7 +308,6 @@
         }
       ]
     },
-
     {
       "name": "Ebonroc",
       "reaction": "",
@@ -379,7 +374,6 @@
         }
       ]
     },
-
     {
       "name": "Flamegor",
       "reaction": "",
@@ -444,9 +438,8 @@
           "name": "Circle of Applied Force",
           "wowhead_link": "https://classic.wowhead.com/item=19432"
         }
-     ]
+      ]
     },
-
     {
       "name": "Chromaggus",
       "reaction": "",
@@ -541,7 +534,6 @@
         }
       ]
     },
-
     {
       "name": "Nefarian",
       "reaction": "",
@@ -633,10 +625,9 @@
         {
           "name": "Neltharion's Tear",
           "wowhead_link": "https://classic.wowhead.com/item=19379"
-        },
+        }
       ]
     },
-
     {
       "name": "Trash",
       "reaction": "",
@@ -679,6 +670,5 @@
         }
       ]
     }
-
   ]
 }

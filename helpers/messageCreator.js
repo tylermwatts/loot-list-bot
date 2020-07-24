@@ -6,6 +6,7 @@ const defaultParams = {
 	date: null,
 	event: null,
 	list: null,
+	lootData: null,
 }
 
 module.exports = (command, params = defaultParams) => {
@@ -14,13 +15,27 @@ module.exports = (command, params = defaultParams) => {
 			return `__Available commands__\n\`!zgloot\` - Creates a new ZG loot list\n\`!zgprint\` - Select a loot list to be printed in the channel\n\`!zgwho\` - Sends a list of players who have reserved loot. **Does not show what items are reserved**`
 		}
 		case messageCommands.ZG_LOOT_SELECTION: {
-			const { date } = params
-			const bossString = zgLoot.bosses
+			const { date, lootData } = params
+			const bossString = lootData.bosses
 				.map((boss) => {
 					return `**${boss.name}** - ${boss.reaction}`
 				})
 				.join('\n')
 			return `\`ZG-${date}\`\n__**ZG Loot Selection**__\nThis list is for the ZG raid happening on **${moment(
+				date,
+				'MM-DD-YYYY'
+			).format(
+				'dddd, MMMM Do YYYY'
+			)}**\n\nPlease click the appropriate reaction for the boss that drops the piece you would like to reserve. You will then receive a direct message from the bot to select your item.\n\n${bossString}\n\n**Show me my reserved item** - ❔\n**Clear my reserved item** - ❌`
+		}
+		case messageCommands.MC_LOOT_SELECTION: {
+			const { date, lootData } = params
+			const bossString = lootData.bosses
+				.map((boss) => {
+					return `**${boss.name}** - ${boss.reaction}`
+				})
+				.join('\n')
+			return `\`MC-${date}\`\n__**Molten Core Loot Selection**__\nThis list is for the MC raid happening on **${moment(
 				date,
 				'MM-DD-YYYY'
 			).format(

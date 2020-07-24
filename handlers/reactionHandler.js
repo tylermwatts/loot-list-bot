@@ -1,4 +1,5 @@
 const zgLoot = require('../data/zg.json')
+const mcLoot = require('../data/mc.json')
 const numberReacts = require('../data/numberReacts.json')
 const dbService = require('../services/dbService')
 const _ = require('lodash')
@@ -9,6 +10,17 @@ const itemStringCreator = (boss) =>
 	boss.items
 		.map((item, index) => `${numberReacts[index]}. ${item.name}`)
 		.join('\n')
+
+const getLootList = (raidName) => {
+	switch (raidName) {
+		case 'ZG':
+			return zgLoot
+		case 'MC':
+			return mcLoot
+		default:
+			return
+	}
+}
 
 const verifyItem = async (user, boss, item, raidEvent) => {
 	const upsertedCount = await dbService.insertItem(
@@ -66,7 +78,9 @@ module.exports = async (reaction, user) => {
 			break
 		}
 		default:
-			const boss = zgLoot.bosses.find(
+			const raidName = raidEvent.slice(0, raidEvent.indexOf('-'))
+			const lootList = getLootList(raidName)
+			const boss = lootList.bosses.find(
 				(b) => b.reaction === reaction._emoji.name
 			)
 

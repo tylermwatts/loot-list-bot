@@ -4,7 +4,7 @@
   "bosses": [
     {
       "name": "Class Tokens (Shared)",
-      "reaction": "",
+      "reaction": "©️",
       "items": [
         {
           "name": "Qiraji Ornate Hilt",
@@ -29,11 +29,10 @@
         {
           "name": "Qiraji Magisterial Ring",
           "wowhead_link": "https://classic.wowhead.com/item=20884"
-        },
+        }
       ]
     },
-
-   {
+    {
       "name": "Kurinnaxx",
       "reaction": "",
       "items": [
@@ -63,7 +62,6 @@
         }
       ]
     },
-
     {
       "name": "General Rajaxx",
       "reaction": "",
@@ -94,7 +92,6 @@
         }
       ]
     },
-
     {
       "name": "Moam",
       "reaction": "",
@@ -157,7 +154,6 @@
         }
       ]
     },
-
     {
       "name": "Buru the Gorger",
       "reaction": "",
@@ -188,7 +184,6 @@
         }
       ]
     },
-
     {
       "name": "Ayamiss the Hunter",
       "reaction": "",
@@ -227,7 +222,6 @@
         }
       ]
     },
-
     {
       "name": "Ossirian the Unscarred",
       "reaction": "",
@@ -286,7 +280,6 @@
         }
       ]
     },
-
     {
       "name": "Class books",
       "reaction": "",
@@ -401,6 +394,5 @@
         }
       ]
     }
-
   ]
 }

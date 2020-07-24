@@ -8,6 +8,7 @@ const messageCommands = require('../data/messageCommands')
 const dbService = require('../services/dbService')
 
 const zgLoot = require('../data/zg.json')
+const mcLoot = require('../data/mc.json')
 const numberReacts = require('../data/numberReacts.json')
 
 const returnFormattedDateString = (hyphenatedDate) => {
@@ -68,6 +69,7 @@ const makeNewLootTable = async (message, messageCommand, lootData) => {
 
 				const lootTable = messageCreator(messageCommand, {
 					date: message.content,
+					lootData,
 				})
 
 				channel.send(lootTable).then((sentMessage) => {
@@ -209,18 +211,18 @@ module.exports = async (message) => {
 			await showUsersWithReservedItems(message, 'ZG')
 			break
 		}
-		// case '!mcloot': {
-		// 	await makeNewLootTable(message, messageCommands.MC_LOOT_SELECTION, mcLoot)
-		// 	break
-		// }
-		// case '!mcprint': {
-		// 	await printList(message, 'MC')
-		// 	break
-		// }
-		// case '!mcwho': {
-		// 	await showUsersWithReservedItems(message, 'MC')
-		// 	break
-		// }
+		case '!mcloot': {
+			await makeNewLootTable(message, messageCommands.MC_LOOT_SELECTION, mcLoot)
+			break
+		}
+		case '!mcprint': {
+			await printList(message, 'MC')
+			break
+		}
+		case '!mcwho': {
+			await showUsersWithReservedItems(message, 'MC')
+			break
+		}
 		// case '!aq20loot': {
 		// 	await makeNewLootTable(message, messageCommands.AQ20_LOOT_SELECTION, aq20Loot)
 		// 	break
