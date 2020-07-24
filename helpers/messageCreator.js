@@ -31,7 +31,7 @@ module.exports = (command, params = defaultParams) => {
 			return `Using the MM-DD-YYYY format including leading zeros (ex: 02-28-2020), please enter the date that this raid will take place. You will have 3 minutes to respond. Invalid date formatting will not be accepted. When a valid date is given in the proper format, you will be asked to confirm this date.`
 		}
 		case messageCommands.CREATE_ITEM_LIST: {
-			const { event, list } = params
+			const { longName, event, list } = params
 			const lootListObj = {}
 			list.forEach((r) => {
 				if (!lootListObj.hasOwnProperty(r.boss)) {
@@ -62,7 +62,7 @@ module.exports = (command, params = defaultParams) => {
 				.join('')
 
 			const message =
-				`__**Zul'Gurub Loot List for ${moment(event, 'MM-DD-YYYY').format(
+				`__**${longName} Loot List for ${moment(event, 'MM-DD-YYYY').format(
 					'dddd, MMMM Do YYYY'
 				)}**__\n\n` + itemsByBoss
 
