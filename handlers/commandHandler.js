@@ -255,6 +255,7 @@ module.exports = async (message) => {
 		}
 		case '!bwlwho': {
 			await showUsersWithReservedItems(message, 'BWL')
+			break
 		}
 		case messageCommands.HELP: {
 			const helpMessage = messageCreator(messageCommands.HELP)

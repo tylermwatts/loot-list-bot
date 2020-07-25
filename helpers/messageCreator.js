@@ -14,7 +14,9 @@ const makeLootSelectMessage = (raidName, date, lootData) => {
 			return `**${boss.name}** - ${boss.reaction}`
 		})
 		.join('\n')
-	return `\`${raidName}-${date}\`\n__**ZG Loot Selection**__\nThis list is for the ${raidName} raid happening on **${moment(
+	return `\`${raidName}-${date}\`\n__**${
+		lootData.zone
+	} Loot Selection**__\nThis list is for the ${raidName} raid happening on **${moment(
 		date,
 		'MM-DD-YYYY'
 	).format(
@@ -25,7 +27,7 @@ const makeLootSelectMessage = (raidName, date, lootData) => {
 module.exports = (command, params = defaultParams) => {
 	switch (command) {
 		case messageCommands.HELP: {
-			return `__Available commands__\n\`!zgloot\` - Creates a new ZG loot list\n\`!zgprint\` - Select a loot list to be printed in the channel\n\`!zgwho\` - Sends a list of players who have reserved loot. **Does not show what items are reserved**`
+			return `__Available commands__\n\`!zgloot\` - Creates a new ZG loot list\n\`!mcloot\` - Creates a new MC loot list\n\`!bwlloot\` - Creates a new BWL loot list\n\`!aq20loot\` - Creates a new AQ20 loot list\n\`!zgprint\` - Select a ZG loot list to be printed in the channel\n\`!mcprint\` - Select a MC loot list to be printed in the channel\n\`!bwlprint\` - Select a BWL loot list to be printed in the channel\n\`!aq20print\` - Select a AQ20 loot list to be printed in the channel\n\`!zgwho\` - Sends a list of players who have reserved loot for ZG. **Does not show what items are reserved**\n\`!mcwho\` - Sends a list of players who have reserved loot for MC. **Does not show what items are reserved**\n\`!bwlwho\` - Sends a list of players who have reserved loot for BWL. **Does not show what items are reserved**\n\`!aq20who\` - Sends a list of players who have reserved loot for AQ20. **Does not show what items are reserved**`
 		}
 		case messageCommands.ZG_LOOT_SELECTION: {
 			const { date, lootData } = params
