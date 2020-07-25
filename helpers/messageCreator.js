@@ -1,12 +1,25 @@
 const messageCommands = require('../data/messageCommands')
 const moment = require('moment')
-const zgLoot = require('../data/zg.json')
 
 const defaultParams = {
 	date: null,
 	event: null,
 	list: null,
 	lootData: null,
+}
+
+const makeLootSelectMessage = (raidName, date, lootData) => {
+	const bossString = lootData.bosses
+		.map((boss) => {
+			return `**${boss.name}** - ${boss.reaction}`
+		})
+		.join('\n')
+	return `\`${raidName}-${date}\`\n__**ZG Loot Selection**__\nThis list is for the ${raidName} raid happening on **${moment(
+		date,
+		'MM-DD-YYYY'
+	).format(
+		'dddd, MMMM Do YYYY'
+	)}**\n\nPlease click the appropriate reaction for the boss that drops the piece you would like to reserve. You will then receive a direct message from the bot to select your item.\n\n${bossString}\n\n**Show me my reserved item** - ❔\n**Clear my reserved item** - ❌`
 }
 
 module.exports = (command, params = defaultParams) => {
@@ -16,31 +29,23 @@ module.exports = (command, params = defaultParams) => {
 		}
 		case messageCommands.ZG_LOOT_SELECTION: {
 			const { date, lootData } = params
-			const bossString = lootData.bosses
-				.map((boss) => {
-					return `**${boss.name}** - ${boss.reaction}`
-				})
-				.join('\n')
-			return `\`ZG-${date}\`\n__**ZG Loot Selection**__\nThis list is for the ZG raid happening on **${moment(
-				date,
-				'MM-DD-YYYY'
-			).format(
-				'dddd, MMMM Do YYYY'
-			)}**\n\nPlease click the appropriate reaction for the boss that drops the piece you would like to reserve. You will then receive a direct message from the bot to select your item.\n\n${bossString}\n\n**Show me my reserved item** - ❔\n**Clear my reserved item** - ❌`
+			const lootSelectionMessage = makeLootSelectMessage('ZG', date, lootData)
+			return lootSelectionMessage
 		}
 		case messageCommands.MC_LOOT_SELECTION: {
 			const { date, lootData } = params
-			const bossString = lootData.bosses
-				.map((boss) => {
-					return `**${boss.name}** - ${boss.reaction}`
-				})
-				.join('\n')
-			return `\`MC-${date}\`\n__**Molten Core Loot Selection**__\nThis list is for the MC raid happening on **${moment(
-				date,
-				'MM-DD-YYYY'
-			).format(
-				'dddd, MMMM Do YYYY'
-			)}**\n\nPlease click the appropriate reaction for the boss that drops the piece you would like to reserve. You will then receive a direct message from the bot to select your item.\n\n${bossString}\n\n**Show me my reserved item** - ❔\n**Clear my reserved item** - ❌`
+			const lootSelectionMessage = makeLootSelectMessage('MC', date, lootData)
+			return lootSelectionMessage
+		}
+		case messageCommands.AQ20_LOOT_SELECTION: {
+			const { date, lootData } = params
+			const lootSelectionMessage = makeLootSelectMessage('AQ20', date, lootData)
+			return lootSelectionMessage
+		}
+		case messageCommands.BWL_LOOT_SELECTION: {
+			const { date, lootData } = params
+			const lootSelectionMessage = makeLootSelectMessage('BWL', date, lootData)
+			return lootSelectionMessage
 		}
 		case messageCommands.CREATE_DATE_SELECT: {
 			return `Using the MM-DD-YYYY format including leading zeros (ex: 02-28-2020), please enter the date that this raid will take place. You will have 3 minutes to respond. Invalid date formatting will not be accepted. When a valid date is given in the proper format, you will be asked to confirm this date.`

@@ -11,28 +11,24 @@
           "wowhead_link": "https://classic.wowhead.com/item=16800"
         },
         {
-          "name": "Felheart Gloves",
-          "wowhead_link": "https://classic.wowhead.com/item=16805"
-        },
-        {
           "name": "Cenarion Boots",
           "wowhead_link": "https://classic.wowhead.com/item=16829"
-        },
-        {
-          "name": "Earthfury Boots",
-          "wowhead_link": "https://classic.wowhead.com/item=16837"
-        },
-        {
-          "name": "Gauntlets of Might",
-          "wowhead_link": "https://classic.wowhead.com/item=16863"
         },
         {
           "name": "Choker of Enlightenment",
           "wowhead_link": "https://classic.wowhead.com/item=17109"
         },
         {
-          "name": "Tome of Tranquilizing Shot",
-          "wowhead_link": "https://classic.wowhead.com/item=16665"
+          "name": "Earthfury Boots",
+          "wowhead_link": "https://classic.wowhead.com/item=16837"
+        },
+        {
+          "name": "Felheart Gloves",
+          "wowhead_link": "https://classic.wowhead.com/item=16805"
+        },
+        {
+          "name": "Gauntlets of Might",
+          "wowhead_link": "https://classic.wowhead.com/item=16863"
         }
       ]
     },
@@ -41,52 +37,52 @@
       "reaction": "🐕",
       "items": [
         {
-          "name": "Pants of Prophecy",
-          "wowhead_link": "https://classic.wowhead.com/item=16814"
-        },
-        {
           "name": "Arcanist Leggings",
           "wowhead_link": "https://classic.wowhead.com/item=16796"
-        },
-        {
-          "name": "Felheart Pants",
-          "wowhead_link": "https://classic.wowhead.com/item=16810"
-        },
-        {
-          "name": "Nightslayer Pants",
-          "wowhead_link": "https://classic.wowhead.com/item=16822"
         },
         {
           "name": "Cenarion Leggings",
           "wowhead_link": "https://classic.wowhead.com/item=16835"
         },
         {
-          "name": "Giantstalker's Leggings",
-          "wowhead_link": "https://classic.wowhead.com/item=16847"
-        },
-        {
           "name": "Earthfury Legguards",
           "wowhead_link": "https://classic.wowhead.com/item=16843"
         },
         {
-          "name": "Legplates of Might",
-          "wowhead_link": "https://classic.wowhead.com/item=16867"
+          "name": "Earthshaker",
+          "wowhead_link": "https://classic.wowhead.com/item=17073"
         },
         {
           "name": "Eskhandar's Right Claw",
           "wowhead_link": "https://classic.wowhead.com/item=18203"
         },
         {
+          "name": "Felheart Pants",
+          "wowhead_link": "https://classic.wowhead.com/item=16810"
+        },
+        {
+          "name": "Giantstalker's Leggings",
+          "wowhead_link": "https://classic.wowhead.com/item=16847"
+        },
+        {
+          "name": "Legplates of Might",
+          "wowhead_link": "https://classic.wowhead.com/item=16867"
+        },
+        {
           "name": "Medallion of Steadfast Might",
           "wowhead_link": "https://classic.wowhead.com/item=17065"
         },
         {
-          "name": "Striker's Mark",
-          "wowhead_link": "https://classic.wowhead.com/item=17069"
+          "name": "Nightslayer Pants",
+          "wowhead_link": "https://classic.wowhead.com/item=16822"
         },
         {
-          "name": "Earthshaker",
-          "wowhead_link": "https://classic.wowhead.com/item=17073"
+          "name": "Pants of Prophecy",
+          "wowhead_link": "https://classic.wowhead.com/item=16814"
+        },
+        {
+          "name": "Striker's Mark",
+          "wowhead_link": "https://classic.wowhead.com/item=17069"
         }
       ]
     },
@@ -95,20 +91,20 @@
       "reaction": "🦒",
       "items": [
         {
-          "name": "Gloves of Prophecy",
-          "wowhead_link": "https://classic.wowhead.com/item=16812"
-        },
-        {
-          "name": "Nightslayer Gloves",
-          "wowhead_link": "https://classic.wowhead.com/item=16826"
+          "name": "Earthfury Gauntlets",
+          "wowhead_link": "https://classic.wowhead.com/item=16839"
         },
         {
           "name": "Giantstalker's Boots",
           "wowhead_link": "https://classic.wowhead.com/item=16849"
         },
         {
-          "name": "Earthfury Gauntlets",
-          "wowhead_link": "https://classic.wowhead.com/item=16839"
+          "name": "Gloves of Prophecy",
+          "wowhead_link": "https://classic.wowhead.com/item=16812"
+        },
+        {
+          "name": "Nightslayer Gloves",
+          "wowhead_link": "https://classic.wowhead.com/item=16826"
         },
         {
           "name": "Sabatons of Might",
@@ -121,48 +117,8 @@
       "reaction": "🌋",
       "items": [
         {
-          "name": "Bindings of the Windseeker",
-          "wowhead_link": "https://classic.wowhead.com/item=18564"
-        },
-        {
-          "name": "Circlet of Prophecy",
-          "wowhead_link": "https://classic.wowhead.com/item=16813"
-        },
-        {
           "name": "Arcanist Crown",
           "wowhead_link": "https://classic.wowhead.com/item=16795"
-        },
-        {
-          "name": "Felheart Horns",
-          "wowhead_link": "https://classic.wowhead.com/item=16808"
-        },
-        {
-          "name": "Nightslayer Cover",
-          "wowhead_link": "https://classic.wowhead.com/item=16821"
-        },
-        {
-          "name": "Cenarion Helm",
-          "wowhead_link": "https://classic.wowhead.com/item=16834"
-        },
-        {
-          "name": "Giantstalker's Helmet",
-          "wowhead_link": "https://classic.wowhead.com/item=16846"
-        },
-        {
-          "name": "Earthfury Helmet",
-          "wowhead_link": "https://classic.wowhead.com/item=16842"
-        },
-        {
-          "name": "Helm of Might",
-          "wowhead_link": "https://classic.wowhead.com/item=16866"
-        },
-        {
-          "name": "Drillborer Disk",
-          "wowhead_link": "https://classic.wowhead.com/item=17066"
-        },
-        {
-          "name": "Gutgore Ripper",
-          "wowhead_link": "https://classic.wowhead.com/item=17071"
         },
         {
           "name": "Aurastone Hammer",
@@ -171,6 +127,42 @@
         {
           "name": "Brutality Blade",
           "wowhead_link": "https://classic.wowhead.com/item=18832"
+        },
+        {
+          "name": "Cenarion Helm",
+          "wowhead_link": "https://classic.wowhead.com/item=16834"
+        },
+        {
+          "name": "Circlet of Prophecy",
+          "wowhead_link": "https://classic.wowhead.com/item=16813"
+        },
+        {
+          "name": "Drillborer Disk",
+          "wowhead_link": "https://classic.wowhead.com/item=17066"
+        },
+        {
+          "name": "Earthfury Helmet",
+          "wowhead_link": "https://classic.wowhead.com/item=16842"
+        },
+        {
+          "name": "Felheart Horns",
+          "wowhead_link": "https://classic.wowhead.com/item=16808"
+        },
+        {
+          "name": "Giantstalker's Helmet",
+          "wowhead_link": "https://classic.wowhead.com/item=16846"
+        },
+        {
+          "name": "Gutgore Ripper",
+          "wowhead_link": "https://classic.wowhead.com/item=17071"
+        },
+        {
+          "name": "Helm of Might",
+          "wowhead_link": "https://classic.wowhead.com/item=16866"
+        },
+        {
+          "name": "Nightslayer Cover",
+          "wowhead_link": "https://classic.wowhead.com/item=16821"
         }
       ]
     },
@@ -179,28 +171,28 @@
       "reaction": "💦",
       "items": [
         {
-          "name": "Boots of Prophecy",
-          "wowhead_link": "https://classic.wowhead.com/item=16811"
-        },
-        {
           "name": "Arcanist Gloves",
           "wowhead_link": "https://classic.wowhead.com/item=16801"
         },
         {
-          "name": "Felheart Slippers",
-          "wowhead_link": "https://classic.wowhead.com/item=16803"
-        },
-        {
-          "name": "Nightslayer Boots",
-          "wowhead_link": "https://classic.wowhead.com/item=16824"
+          "name": "Boots of Prophecy",
+          "wowhead_link": "https://classic.wowhead.com/item=16811"
         },
         {
           "name": "Cenarion Gloves",
           "wowhead_link": "https://classic.wowhead.com/item=16831"
         },
         {
+          "name": "Felheart Slippers",
+          "wowhead_link": "https://classic.wowhead.com/item=16803"
+        },
+        {
           "name": "Giantstalker's Gloves",
           "wowhead_link": "https://classic.wowhead.com/item=16852"
+        },
+        {
+          "name": "Nightslayer Boots",
+          "wowhead_link": "https://classic.wowhead.com/item=16824"
         }
       ]
     },
@@ -209,16 +201,8 @@
       "reaction": "💥",
       "items": [
         {
-          "name": "Bindings of the Windseeker",
-          "wowhead_link": "https://classic.wowhead.com/item=18563"
-        },
-        {
           "name": "Arcanist Mantle",
           "wowhead_link": "https://classic.wowhead.com/item=16797"
-        },
-        {
-          "name": "Felheart Shoulder Pads",
-          "wowhead_link": "https://classic.wowhead.com/item=16807"
         },
         {
           "name": "Cenarion Spaulders",
@@ -227,6 +211,10 @@
         {
           "name": "Earthfury Epaulets",
           "wowhead_link": "https://classic.wowhead.com/item=16844"
+        },
+        {
+          "name": "Felheart Shoulder Pads",
+          "wowhead_link": "https://classic.wowhead.com/item=16807"
         },
         {
           "name": "Seal of the Archmagus",
@@ -239,44 +227,44 @@
       "reaction": "🐶",
       "items": [
         {
-          "name": "Robes of Prophecy",
-          "wowhead_link": "https://classic.wowhead.com/item=16815"
-        },
-        {
           "name": "Arcanist Robes",
           "wowhead_link": "https://classic.wowhead.com/item=16798"
         },
         {
-          "name": "Felheart Robes",
-          "wowhead_link": "https://classic.wowhead.com/item=16809"
-        },
-        {
-          "name": "Nightslayer Chestpiece",
-          "wowhead_link": "https://classic.wowhead.com/item=16820"
-        },
-        {
-          "name": "Cenarion Vestments",
-          "wowhead_link": "https://classic.wowhead.com/item=16833"
-        },
-        {
-          "name": "Giantstalker's Breastplate",
-          "wowhead_link": "https://classic.wowhead.com/item=16845"
-        },
-        {
-          "name": "Earthfury Vestments",
-          "wowhead_link": "https://classic.wowhead.com/item=16841"
-        },
-        {
-          "name": "Breastplate of Might",
-          "wowhead_link": "https://classic.wowhead.com/item=16865"
+          "name": "Azuresong Mageblade",
+          "wowhead_link": "https://classic.wowhead.com/item=17103"
         },
         {
           "name": "Blastershot Launcher",
           "wowhead_link": "https://classic.wowhead.com/item=17072"
         },
         {
-          "name": "Azuresong Mageblade",
-          "wowhead_link": "https://classic.wowhead.com/item=17103"
+          "name": "Breastplate of Might",
+          "wowhead_link": "https://classic.wowhead.com/item=16865"
+        },
+        {
+          "name": "Cenarion Vestments",
+          "wowhead_link": "https://classic.wowhead.com/item=16833"
+        },
+        {
+          "name": "Earthfury Vestments",
+          "wowhead_link": "https://classic.wowhead.com/item=16841"
+        },
+        {
+          "name": "Felheart Robes",
+          "wowhead_link": "https://classic.wowhead.com/item=16809"
+        },
+        {
+          "name": "Giantstalker's Breastplate",
+          "wowhead_link": "https://classic.wowhead.com/item=16845"
+        },
+        {
+          "name": "Nightslayer Chestpiece",
+          "wowhead_link": "https://classic.wowhead.com/item=16820"
+        },
+        {
+          "name": "Robes of Prophecy",
+          "wowhead_link": "https://classic.wowhead.com/item=16815"
         },
         {
           "name": "Staff of Dominance",
@@ -289,16 +277,16 @@
       "reaction": "⚕️",
       "items": [
         {
+          "name": "Giantstalker's Epaulets",
+          "wowhead_link": "https://classic.wowhead.com/item=16848"
+        },
+        {
           "name": "Mantle of Prophecy",
           "wowhead_link": "https://classic.wowhead.com/item=16816"
         },
         {
           "name": "Nightslayer Shoulder Pads",
           "wowhead_link": "https://classic.wowhead.com/item=16823"
-        },
-        {
-          "name": "Giantstalker's Epaulets",
-          "wowhead_link": "https://classic.wowhead.com/item=16848"
         },
         {
           "name": "Pauldrons of Might",
@@ -315,12 +303,32 @@
       "reaction": "💂‍♂️",
       "items": [
         {
-          "name": "Fireguard Shoulders",
-          "wowhead_link": "https://classic.wowhead.com/item=19139"
+          "name": "Ancient Petrified Leaf",
+          "wowhead_link": "https://classic.wowhead.com/item=18703"
         },
         {
-          "name": "Wild Growth Spaulders",
-          "wowhead_link": "https://classic.wowhead.com/item=18810"
+          "name": "Cauterizing Band",
+          "wowhead_link": "https://classic.wowhead.com/item=19140"
+        },
+        {
+          "name": "Core Hound Tooth",
+          "wowhead_link": "https://classic.wowhead.com/item=18805"
+        },
+        {
+          "name": "Core Forged Greaves",
+          "wowhead_link": "https://classic.wowhead.com/item=18806"
+        },
+        {
+          "name": "The Eye of Divinity",
+          "wowhead_link": "https://classic.wowhead.com/item=18646"
+        },
+        {
+          "name": "Finkle's Lava Dredger",
+          "wowhead_link": "https://classic.wowhead.com/item=18803"
+        },
+        {
+          "name": "Fireguard Shoulders",
+          "wowhead_link": "https://classic.wowhead.com/item=19139"
         },
         {
           "name": "Fireproof Cloak",
@@ -335,32 +343,12 @@
           "wowhead_link": "https://classic.wowhead.com/item=18809"
         },
         {
+          "name": "Wild Growth Spaulders",
+          "wowhead_link": "https://classic.wowhead.com/item=18810"
+        },
+        {
           "name": "Wristguards of True Flight",
           "wowhead_link": "https://classic.wowhead.com/item=18812"
-        },
-        {
-          "name": "Core Forged Greaves",
-          "wowhead_link": "https://classic.wowhead.com/item=18806"
-        },
-        {
-          "name": "Cauterizing Band",
-          "wowhead_link": "https://classic.wowhead.com/item=19140"
-        },
-        {
-          "name": "Core Hound Tooth",
-          "wowhead_link": "https://classic.wowhead.com/item=18805"
-        },
-        {
-          "name": "Finkle's Lava Dredger",
-          "wowhead_link": "https://classic.wowhead.com/item=18803"
-        },
-        {
-          "name": "Ancient Petrified Leaf",
-          "wowhead_link": "https://classic.wowhead.com/item=18703"
-        },
-        {
-          "name": "The Eye of Divinity",
-          "wowhead_link": "https://classic.wowhead.com/item=18646"
         }
       ]
     },
@@ -369,20 +357,16 @@
       "reaction": "🔨",
       "items": [
         {
-          "name": "Eye of Sulfuras",
-          "wowhead_link": "https://classic.wowhead.com/item=17204"
+          "name": "Band of Accuria",
+          "wowhead_link": "https://classic.wowhead.com/item=17063"
         },
         {
-          "name": "Essence of the Firelord",
-          "wowhead_link": "https://classic.wowhead.com/item=19017"
+          "name": "Band of Sulfuras",
+          "wowhead_link": "https://classic.wowhead.com/item=19138"
         },
         {
-          "name": "Shard of the Flame",
-          "wowhead_link": "https://classic.wowhead.com/item=17082"
-        },
-        {
-          "name": "Crown of Destruction",
-          "wowhead_link": "https://classic.wowhead.com/item=18817"
+          "name": "Bonereaver's Edge",
+          "wowhead_link": "https://classic.wowhead.com/item=17076"
         },
         {
           "name": "Choker of the Fire Lord",
@@ -393,40 +377,44 @@
           "wowhead_link": "https://classic.wowhead.com/item=17102"
         },
         {
+          "name": "Crown of Destruction",
+          "wowhead_link": "https://classic.wowhead.com/item=18817"
+        },
+        {
           "name": "Dragon's Blood Cape",
           "wowhead_link": "https://classic.wowhead.com/item=17107"
-        },
-        {
-          "name": "Onslaught Girdle",
-          "wowhead_link": "https://classic.wowhead.com/item=19137"
-        },
-        {
-          "name": "Band of Accuria",
-          "wowhead_link": "https://classic.wowhead.com/item=17063"
-        },
-        {
-          "name": "Band of Sulfuras",
-          "wowhead_link": "https://classic.wowhead.com/item=19138"
         },
         {
           "name": "Essence of the Pure Flame",
           "wowhead_link": "https://classic.wowhead.com/item=18815"
         },
         {
+          "name": "Essence of the Firelord",
+          "wowhead_link": "https://classic.wowhead.com/item=19017"
+        },
+        {
+          "name": "Eye of Sulfuras",
+          "wowhead_link": "https://classic.wowhead.com/item=17204"
+        },
+        {
           "name": "Malistar's Defender",
           "wowhead_link": "https://classic.wowhead.com/item=17106"
+        },
+        {
+          "name": "Onslaught Girdle",
+          "wowhead_link": "https://classic.wowhead.com/item=19137"
         },
         {
           "name": "Perdition's Blade",
           "wowhead_link": "https://classic.wowhead.com/item=18816"
         },
         {
-          "name": "Spinal Reaper",
-          "wowhead_link": "https://classic.wowhead.com/item=17104"
+          "name": "Shard of the Flame",
+          "wowhead_link": "https://classic.wowhead.com/item=17082"
         },
         {
-          "name": "Bonereaver's Edge",
-          "wowhead_link": "https://classic.wowhead.com/item=17076"
+          "name": "Spinal Reaper",
+          "wowhead_link": "https://classic.wowhead.com/item=17104"
         }
       ]
     },
@@ -435,28 +423,16 @@
       "reaction": "🩳",
       "items": [
         {
-          "name": "Leggings of Transcendence",
-          "wowhead_link": "https://classic.wowhead.com/item=16922"
-        },
-        {
-          "name": "Netherwind Pants",
-          "wowhead_link": "https://classic.wowhead.com/item=16915"
-        },
-        {
-          "name": "Nemesis Leggings",
-          "wowhead_link": "https://classic.wowhead.com/item=16930"
-        },
-        {
           "name": "Bloodfang Pants",
           "wowhead_link": "https://classic.wowhead.com/item=16909"
         },
         {
-          "name": "Stormrage Legguards",
-          "wowhead_link": "https://classic.wowhead.com/item=16901"
-        },
-        {
           "name": "Dragonstalker's Legguards",
           "wowhead_link": "https://classic.wowhead.com/item=16938"
+        },
+        {
+          "name": "Leggings of Transcendence",
+          "wowhead_link": "https://classic.wowhead.com/item=16922"
         },
         {
           "name": "Legplates of Ten Storms",
@@ -465,6 +441,18 @@
         {
           "name": "Legplates of Wrath",
           "wowhead_link": "https://classic.wowhead.com/item=16962"
+        },
+        {
+          "name": "Nemesis Leggings",
+          "wowhead_link": "https://classic.wowhead.com/item=16930"
+        },
+        {
+          "name": "Netherwind Pants",
+          "wowhead_link": "https://classic.wowhead.com/item=16915"
+        },
+        {
+          "name": "Stormrage Legguards",
+          "wowhead_link": "https://classic.wowhead.com/item=16901"
         }
       ]
     },
@@ -473,8 +461,36 @@
       "reaction": "📜",
       "items": [
         {
+          "name": "Formula: Enchant Weapon - Healing Power",
+          "wowhead_link": "https://classic.wowhead.com/item=18260"
+        },
+        {
+          "name": "Formula: Enchant Weapon - Spell Power",
+          "wowhead_link": "https://classic.wowhead.com/item=18259"
+        },
+        {
+          "name": "Pattern: Core Armor Kit",
+          "wowhead_link": "https://classic.wowhead.com/item=18252"
+        },
+        {
+          "name": "Pattern: Core Felcloth Bag",
+          "wowhead_link": "https://classic.wowhead.com/item=21371"
+        },
+        {
+          "name": "Pattern: Flarecore Wraps",
+          "wowhead_link": "https://classic.wowhead.com/item=18265"
+        },
+        {
           "name": "Plans: Elemental Sharpening Stone",
           "wowhead_link": "https://classic.wowhead.com/item=18264"
+        },
+        {
+          "name": "Recipe: Major Rejuvenation Potion",
+          "wowhead_link": "https://classic.wowhead.com/item=18257"
+        },
+        {
+          "name": "Schematic: Biznicks 247x128 Accurascope",
+          "wowhead_link": "https://classic.wowhead.com/item=18290"
         },
         {
           "name": "Schematic: Core Marksman Rifle",
@@ -483,34 +499,6 @@
         {
           "name": "Schematic: Force Reactive Disk",
           "wowhead_link": "https://classic.wowhead.com/item=18291"
-        },
-        {
-          "name": "Schematic: Biznicks 247x128 Accurascope",
-          "wowhead_link": "https://classic.wowhead.com/item=18290"
-        },
-        {
-          "name": "Formula: Enchant Weapon - Spell Power",
-          "wowhead_link": "https://classic.wowhead.com/item=18259"
-        },
-        {
-          "name": "Formula: Enchant Weapon - Healing Power",
-          "wowhead_link": "https://classic.wowhead.com/item=18260"
-        },
-        {
-          "name": "Pattern: Core Armor Kit",
-          "wowhead_link": "https://classic.wowhead.com/item=18252"
-        },
-        {
-          "name": "Pattern: Flarecore Wraps",
-          "wowhead_link": "https://classic.wowhead.com/item=18265"
-        },
-        {
-          "name": "Pattern: Core Felcloth Bag",
-          "wowhead_link": "https://classic.wowhead.com/item=21371"
-        },
-        {
-          "name": "Recipe: Major Rejuvenation Potion",
-          "wowhead_link": "https://classic.wowhead.com/item=18257"
         }
       ]
     },
@@ -519,24 +507,24 @@
       "reaction": "©️",
       "items": [
         {
-          "name": "Helm of the Lifegiver",
-          "wowhead_link": "https://classic.wowhead.com/item=18870"
+          "name": "Aged Core Leather Gloves",
+          "wowhead_link": "https://classic.wowhead.com/item=18823"
         },
         {
-          "name": "Robe of Volatile Power",
-          "wowhead_link": "https://classic.wowhead.com/item=19145"
+          "name": "Crimson Shocker",
+          "wowhead_link": "https://classic.wowhead.com/item=17077"
         },
         {
-          "name": "Wristguards of Stability",
-          "wowhead_link": "https://classic.wowhead.com/item=19146"
+          "name": "Deep Earth Spaulders",
+          "wowhead_link": "https://classic.wowhead.com/item=18829"
         },
         {
-          "name": "Manastorm Leggings",
-          "wowhead_link": "https://classic.wowhead.com/item=18872"
+          "name": "Fire Runed Grimoire",
+          "wowhead_link": "https://classic.wowhead.com/item=19142"
         },
         {
-          "name": "Salamander Scale Pants",
-          "wowhead_link": "https://classic.wowhead.com/item=18875"
+          "name": "Flameguard Gauntlets",
+          "wowhead_link": "https://classic.wowhead.com/item=19143"
         },
         {
           "name": "Flamewaker Legplates",
@@ -547,60 +535,56 @@
           "wowhead_link": "https://classic.wowhead.com/item=18879"
         },
         {
-          "name": "Ring of Spell Power",
-          "wowhead_link": "https://classic.wowhead.com/item=19147"
-        },
-        {
-          "name": "Crimson Shocker",
-          "wowhead_link": "https://classic.wowhead.com/item=17077"
-        },
-        {
-          "name": "Sorcerous Dagger",
-          "wowhead_link": "https://classic.wowhead.com/item=18878"
-        },
-        {
-          "name": "Deep Earth Spaulders",
-          "wowhead_link": "https://classic.wowhead.com/item=18829"
-        },
-        {
-          "name": "Aged Core Leather Gloves",
-          "wowhead_link": "https://classic.wowhead.com/item=18823"
-        },
-        {
-          "name": "Flameguard Gauntlets",
-          "wowhead_link": "https://classic.wowhead.com/item=19143"
-        },
-        {
-          "name": "Mana Igniting Cord",
-          "wowhead_link": "https://classic.wowhead.com/item=19136"
-        },
-        {
-          "name": "Flamewaker Legplates",
-          "wowhead_link": "https://classic.wowhead.com/item=18861"
-        },
-        {
-          "name": "Sabatons of the Flamewalker",
-          "wowhead_link": "https://classic.wowhead.com/item=19144"
+          "name": "Helm of the Lifegiver",
+          "wowhead_link": "https://classic.wowhead.com/item=18870"
         },
         {
           "name": "Magma Tempered Boots",
           "wowhead_link": "https://classic.wowhead.com/item=18824"
         },
         {
+          "name": "Mana Igniting Cord",
+          "wowhead_link": "https://classic.wowhead.com/item=19136"
+        },
+        {
+          "name": "Manastorm Leggings",
+          "wowhead_link": "https://classic.wowhead.com/item=18872"
+        },
+        {
+          "name": "Obsidian Edged Blade",
+          "wowhead_link": "https://classic.wowhead.com/item=18822"
+        },
+        {
           "name": "Quick Strike Ring",
           "wowhead_link": "https://classic.wowhead.com/item=18821"
+        },
+        {
+          "name": "Ring of Spell Power",
+          "wowhead_link": "https://classic.wowhead.com/item=19147"
+        },
+        {
+          "name": "Robe of Volatile Power",
+          "wowhead_link": "https://classic.wowhead.com/item=19145"
+        },
+        {
+          "name": "Sabatons of the Flamewalker",
+          "wowhead_link": "https://classic.wowhead.com/item=19144"
+        },
+        {
+          "name": "Salamander Scale Pants",
+          "wowhead_link": "https://classic.wowhead.com/item=18875"
+        },
+        {
+          "name": "Sorcerous Dagger",
+          "wowhead_link": "https://classic.wowhead.com/item=18878"
         },
         {
           "name": "Talisman of Ephemeral Power",
           "wowhead_link": "https://classic.wowhead.com/item=18820"
         },
         {
-          "name": "Fire Runed Grimoire",
-          "wowhead_link": "https://classic.wowhead.com/item=19142"
-        },
-        {
-          "name": "Obsidian Edged Blade",
-          "wowhead_link": "https://classic.wowhead.com/item=18822"
+          "name": "Wristguards of Stability",
+          "wowhead_link": "https://classic.wowhead.com/item=19146"
         }
       ]
     },
@@ -609,84 +593,68 @@
       "reaction": "🗑️",
       "items": [
         {
-          "name": "Girdle of Prophecy",
-          "wowhead_link": "https://classic.wowhead.com/item=16817"
-        },
-        {
           "name": "Arcanist Belt",
           "wowhead_link": "https://classic.wowhead.com/item=16802"
-        },
-        {
-          "name": "Felheart Belt",
-          "wowhead_link": "https://classic.wowhead.com/item=16806"
-        },
-        {
-          "name": "Nightslayer Belt",
-          "wowhead_link": "https://classic.wowhead.com/item=16827"
-        },
-        {
-          "name": "Cenarion Belt",
-          "wowhead_link": "https://classic.wowhead.com/item=16828"
-        },
-        {
-          "name": "Giantstalker's Belt",
-          "wowhead_link": "https://classic.wowhead.com/item=16851"
-        },
-        {
-          "name": "Earthfury Belt",
-          "wowhead_link": "https://classic.wowhead.com/item=16838"
-        },
-        {
-          "name": "Belt of Might",
-          "wowhead_link": "https://classic.wowhead.com/item=16864"
-        },
-        {
-          "name": "Lava Core",
-          "wowhead_link": "https://classic.wowhead.com/item=17011"
-        },
-        {
-          "name": "Fiery Core",
-          "wowhead_link": "https://classic.wowhead.com/item=17010"
-        },
-        {
-          "name": "Blood of the Mountain",
-          "wowhead_link": "https://classic.wowhead.com/item=11382"
-        },
-        {
-          "name": "Core Leather",
-          "wowhead_link": "https://classic.wowhead.com/item=17012"
-        },
-        {
-          "name": "Vambraces of Prophecy",
-          "wowhead_link": "https://classic.wowhead.com/item=16819"
         },
         {
           "name": "Arcanist Bindings",
           "wowhead_link": "https://classic.wowhead.com/item=16799"
         },
         {
-          "name": "Felheart Bracers",
-          "wowhead_link": "https://classic.wowhead.com/item=16804"
+          "name": "Belt of Might",
+          "wowhead_link": "https://classic.wowhead.com/item=16864"
         },
         {
-          "name": "Nightslayer Bracelets",
-          "wowhead_link": "https://classic.wowhead.com/item=16825"
+          "name": "Bracers of Might",
+          "wowhead_link": "https://classic.wowhead.com/item=16861"
+        },
+        {
+          "name": "Cenarion Belt",
+          "wowhead_link": "https://classic.wowhead.com/item=16828"
         },
         {
           "name": "Cenarion Bracers",
           "wowhead_link": "https://classic.wowhead.com/item=16830"
         },
         {
-          "name": "Giantstalker's Bracers",
-          "wowhead_link": "https://classic.wowhead.com/item=16850"
+          "name": "Earthfury Belt",
+          "wowhead_link": "https://classic.wowhead.com/item=16838"
         },
         {
           "name": "Earthfury Bracers",
           "wowhead_link": "https://classic.wowhead.com/item=16840"
         },
         {
-          "name": "Bracers of Might",
-          "wowhead_link": "https://classic.wowhead.com/item=16861"
+          "name": "Felheart Belt",
+          "wowhead_link": "https://classic.wowhead.com/item=16806"
+        },
+        {
+          "name": "Felheart Bracers",
+          "wowhead_link": "https://classic.wowhead.com/item=16804"
+        },
+        {
+          "name": "Giantstalker's Belt",
+          "wowhead_link": "https://classic.wowhead.com/item=16851"
+        },
+        {
+          "name": "Giantstalker's Bracers",
+          "wowhead_link": "https://classic.wowhead.com/item=16850"
+        },
+        {
+          "name": "Girdle of Prophecy",
+          "wowhead_link": "https://classic.wowhead.com/item=16817"
+        },
+        {
+          "name": "Nightslayer Belt",
+          "wowhead_link": "https://classic.wowhead.com/item=16827"
+        },
+        {
+          "name": "Nightslayer Bracelets",
+          "wowhead_link": "https://classic.wowhead.com/item=16825"
+        },
+        {
+          "name": "Vambraces of Prophecy",
+          "wowhead_link": "https://classic.wowhead.com/item=16819"
         }
       ]
     }

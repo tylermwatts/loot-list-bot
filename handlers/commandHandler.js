@@ -9,6 +9,8 @@ const dbService = require('../services/dbService')
 
 const zgLoot = require('../data/zg.json')
 const mcLoot = require('../data/mc.json')
+const aq20Loot = require('../data/aq20.json')
+const bwlLoot = require('../data/bwl.json')
 const numberReacts = require('../data/numberReacts.json')
 
 const returnFormattedDateString = (hyphenatedDate) => {
@@ -223,29 +225,37 @@ module.exports = async (message) => {
 			await showUsersWithReservedItems(message, 'MC')
 			break
 		}
-		// case '!aq20loot': {
-		// 	await makeNewLootTable(message, messageCommands.AQ20_LOOT_SELECTION, aq20Loot)
-		// 	break
-		// }
-		// case '!aq20print': {
-		// 	await printList(message, 'AQ20')
-		// 	break
-		// }
-		// case '!aq20who': {
-		// 	await showUsersWithReservedItems(message, 'AQ20')
-		// 	break
-		// }
-		// case '!bwlloot': {
-		// 	await makeNewLootTable(message, messageCommands.BWL_LOOT_SELECTION, bwlLoot)
-		// 	break
-		// }
-		// case '!bwlprint': {
-		// 	await printList(message, 'BWL')
-		// 	break
-		// }
-		// case '!bwlwho': {
-		// 	await showUsersWithReservedItems(message, 'BWL')
-		// }
+		case '!aq20loot': {
+			await makeNewLootTable(
+				message,
+				messageCommands.AQ20_LOOT_SELECTION,
+				aq20Loot
+			)
+			break
+		}
+		case '!aq20print': {
+			await printList(message, 'AQ20')
+			break
+		}
+		case '!aq20who': {
+			await showUsersWithReservedItems(message, 'AQ20')
+			break
+		}
+		case '!bwlloot': {
+			await makeNewLootTable(
+				message,
+				messageCommands.BWL_LOOT_SELECTION,
+				bwlLoot
+			)
+			break
+		}
+		case '!bwlprint': {
+			await printList(message, 'BWL')
+			break
+		}
+		case '!bwlwho': {
+			await showUsersWithReservedItems(message, 'BWL')
+		}
 		case messageCommands.HELP: {
 			const helpMessage = messageCreator(messageCommands.HELP)
 			message.author.send(helpMessage)

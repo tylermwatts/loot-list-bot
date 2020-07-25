@@ -1,5 +1,7 @@
 const zgLoot = require('../data/zg.json')
 const mcLoot = require('../data/mc.json')
+const aq20loot = require('../data/aq20.json')
+const bwlLoot = require('../data/bwl.json')
 const numberReacts = require('../data/numberReacts.json')
 const dbService = require('../services/dbService')
 const _ = require('lodash')
@@ -17,6 +19,10 @@ const getLootList = (raidName) => {
 			return zgLoot
 		case 'MC':
 			return mcLoot
+		case 'AQ20':
+			return aq20loot
+		case 'BWL':
+			return bwlLoot
 		default:
 			return
 	}
