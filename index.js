@@ -36,10 +36,8 @@ bot.once('ready', () => {
 })
 
 bot.on('message', async (message) => {
-	if (
-		message.channel.id === process.env.OPERATING_CHANNEL &&
-		message.member.roles.cache.has(process.env.OFFICER_ROLE)
-	) {
+	if (message.author.bot || message.channel.type === 'dm') return
+	if (message.member.roles.cache.has(process.env.OFFICER_ROLE)) {
 		if (!message.content.startsWith('!') || message.author.bot) return
 		await commandHandler(message)
 	}
@@ -47,7 +45,7 @@ bot.on('message', async (message) => {
 
 bot.on('messageReactionAdd', async (reaction, user) => {
 	if (user.bot) return
-	const datePattern = /^`\d\d-\d\d-\d\d\d\d`/
+	const startPattern = /^`(\w|\d)+-\d\d-\d\d-\d\d\d\d`/
 	if (reaction.partial) {
 		try {
 			await reaction.fetch()
@@ -55,12 +53,12 @@ bot.on('messageReactionAdd', async (reaction, user) => {
 			console.log('Could not fetch: ', err)
 			return
 		}
-		if (datePattern.test(reaction.message.content)) {
+		if (startPattern.test(reaction.message.content)) {
 			await reactionHandler(reaction, user)
 			reaction.users.remove(user.id)
 		}
 	} else {
-		if (datePattern.test(reaction.message.content)) {
+		if (startPattern.test(reaction.message.content)) {
 			await reactionHandler(reaction, user)
 			reaction.users.remove(user.id)
 		}

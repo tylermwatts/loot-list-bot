@@ -4,24 +4,8 @@
   "bosses": [
     {
       "name": "Class Tokens (Shared)",
-      "reaction": "",
+      "reaction": "©️",
       "items": [
-        {
-          "name": "Qiraji Ornate Hilt",
-          "wowhead_link": "https://classic.wowhead.com/item=20890"
-        },
-        {
-          "name": "Qiraji Spiked Hilt",
-          "wowhead_link": "https://classic.wowhead.com/item=20886"
-        },
-        {
-          "name": "Qiraji Martial Drape",
-          "wowhead_link": "https://classic.wowhead.com/item=20885"
-        },
-        {
-          "name": "Qiraji Regal Drape",
-          "wowhead_link": "https://classic.wowhead.com/item=20889"
-        },
         {
           "name": "Qiraji Ceremonial Ring",
           "wowhead_link": "https://classic.wowhead.com/item=20888"
@@ -30,16 +14,35 @@
           "name": "Qiraji Magisterial Ring",
           "wowhead_link": "https://classic.wowhead.com/item=20884"
         },
+        {
+          "name": "Qiraji Martial Drape",
+          "wowhead_link": "https://classic.wowhead.com/item=20885"
+        },
+        {
+          "name": "Qiraji Ornate Hilt",
+          "wowhead_link": "https://classic.wowhead.com/item=20890"
+        },
+        {
+          "name": "Qiraji Regal Drape",
+          "wowhead_link": "https://classic.wowhead.com/item=20889"
+        },
+        {
+          "name": "Qiraji Spiked Hilt",
+          "wowhead_link": "https://classic.wowhead.com/item=20886"
+        }
       ]
     },
-
-   {
+    {
       "name": "Kurinnaxx",
-      "reaction": "",
+      "reaction": "🐛",
       "items": [
         {
-          "name": "Vestments of the Shifting Sands",
-          "wowhead_link": "https://classic.wowhead.com/item=21499"
+          "name": "Belt of the Inquisition",
+          "wowhead_link": "https://classic.wowhead.com/item=21500"
+        },
+        {
+          "name": "Belt of the Sand Reaver",
+          "wowhead_link": "https://classic.wowhead.com/item=21503"
         },
         {
           "name": "Qiraji Sacrificial Dagger",
@@ -54,75 +57,45 @@
           "wowhead_link": "https://classic.wowhead.com/item=21501"
         },
         {
-          "name": "Belt of the Inquisition",
-          "wowhead_link": "https://classic.wowhead.com/item=21500"
-        },
-        {
-          "name": "Belt of the Sand Reaver",
-          "wowhead_link": "https://classic.wowhead.com/item=21503"
+          "name": "Vestments of the Shifting Sands",
+          "wowhead_link": "https://classic.wowhead.com/item=21499"
         }
       ]
     },
-
     {
       "name": "General Rajaxx",
-      "reaction": "",
+      "reaction": "🦞",
       "items": [
+        {
+          "name": "Boots of the Qiraji General",
+          "wowhead_link": "https://classic.wowhead.com/item=21497"
+        },
         {
           "name": "Boots of the Vanguard",
           "wowhead_link": "https://classic.wowhead.com/item=21493"
-        },
-        {
-          "name": "Manslayer of the Qiraji",
-          "wowhead_link": "https://classic.wowhead.com/item=21492"
         },
         {
           "name": "Bracers of Qiraji Command",
           "wowhead_link": "https://classic.wowhead.com/item=21496"
         },
         {
-          "name": "Southwind's Grasp",
-          "wowhead_link": "https://classic.wowhead.com/item=21494"
-        },
-        {
           "name": "Legplates of the Qiraji Command",
           "wowhead_link": "https://classic.wowhead.com/item=21495"
         },
         {
-          "name": "Boots of the Qiraji General",
-          "wowhead_link": "https://classic.wowhead.com/item=21497"
+          "name": "Manslayer of the Qiraji",
+          "wowhead_link": "https://classic.wowhead.com/item=21492"
+        },
+        {
+          "name": "Southwind's Grasp",
+          "wowhead_link": "https://classic.wowhead.com/item=21494"
         }
       ]
     },
-
     {
       "name": "Moam",
-      "reaction": "",
+      "reaction": "🦅",
       "items": [
-        {
-          "name": "Dustwind Turban",
-          "wowhead_link": "https://classic.wowhead.com/item=21472"
-        },
-        {
-          "name": "Thick Silithid Chestguard",
-          "wowhead_link": "https://classic.wowhead.com/item=21467"
-        },
-        {
-          "name": "Gauntlets of the Immovable",
-          "wowhead_link": "https://classic.wowhead.com/item=21479"
-        },
-        {
-          "name": "Talon of Furious Concentration",
-          "wowhead_link": "https://classic.wowhead.com/item=21471"
-        },
-        {
-          "name": "Southwind Helm",
-          "wowhead_link": "https://classic.wowhead.com/item=21455"
-        },
-        {
-          "name": "Mantle of Maz'Nadir",
-          "wowhead_link": "https://classic.wowhead.com/item=21468"
-        },
         {
           "name": "Chitinous Shoulderguards",
           "wowhead_link": "https://classic.wowhead.com/item=21474"
@@ -132,113 +105,166 @@
           "wowhead_link": "https://classic.wowhead.com/item=21470"
         },
         {
-          "name": "Gauntlets of Southwind",
-          "wowhead_link": "https://classic.wowhead.com/item=21469"
-        },
-        {
-          "name": "Obsidian Scaled Leggings",
-          "wowhead_link": "https://classic.wowhead.com/item=21476"
-        },
-        {
-          "name": "Legplates of the Destroyer",
-          "wowhead_link": "https://classic.wowhead.com/item=21475"
-        },
-        {
-          "name": "Ring of Fury",
-          "wowhead_link": "https://classic.wowhead.com/item=21477"
+          "name": "Dustwind Turban",
+          "wowhead_link": "https://classic.wowhead.com/item=21472"
         },
         {
           "name": "Eye of Moam",
           "wowhead_link": "https://classic.wowhead.com/item=21473"
         },
         {
+          "name": "Gauntlets of Southwind",
+          "wowhead_link": "https://classic.wowhead.com/item=21469"
+        },
+        {
+          "name": "Gauntlets of the Immovable",
+          "wowhead_link": "https://classic.wowhead.com/item=21479"
+        },
+        {
+          "name": "Legplates of the Destroyer",
+          "wowhead_link": "https://classic.wowhead.com/item=21475"
+        },
+        {
+          "name": "Mantle of Maz'Nadir",
+          "wowhead_link": "https://classic.wowhead.com/item=21468"
+        },
+        {
+          "name": "Obsidian Scaled Leggings",
+          "wowhead_link": "https://classic.wowhead.com/item=21476"
+        },
+        {
           "name": "Plans: Black Grasp of the Destroyer",
           "wowhead_link": "https://classic.wowhead.com/item=22220"
+        },
+        {
+          "name": "Ring of Fury",
+          "wowhead_link": "https://classic.wowhead.com/item=21477"
+        },
+        {
+          "name": "Southwind Helm",
+          "wowhead_link": "https://classic.wowhead.com/item=21455"
+        },
+        {
+          "name": "Talon of Furious Concentration",
+          "wowhead_link": "https://classic.wowhead.com/item=21471"
+        },
+        {
+          "name": "Thick Silithid Chestguard",
+          "wowhead_link": "https://classic.wowhead.com/item=21467"
         }
       ]
     },
-
     {
       "name": "Buru the Gorger",
-      "reaction": "",
+      "reaction": "🦂",
       "items": [
-        {
-          "name": "Slimy Scaled Gauntlets",
-          "wowhead_link": "https://classic.wowhead.com/item=21487,"
-        },
         {
           "name": "Buru's Skull Fragment",
           "wowhead_link": "https://classic.wowhead.com/item=21485"
         },
         {
-          "name": "Scaled Bracers of the Gorger",
-          "wowhead_link": "https://classic.wowhead.com/item=21491"
+          "name": "Fetish of Chitinous Spikes",
+          "wowhead_link": "https://classic.wowhead.com/item=21488"
         },
         {
           "name": "Quicksand Waders",
           "wowhead_link": "https://classic.wowhead.com/item=21489"
         },
         {
+          "name": "Scaled Bracers of the Gorger",
+          "wowhead_link": "https://classic.wowhead.com/item=21491"
+        },
+        {
           "name": "Slime Kickers",
           "wowhead_link": "https://classic.wowhead.com/item=21490"
         },
         {
-          "name": "Fetish of Chitinous Spikes",
-          "wowhead_link": "https://classic.wowhead.com/item=21488"
+          "name": "Slimy Scaled Gauntlets",
+          "wowhead_link": "https://classic.wowhead.com/item=21487,"
         }
       ]
     },
-
     {
       "name": "Ayamiss the Hunter",
-      "reaction": "",
+      "reaction": "🐞",
       "items": [
         {
-          "name": "Gauntlets of the Immovable",
-          "wowhead_link": "https://classic.wowhead.com/item=21479"
-        },
-        {
-          "name": "Bow of Taut Sinew",
-          "wowhead_link": "https://classic.wowhead.com/item=21478"
-        },
-        {
-          "name": "Stinger of Ayamiss",
-          "wowhead_link": "https://classic.wowhead.com/item=21466"
-        },
-        {
-          "name": "Helm of Regrowth",
-          "wowhead_link": "https://classic.wowhead.com/item=21484"
-        },
-        {
-          "name": "Scaled Silithid Gauntlets",
-          "wowhead_link": "https://classic.wowhead.com/item=21480"
+          "name": "Boots of the Desert Protector",
+          "wowhead_link": "https://classic.wowhead.com/item=21481"
         },
         {
           "name": "Boots of the Fiery Sands",
           "wowhead_link": "https://classic.wowhead.com/item=21482"
         },
         {
-          "name": "Boots of the Desert Protector",
-          "wowhead_link": "https://classic.wowhead.com/item=21481"
+          "name": "Bow of Taut Sinew",
+          "wowhead_link": "https://classic.wowhead.com/item=21478"
+        },
+        {
+          "name": "Gauntlets of the Immovable",
+          "wowhead_link": "https://classic.wowhead.com/item=21479"
+        },
+        {
+          "name": "Helm of Regrowth",
+          "wowhead_link": "https://classic.wowhead.com/item=21484"
         },
         {
           "name": "Ring of the Desert Winds",
           "wowhead_link": "https://classic.wowhead.com/item=21483"
+        },
+        {
+          "name": "Scaled Silithid Gauntlets",
+          "wowhead_link": "https://classic.wowhead.com/item=21480"
+        },
+        {
+          "name": "Stinger of Ayamiss",
+          "wowhead_link": "https://classic.wowhead.com/item=21466"
         }
       ]
     },
-
     {
       "name": "Ossirian the Unscarred",
-      "reaction": "",
+      "reaction": "🐧",
       "items": [
+        {
+          "name": "Bracers of Brutality",
+          "wowhead_link": "https://classic.wowhead.com/item=21457"
+        },
+        {
+          "name": "Crossbow of Imminent Doom",
+          "wowhead_link": "https://classic.wowhead.com/item=21459"
+        },
+        {
+          "name": "Gauntlets of New Life",
+          "wowhead_link": "https://classic.wowhead.com/item=21458"
+        },
+        {
+          "name": "Gloves of Dark Wisdom",
+          "wowhead_link": "https://classic.wowhead.com/item=21462"
+        },
+        {
+          "name": "Head of Ossirian the Unscarred",
+          "wowhead_link": "https://classic.wowhead.com/item=21220"
+        },
         {
           "name": "Helm of Domination",
           "wowhead_link": "https://classic.wowhead.com/item=21460"
         },
         {
+          "name": "Leggings of the Black Blizzard",
+          "wowhead_link": "https://classic.wowhead.com/item=21461"
+        },
+        {
+          "name": "Ossirian's Binding",
+          "wowhead_link": "https://classic.wowhead.com/item=21463"
+        },
+        {
           "name": "Runic Stone Shoulders",
           "wowhead_link": "https://classic.wowhead.com/item=21454,"
+        },
+        {
+          "name": "Sand Polished Hammer",
+          "wowhead_link": "https://classic.wowhead.com/item=21715"
         },
         {
           "name": "Sandstorm Cloak",
@@ -249,84 +275,15 @@
           "wowhead_link": "https://classic.wowhead.com/item=21464"
         },
         {
-          "name": "Bracers of Brutality",
-          "wowhead_link": "https://classic.wowhead.com/item=21457"
-        },
-        {
-          "name": "Gloves of Dark Wisdom",
-          "wowhead_link": "https://classic.wowhead.com/item=21462"
-        },
-        {
-          "name": "Gauntlets of New Life",
-          "wowhead_link": "https://classic.wowhead.com/item=21458"
-        },
-        {
-          "name": "Ossirian's Binding",
-          "wowhead_link": "https://classic.wowhead.com/item=21463"
-        },
-        {
-          "name": "Leggings of the Black Blizzard",
-          "wowhead_link": "https://classic.wowhead.com/item=21461"
-        },
-        {
-          "name": "Crossbow of Imminent Doom",
-          "wowhead_link": "https://classic.wowhead.com/item=21459"
-        },
-        {
-          "name": "Sand Polished Hammer",
-          "wowhead_link": "https://classic.wowhead.com/item=21715"
-        },
-        {
           "name": "Staff of the Ruins",
           "wowhead_link": "https://classic.wowhead.com/item=21452"
-        },
-        {
-          "name": "Head of Ossirian the Unscarred",
-          "wowhead_link": "https://classic.wowhead.com/item=21220"
         }
       ]
     },
-
     {
-      "name": "Class books",
-      "reaction": "",
+      "name": "Class books (Warrior, Hunter, Shaman, Druid, Rogue)",
+      "reaction": "📚",
       "items": [
-        {
-          "name": "Codex of Greater Heal V",
-          "wowhead_link": "https://classic.wowhead.com/item=21284"
-        },
-        {
-          "name": "Codex of Prayer of Healing V",
-          "wowhead_link": "https://classic.wowhead.com/item=21287"
-        },
-        {
-          "name": "Codex of Renew X",
-          "wowhead_link": "https://classic.wowhead.com/item=21285"
-        },
-        {
-          "name": "Tome of Fireball XII",
-          "wowhead_link": "https://classic.wowhead.com/item=21279"
-        },
-        {
-          "name": "Tome of Frostbolt XI",
-          "wowhead_link": "https://classic.wowhead.com/item=21214"
-        },
-        {
-          "name": "Tome of Arcane Missiles VIII",
-          "wowhead_link": "https://classic.wowhead.com/item=21280"
-        },
-        {
-          "name": "Grimoire of Shadow Bolt X",
-          "wowhead_link": "https://classic.wowhead.com/item=21281"
-        },
-        {
-          "name": "Grimoire of Corruption VII",
-          "wowhead_link": "https://classic.wowhead.com/item=21283"
-        },
-        {
-          "name": "Grimoire of Immolate VIII",
-          "wowhead_link": "https://classic.wowhead.com/item=21282"
-        },
         {
           "name": "Handbook of Backstab IX",
           "wowhead_link": "https://classic.wowhead.com/item=21300"
@@ -376,18 +333,6 @@
           "wowhead_link": "https://classic.wowhead.com/item=21293"
         },
         {
-          "name": "Libram: Blessing of Wisdom VI",
-          "wowhead_link": "https://classic.wowhead.com/item=21288"
-        },
-        {
-          "name": "Libram: Blessing of Might VII",
-          "wowhead_link": "https://classic.wowhead.com/item=21289"
-        },
-        {
-          "name": "Libram: Holy Light IX",
-          "wowhead_link": "https://classic.wowhead.com/item=21290"
-        },
-        {
           "name": "Manual of Battle Shout VII",
           "wowhead_link": "https://classic.wowhead.com/item=21298"
         },
@@ -400,7 +345,48 @@
           "wowhead_link": "https://classic.wowhead.com/item=21297"
         }
       ]
+    },
+    {
+      "name": "Class Books (Mage, Priest, Warlock)",
+      "reaction": "📖",
+      "items": [
+        {
+          "name": "Codex of Greater Heal V",
+          "wowhead_link": "https://classic.wowhead.com/item=21284"
+        },
+        {
+          "name": "Codex of Prayer of Healing V",
+          "wowhead_link": "https://classic.wowhead.com/item=21287"
+        },
+        {
+          "name": "Codex of Renew X",
+          "wowhead_link": "https://classic.wowhead.com/item=21285"
+        },
+        {
+          "name": "Tome of Fireball XII",
+          "wowhead_link": "https://classic.wowhead.com/item=21279"
+        },
+        {
+          "name": "Tome of Frostbolt XI",
+          "wowhead_link": "https://classic.wowhead.com/item=21214"
+        },
+        {
+          "name": "Tome of Arcane Missiles VIII",
+          "wowhead_link": "https://classic.wowhead.com/item=21280"
+        },
+        {
+          "name": "Grimoire of Shadow Bolt X",
+          "wowhead_link": "https://classic.wowhead.com/item=21281"
+        },
+        {
+          "name": "Grimoire of Corruption VII",
+          "wowhead_link": "https://classic.wowhead.com/item=21283"
+        },
+        {
+          "name": "Grimoire of Immolate VIII",
+          "wowhead_link": "https://classic.wowhead.com/item=21282"
+        }
+      ]
     }
-
   ]
 }

@@ -4,63 +4,59 @@
   "bosses": [
     {
       "name": "Razorgore the Untamed",
-      "reaction": "",
+      "reaction": "🪒",
       "items": [
-        {
-          "name": "Bindings of Transcendence",
-          "wowhead_link": "https://classic.wowhead.com/item=16926"
-        },
-        {
-          "name": "Netherwind Bindings",
-          "wowhead_link": "https://classic.wowhead.com/item=16918"
-        },
-        {
-          "name": "Nemesis Bracers",
-          "wowhead_link": "https://classic.wowhead.com/item=16934"
-        },
-        {
-          "name": "Bloodfang Bracers",
-          "wowhead_link": "https://classic.wowhead.com/item=16911"
-        },
-        {
-          "name": "Stormrage Bracers",
-          "wowhead_link": "https://classic.wowhead.com/item=16904"
-        },
-        {
-          "name": "Dragonstalker's Bracers",
-          "wowhead_link": "https://classic.wowhead.com/item=16935"
-        },
-        {
-          "name": "Bracers of Ten Storms",
-          "wowhead_link": "https://classic.wowhead.com/item=16943"
-        },
-        {
-          "name": "Judgement Bindings",
-          "wowhead_link": "https://classic.wowhead.com/item=16951"
-        },
-        {
-          "name": "Bracelets of Wrath",
-          "wowhead_link": "https://classic.wowhead.com/item=16959"
-        },
         {
           "name": "Arcane Infused Gem",
           "wowhead_link": "https://classic.wowhead.com/item=19336"
+        },
+        {
+          "name": "Bindings of Transcendence",
+          "wowhead_link": "https://classic.wowhead.com/item=16926"
         },
         {
           "name": "The Black Book",
           "wowhead_link": "https://classic.wowhead.com/item=19337"
         },
         {
-          "name": "Mantle of the Blackwing Cabal",
-          "wowhead_link": "https://classic.wowhead.com/item=19370"
+          "name": "Bloodfang Bracers",
+          "wowhead_link": "https://classic.wowhead.com/item=16911"
+        },
+        {
+          "name": "Bracelets of Wrath",
+          "wowhead_link": "https://classic.wowhead.com/item=16959"
+        },
+        {
+          "name": "Bracers of Ten Storms",
+          "wowhead_link": "https://classic.wowhead.com/item=16943"
+        },
+        {
+          "name": "Dragonstalker's Bracers",
+          "wowhead_link": "https://classic.wowhead.com/item=16935"
         },
         {
           "name": "Gloves of Rapid Evolution",
           "wowhead_link": "https://classic.wowhead.com/item=19369"
         },
         {
+          "name": "Mantle of the Blackwing Cabal",
+          "wowhead_link": "https://classic.wowhead.com/item=19370"
+        },
+        {
+          "name": "Nemesis Bracers",
+          "wowhead_link": "https://classic.wowhead.com/item=16934"
+        },
+        {
+          "name": "Netherwind Bindings",
+          "wowhead_link": "https://classic.wowhead.com/item=16918"
+        },
+        {
           "name": "Spineshatter",
           "wowhead_link": "https://classic.wowhead.com/item=19335"
+        },
+        {
+          "name": "Stormrage Bracers",
+          "wowhead_link": "https://classic.wowhead.com/item=16904"
         },
         {
           "name": "The Untamed Blade",
@@ -68,58 +64,45 @@
         }
       ]
     },
-
     {
       "name": "Vaelastrasz the Corrupt",
-      "reaction": "",
+      "reaction": "🐲",
       "items": [
+        {
+          "name": "Belt of Ten Storms",
+          "wowhead_link": "https://classic.wowhead.com/item=16944"
+        },
         {
           "name": "Belt of Transcendence",
           "wowhead_link": "https://classic.wowhead.com/item=16925"
-        },
-        {
-          "name": "Netherwind Belt",
-          "wowhead_link": "https://classic.wowhead.com/item=16818"
-        },
-        {
-          "name": "Nemesis Belt",
-          "wowhead_link": "https://classic.wowhead.com/item=16933"
         },
         {
           "name": "Bloodfang Belt",
           "wowhead_link": "https://classic.wowhead.com/item=16910"
         },
         {
-          "name": "Stormrage Belt",
-          "wowhead_link": "https://classic.wowhead.com/item=16903"
+          "name": "Dragonfang Blade",
+          "wowhead_link": "https://classic.wowhead.com/item=19346"
         },
         {
           "name": "Dragonstalker's Belt",
           "wowhead_link": "https://classic.wowhead.com/item=16936"
         },
         {
-          "name": "Belt of Ten Storms",
-          "wowhead_link": "https://classic.wowhead.com/item=16944"
-        },
-        {
-          "name": "Judgement Belt",
-          "wowhead_link": "https://classic.wowhead.com/item=16952"
-        },
-        {
-          "name": "Waistband of Wrath",
-          "wowhead_link": "https://classic.wowhead.com/item=16960"
+          "name": "Helm of Endless Rage",
+          "wowhead_link": "https://classic.wowhead.com/item=19372"
         },
         {
           "name": "Mind Quickening Gem",
           "wowhead_link": "https://classic.wowhead.com/item=19339"
         },
         {
-          "name": "Rune of Metamorphosis",
-          "wowhead_link": "https://classic.wowhead.com/item=19340"
+          "name": "Nemesis Belt",
+          "wowhead_link": "https://classic.wowhead.com/item=16933"
         },
         {
-          "name": "Helm of Endless Rage",
-          "wowhead_link": "https://classic.wowhead.com/item=19372"
+          "name": "Netherwind Belt",
+          "wowhead_link": "https://classic.wowhead.com/item=16818"
         },
         {
           "name": "Pendant of the Fallen Dragon",
@@ -130,35 +113,38 @@
           "wowhead_link": "https://classic.wowhead.com/item=19348"
         },
         {
-          "name": "Dragonfang Blade",
-          "wowhead_link": "https://classic.wowhead.com/item=19346"
+          "name": "Rune of Metamorphosis",
+          "wowhead_link": "https://classic.wowhead.com/item=19340"
+        },
+        {
+          "name": "Stormrage Belt",
+          "wowhead_link": "https://classic.wowhead.com/item=16903"
+        },
+        {
+          "name": "Waistband of Wrath",
+          "wowhead_link": "https://classic.wowhead.com/item=16960"
         }
       ]
     },
-
     {
       "name": "Broodlord Lashlayer",
-      "reaction": "",
+      "reaction": "🎯",
       "items": [
         {
-          "name": "Boots of Transcendence",
-          "wowhead_link": "https://classic.wowhead.com/item=16919"
-        },
-        {
-          "name": "Netherwind Boots",
-          "wowhead_link": "https://classic.wowhead.com/item=16912"
-        },
-        {
-          "name": "Nemesis Boots",
-          "wowhead_link": "https://classic.wowhead.com/item=16927"
+          "name": "Black Brood Pauldrons",
+          "wowhead_link": "https://classic.wowhead.com/item=19373"
         },
         {
           "name": "Bloodfang Boots",
           "wowhead_link": "https://classic.wowhead.com/item=16906"
         },
         {
-          "name": "Stormrage Boots",
-          "wowhead_link": "https://classic.wowhead.com/item=16898"
+          "name": "Boots of Transcendence",
+          "wowhead_link": "https://classic.wowhead.com/item=16919"
+        },
+        {
+          "name": "Bracers of Arcane Accuracy",
+          "wowhead_link": "https://classic.wowhead.com/item=19374"
         },
         {
           "name": "Dragonstalker's Greaves",
@@ -169,193 +155,158 @@
           "wowhead_link": "https://classic.wowhead.com/item=16949"
         },
         {
-          "name": "Judgement Sabatons",
-          "wowhead_link": "https://classic.wowhead.com/item=16957"
-        },
-        {
-          "name": "Sabatons of Wrath",
-          "wowhead_link": "https://classic.wowhead.com/item=16965"
-        },
-        {
-          "name": "Lifegiving Gem",
-          "wowhead_link": "https://classic.wowhead.com/item=19341"
-        },
-        {
-          "name": "Venomous Totem",
-          "wowhead_link": "https://classic.wowhead.com/item=19342"
-        },
-        {
-          "name": "Black Brood Pauldrons",
-          "wowhead_link": "https://classic.wowhead.com/item=19373"
-        },
-        {
-          "name": "Bracers of Arcane Accuracy",
-          "wowhead_link": "https://classic.wowhead.com/item=19374"
+          "name": "Head of the Broodlord Lashlayer",
+          "wowhead_link": "https://classic.wowhead.com/item=20383"
         },
         {
           "name": "Heartstriker",
           "wowhead_link": "https://classic.wowhead.com/item=19350"
         },
         {
+          "name": "Lifegiving Gem",
+          "wowhead_link": "https://classic.wowhead.com/item=19341"
+        },
+        {
           "name": "Maladath, Runed Blade of the Black Flight",
           "wowhead_link": "https://classic.wowhead.com/item=19351"
         },
         {
-          "name": "Head of the Broodlord Lashlayer",
-          "wowhead_link": "https://classic.wowhead.com/item=20383"
+          "name": "Nemesis Boots",
+          "wowhead_link": "https://classic.wowhead.com/item=16927"
+        },
+        {
+          "name": "Netherwind Boots",
+          "wowhead_link": "https://classic.wowhead.com/item=16912"
+        },
+        {
+          "name": "Sabatons of Wrath",
+          "wowhead_link": "https://classic.wowhead.com/item=16965"
+        },
+        {
+          "name": "Stormrage Boots",
+          "wowhead_link": "https://classic.wowhead.com/item=16898"
+        },
+        {
+          "name": "Venomous Totem",
+          "wowhead_link": "https://classic.wowhead.com/item=19342"
         }
       ]
     },
-
     {
       "name": "3 Drakes Shared Loot",
-      "reaction": "",
+      "reaction": "3️⃣",
       "items": [
         {
-          "name": "Taut Dragonhide Belt",
-          "wowhead_link": "https://classic.wowhead.com/item=19396"
+          "name": "Drake Talon Cleaver",
+          "wowhead_link": "https://classic.wowhead.com/item=19353"
         },
         {
           "name": "Drake Talon Pauldrons",
           "wowhead_link": "https://classic.wowhead.com/item=19394"
         },
         {
-          "name": "Drake Talon Cleaver",
-          "wowhead_link": "https://classic.wowhead.com/item=19353"
-        },
-        {
-          "name": "Shadow Wing Focus Staff",
-          "wowhead_link": "https://classic.wowhead.com/item=19355"
+          "name": "Rejuvenating Gem",
+          "wowhead_link": "https://classic.wowhead.com/item=19395"
         },
         {
           "name": "Ring of Blackrock",
           "wowhead_link": "https://classic.wowhead.com/item=19397"
         },
         {
-          "name": "Rejuvenating Gem",
-          "wowhead_link": "https://classic.wowhead.com/item=19395"
+          "name": "Shadow Wing Focus Staff",
+          "wowhead_link": "https://classic.wowhead.com/item=19355"
+        },
+        {
+          "name": "Taut Dragonhide Belt",
+          "wowhead_link": "https://classic.wowhead.com/item=19396"
         }
       ]
     },
-
     {
       "name": "Firemaw",
-      "reaction": "",
+      "reaction": "🔥",
       "items": [
         {
-          "name": "Handguards of Transcendence",
-          "wowhead_link": "https://classic.wowhead.com/item=16920"
-        },
-        {
-          "name": "Netherwind Gloves",
-          "wowhead_link": "https://classic.wowhead.com/item=16913"
-        },
-        {
-          "name": "Nemesis Gloves",
-          "wowhead_link": "https://classic.wowhead.com/item=16928"
+          "name": "Black Ash Robe",
+          "wowhead_link": "https://classic.wowhead.com/item=19399"
         },
         {
           "name": "Bloodfang Gloves",
           "wowhead_link": "https://classic.wowhead.com/item=16907"
         },
         {
-          "name": "Stormrage Handguards",
-          "wowhead_link": "https://classic.wowhead.com/item=16899"
-        },
-        {
-          "name": "Dragonstalker's Gauntlets",
-          "wowhead_link": "https://classic.wowhead.com/item=16940"
-        },
-        {
-          "name": "Gauntlets of Ten Storms",
-          "wowhead_link": "https://classic.wowhead.com/item=16948"
-        },
-        {
-          "name": "Judgement Gauntlets",
-          "wowhead_link": "https://classic.wowhead.com/item=16956"
-        },
-        {
-          "name": "Gauntlets of Wrath",
-          "wowhead_link": "https://classic.wowhead.com/item=16964"
-        },
-        {
-          "name": "Natural Alignment Crystal",
-          "wowhead_link": "https://classic.wowhead.com/item=19344"
-        },
-        {
-          "name": "Scrolls of Blinding Light",
-          "wowhead_link": "https://classic.wowhead.com/item=19343"
+          "name": "Claw of the Black Drake",
+          "wowhead_link": "https://classic.wowhead.com/item=19365"
         },
         {
           "name": "Cloak of Firemaw",
           "wowhead_link": "https://classic.wowhead.com/item=19398"
         },
         {
-          "name": "Black Ash Robe",
-          "wowhead_link": "https://classic.wowhead.com/item=19399"
+          "name": "Dragonstalker's Gauntlets",
+          "wowhead_link": "https://classic.wowhead.com/item=16940"
         },
         {
           "name": "Firemaw's Clutch",
           "wowhead_link": "https://classic.wowhead.com/item=19400"
         },
         {
-          "name": "Primalist's Linked Legguards",
-          "wowhead_link": "https://classic.wowhead.com/item=19401"
-        },
-        {
-          "name": "Legguards of the Fallen Crusader",
-          "wowhead_link": "https://classic.wowhead.com/item=19402"
-        },
-        {
-          "name": "Claw of the Black Drake",
-          "wowhead_link": "https://classic.wowhead.com/item=19365"
-        }
-      ]
-    },
-
-    {
-      "name": "Ebonroc",
-      "reaction": "",
-      "items": [
-        {
-          "name": "Handguards of Transcendence",
-          "wowhead_link": "https://classic.wowhead.com/item=16920"
-        },
-        {
-          "name": "Netherwind Gloves",
-          "wowhead_link": "https://classic.wowhead.com/item=16913"
-        },
-        {
-          "name": "Nemesis Gloves",
-          "wowhead_link": "https://classic.wowhead.com/item=16928"
-        },
-        {
-          "name": "Bloodfang Gloves",
-          "wowhead_link": "https://classic.wowhead.com/item=16907"
-        },
-        {
-          "name": "Stormrage Handguards",
-          "wowhead_link": "https://classic.wowhead.com/item=16899"
-        },
-        {
-          "name": "Dragonstalker's Gauntlets",
-          "wowhead_link": "https://classic.wowhead.com/item=16940"
-        },
-        {
           "name": "Gauntlets of Ten Storms",
           "wowhead_link": "https://classic.wowhead.com/item=16948"
-        },
-        {
-          "name": "Judgement Gauntlets",
-          "wowhead_link": "https://classic.wowhead.com/item=16956"
         },
         {
           "name": "Gauntlets of Wrath",
           "wowhead_link": "https://classic.wowhead.com/item=16964"
         },
         {
+          "name": "Handguards of Transcendence",
+          "wowhead_link": "https://classic.wowhead.com/item=16920"
+        },
+        {
+          "name": "Natural Alignment Crystal",
+          "wowhead_link": "https://classic.wowhead.com/item=19344"
+        },
+        {
+          "name": "Nemesis Gloves",
+          "wowhead_link": "https://classic.wowhead.com/item=16928"
+        },
+        {
+          "name": "Netherwind Gloves",
+          "wowhead_link": "https://classic.wowhead.com/item=16913"
+        },
+        {
+          "name": "Primalist's Linked Legguards",
+          "wowhead_link": "https://classic.wowhead.com/item=19401"
+        },
+        {
+          "name": "Stormrage Handguards",
+          "wowhead_link": "https://classic.wowhead.com/item=16899"
+        }
+      ]
+    },
+    {
+      "name": "Ebonroc",
+      "reaction": "✒️",
+      "items": [
+        {
           "name": "Aegis of Preservation",
           "wowhead_link": "https://classic.wowhead.com/item=19345"
+        },
+        {
+          "name": "Band of Forced Concentration",
+          "wowhead_link": "https://classic.wowhead.com/item=19403"
+        },
+        {
+          "name": "Bloodfang Gloves",
+          "wowhead_link": "https://classic.wowhead.com/item=16907"
+        },
+        {
+          "name": "Dragonbreath Hand Cannon",
+          "wowhead_link": "https://classic.wowhead.com/item=19368"
+        },
+        {
+          "name": "Dragonstalker's Gauntlets",
+          "wowhead_link": "https://classic.wowhead.com/item=16940"
         },
         {
           "name": "Drake Fang Talisman",
@@ -366,110 +317,162 @@
           "wowhead_link": "https://classic.wowhead.com/item=19407"
         },
         {
-          "name": "Malfurion's Blessed Bulwark",
-          "wowhead_link": "https://classic.wowhead.com/item=19405"
-        },
-        {
-          "name": "Dragonbreath Hand Cannon",
-          "wowhead_link": "https://classic.wowhead.com/item=19368"
-        },
-        {
-          "name": "Band of Forced Concentration",
-          "wowhead_link": "https://classic.wowhead.com/item=19403"
-        }
-      ]
-    },
-
-    {
-      "name": "Flamegor",
-      "reaction": "",
-      "items": [
-        {
-          "name": "Handguards of Transcendence",
-          "wowhead_link": "https://classic.wowhead.com/item=16920"
-        },
-        {
-          "name": "Netherwind Gloves",
-          "wowhead_link": "https://classic.wowhead.com/item=16913"
-        },
-        {
-          "name": "Nemesis Gloves",
-          "wowhead_link": "https://classic.wowhead.com/item=16928"
-        },
-        {
-          "name": "Bloodfang Gloves",
-          "wowhead_link": "https://classic.wowhead.com/item=16907"
-        },
-        {
-          "name": "Stormrage Handguards",
-          "wowhead_link": "https://classic.wowhead.com/item=16899"
-        },
-        {
-          "name": "Dragonstalker's Gauntlets",
-          "wowhead_link": "https://classic.wowhead.com/item=16940"
-        },
-        {
           "name": "Gauntlets of Ten Storms",
           "wowhead_link": "https://classic.wowhead.com/item=16948"
-        },
-        {
-          "name": "Judgement Gauntlets",
-          "wowhead_link": "https://classic.wowhead.com/item=16956"
         },
         {
           "name": "Gauntlets of Wrath",
           "wowhead_link": "https://classic.wowhead.com/item=16964"
         },
         {
-          "name": "Styleen's Impeding Scarab",
-          "wowhead_link": "https://classic.wowhead.com/item=19431"
+          "name": "Handguards of Transcendence",
+          "wowhead_link": "https://classic.wowhead.com/item=16920"
         },
         {
-          "name": "Shroud of Pure Thought",
-          "wowhead_link": "https://classic.wowhead.com/item=19430"
+          "name": "Malfurion's Blessed Bulwark",
+          "wowhead_link": "https://classic.wowhead.com/item=19405"
         },
         {
-          "name": "Emberweave Leggings",
-          "wowhead_link": "https://classic.wowhead.com/item=19433"
+          "name": "Nemesis Gloves",
+          "wowhead_link": "https://classic.wowhead.com/item=16928"
+        },
+        {
+          "name": "Netherwind Gloves",
+          "wowhead_link": "https://classic.wowhead.com/item=16913"
+        },
+        {
+          "name": "Stormrage Handguards",
+          "wowhead_link": "https://classic.wowhead.com/item=16899"
+        }
+      ]
+    },
+    {
+      "name": "Flamegor",
+      "reaction": "💥",
+      "items": [
+        {
+          "name": "Bloodfang Gloves",
+          "wowhead_link": "https://classic.wowhead.com/item=16907"
+        },
+        {
+          "name": "Circle of Applied Force",
+          "wowhead_link": "https://classic.wowhead.com/item=19432"
+        },
+        {
+          "name": "Dragonstalker's Gauntlets",
+          "wowhead_link": "https://classic.wowhead.com/item=16940"
         },
         {
           "name": "Dragon's Touch",
           "wowhead_link": "https://classic.wowhead.com/item=19367"
         },
         {
+          "name": "Emberweave Leggings",
+          "wowhead_link": "https://classic.wowhead.com/item=19433"
+        },
+        {
+          "name": "Gauntlets of Ten Storms",
+          "wowhead_link": "https://classic.wowhead.com/item=16948"
+        },
+        {
+          "name": "Gauntlets of Wrath",
+          "wowhead_link": "https://classic.wowhead.com/item=16964"
+        },
+        {
+          "name": "Handguards of Transcendence",
+          "wowhead_link": "https://classic.wowhead.com/item=16920"
+        },
+        {
           "name": "Herald of Woe",
           "wowhead_link": "https://classic.wowhead.com/item=19357"
         },
         {
-          "name": "Circle of Applied Force",
-          "wowhead_link": "https://classic.wowhead.com/item=19432"
+          "name": "Nemesis Gloves",
+          "wowhead_link": "https://classic.wowhead.com/item=16928"
+        },
+        {
+          "name": "Netherwind Gloves",
+          "wowhead_link": "https://classic.wowhead.com/item=16913"
+        },
+        {
+          "name": "Shroud of Pure Thought",
+          "wowhead_link": "https://classic.wowhead.com/item=19430"
+        },
+        {
+          "name": "Stormrage Handguards",
+          "wowhead_link": "https://classic.wowhead.com/item=16899"
+        },
+        {
+          "name": "Styleen's Impeding Scarab",
+          "wowhead_link": "https://classic.wowhead.com/item=19431"
         }
-     ]
+      ]
     },
-
     {
-      "name": "Chromaggus",
-      "reaction": "",
+      "name": "Chromaggus (non-tier loot)",
+      "reaction": "🐩",
       "items": [
         {
-          "name": "Pauldrons of Transcendence",
-          "wowhead_link": "https://classic.wowhead.com/item=16924"
+          "name": "Angelista's Grasp",
+          "wowhead_link": "https://classic.wowhead.com/item=19388"
         },
         {
-          "name": "Netherwind Mantle",
-          "wowhead_link": "https://classic.wowhead.com/item=16917"
+          "name": "Ashjre'thul, Crossbow of Smiting",
+          "wowhead_link": "https://classic.wowhead.com/item=19361"
         },
         {
-          "name": "Nemesis Spaulders",
-          "wowhead_link": "https://classic.wowhead.com/item=16932"
+          "name": "Chromatic Boots",
+          "wowhead_link": "https://classic.wowhead.com/item=19387"
         },
+        {
+          "name": "Chromatically Tempered Sword",
+          "wowhead_link": "https://classic.wowhead.com/item=19352"
+        },
+        {
+          "name": "Claw of Chromaggus",
+          "wowhead_link": "https://classic.wowhead.com/item=19347"
+        },
+        {
+          "name": "Elementium Reinforced Bulwark",
+          "wowhead_link": "https://classic.wowhead.com/item=19349"
+        },
+        {
+          "name": "Elementium Threaded Cloak",
+          "wowhead_link": "https://classic.wowhead.com/item=19386"
+        },
+        {
+          "name": "Empowered Leggings",
+          "wowhead_link": "https://classic.wowhead.com/item=19385"
+        },
+        {
+          "name": "Girdle of the Fallen Crusader",
+          "wowhead_link": "https://classic.wowhead.com/item=19392"
+        },
+        {
+          "name": "Primalist's Linked Waistguard",
+          "wowhead_link": "https://classic.wowhead.com/item=19393"
+        },
+        {
+          "name": "Shimmering Geta",
+          "wowhead_link": "https://classic.wowhead.com/item=19391"
+        },
+        {
+          "name": "Taut Dragonhide Gloves",
+          "wowhead_link": "https://classic.wowhead.com/item=19390"
+        },
+        {
+          "name": "Taut Dragonhide Shoulderpads",
+          "wowhead_link": "https://classic.wowhead.com/item=19389"
+        }
+      ]
+    },
+    {
+      "name": "T2 Shoulders (Chromaggus)",
+      "reaction": "🤷",
+      "items": [
         {
           "name": "Bloodfang Spaulders",
           "wowhead_link": "https://classic.wowhead.com/item=16832"
-        },
-        {
-          "name": "Stormrage Pauldrons",
-          "wowhead_link": "https://classic.wowhead.com/item=16902"
         },
         {
           "name": "Dragonstalker's Spaulders",
@@ -480,107 +483,50 @@
           "wowhead_link": "https://classic.wowhead.com/item=16945"
         },
         {
-          "name": "Judgement Spaulders",
-          "wowhead_link": "https://classic.wowhead.com/item=16953"
+          "name": "Nemesis Spaulders",
+          "wowhead_link": "https://classic.wowhead.com/item=16932"
+        },
+        {
+          "name": "Netherwind Mantle",
+          "wowhead_link": "https://classic.wowhead.com/item=16917"
+        },
+        {
+          "name": "Pauldrons of Transcendence",
+          "wowhead_link": "https://classic.wowhead.com/item=16924"
         },
         {
           "name": "Pauldrons of Wrath",
           "wowhead_link": "https://classic.wowhead.com/item=16961"
         },
         {
-          "name": "Taut Dragonhide Shoulderpads",
-          "wowhead_link": "https://classic.wowhead.com/item=19389"
-        },
-        {
-          "name": "Elementium Threaded Cloak",
-          "wowhead_link": "https://classic.wowhead.com/item=19386"
-        },
-        {
-          "name": "Taut Dragonhide Gloves",
-          "wowhead_link": "https://classic.wowhead.com/item=19390"
-        },
-        {
-          "name": "Angelista's Grasp",
-          "wowhead_link": "https://classic.wowhead.com/item=19388"
-        },
-        {
-          "name": "Primalist's Linked Waistguard",
-          "wowhead_link": "https://classic.wowhead.com/item=19393"
-        },
-        {
-          "name": "Girdle of the Fallen Crusader",
-          "wowhead_link": "https://classic.wowhead.com/item=19392"
-        },
-        {
-          "name": "Empowered Leggings",
-          "wowhead_link": "https://classic.wowhead.com/item=19385"
-        },
-        {
-          "name": "Shimmering Geta",
-          "wowhead_link": "https://classic.wowhead.com/item=19391"
-        },
-        {
-          "name": "Chromatic Boots",
-          "wowhead_link": "https://classic.wowhead.com/item=19387"
-        },
-        {
-          "name": "Ashjre'thul, Crossbow of Smiting",
-          "wowhead_link": "https://classic.wowhead.com/item=19361"
-        },
-        {
-          "name": "Elementium Reinforced Bulwark",
-          "wowhead_link": "https://classic.wowhead.com/item=19349"
-        },
-        {
-          "name": "Claw of Chromaggus",
-          "wowhead_link": "https://classic.wowhead.com/item=19347"
-        },
-        {
-          "name": "Chromatically Tempered Sword",
-          "wowhead_link": "https://classic.wowhead.com/item=19352"
+          "name": "Stormrage Pauldrons",
+          "wowhead_link": "https://classic.wowhead.com/item=16902"
         }
       ]
     },
-
     {
-      "name": "Nefarian",
-      "reaction": "",
+      "name": "Nefarian (non-tier loot)",
+      "reaction": "🐉",
       "items": [
         {
-          "name": "Robes of Transcendence",
-          "wowhead_link": "https://classic.wowhead.com/item=16923"
+          "name": "Archimtiros' Ring of Reckoning",
+          "wowhead_link": "https://classic.wowhead.com/item=19376"
         },
         {
-          "name": "Netherwind Robes",
-          "wowhead_link": "https://classic.wowhead.com/item=16916"
+          "name": "Ashkandi, Greatsword of the Brotherhood",
+          "wowhead_link": "https://classic.wowhead.com/item=19364"
         },
         {
-          "name": "Nemesis Robes",
-          "wowhead_link": "https://classic.wowhead.com/item=16931"
+          "name": "Boots of the Shadow Flame",
+          "wowhead_link": "https://classic.wowhead.com/item=19381"
         },
         {
-          "name": "Bloodfang Chestpiece",
-          "wowhead_link": "https://classic.wowhead.com/item=16905"
+          "name": "Cloak of the Brood Lord",
+          "wowhead_link": "https://classic.wowhead.com/item=19378"
         },
         {
-          "name": "Stormrage Chestguard",
-          "wowhead_link": "https://classic.wowhead.com/item=16897"
-        },
-        {
-          "name": "Dragonstalker's Breastplate",
-          "wowhead_link": "https://classic.wowhead.com/item=16942"
-        },
-        {
-          "name": "Breastplate of Ten Storms",
-          "wowhead_link": "https://classic.wowhead.com/item=16950"
-        },
-        {
-          "name": "Judgement Breastplate",
-          "wowhead_link": "https://classic.wowhead.com/item=16958"
-        },
-        {
-          "name": "Breastplate of Wrath",
-          "wowhead_link": "https://classic.wowhead.com/item=16966"
+          "name": "Crul'shorukh, Edge of Chaos",
+          "wowhead_link": "https://classic.wowhead.com/item=19363"
         },
         {
           "name": "Head of Nefarian",
@@ -591,79 +537,84 @@
           "wowhead_link": "https://classic.wowhead.com/item=19360"
         },
         {
-          "name": "Crul'shorukh, Edge of Chaos",
-          "wowhead_link": "https://classic.wowhead.com/item=19363"
-        },
-        {
-          "name": "Ashkandi, Greatsword of the Brotherhood",
-          "wowhead_link": "https://classic.wowhead.com/item=19364"
-        },
-        {
-          "name": "Staff of the Shadow Flame",
-          "wowhead_link": "https://classic.wowhead.com/item=19356"
-        },
-        {
           "name": "Mish'undare, Circlet of the Mind Flayer",
           "wowhead_link": "https://classic.wowhead.com/item=19375"
+        },
+        {
+          "name": "Neltharion's Tear",
+          "wowhead_link": "https://classic.wowhead.com/item=19379"
         },
         {
           "name": "Prestor's Talisman of Connivery",
           "wowhead_link": "https://classic.wowhead.com/item=19377"
         },
         {
-          "name": "Cloak of the Brood Lord",
-          "wowhead_link": "https://classic.wowhead.com/item=19378"
-        },
-        {
-          "name": "Therazane's Link",
-          "wowhead_link": "https://classic.wowhead.com/item=19380"
-        },
-        {
-          "name": "Boots of the Shadow Flame",
-          "wowhead_link": "https://classic.wowhead.com/item=19381"
-        },
-        {
-          "name": "Archimtiros' Ring of Reckoning",
-          "wowhead_link": "https://classic.wowhead.com/item=19376"
-        },
-        {
           "name": "Pure Elementium Band",
           "wowhead_link": "https://classic.wowhead.com/item=19382"
         },
         {
-          "name": "Neltharion's Tear",
-          "wowhead_link": "https://classic.wowhead.com/item=19379"
+          "name": "Staff of the Shadow Flame",
+          "wowhead_link": "https://classic.wowhead.com/item=19356"
         },
+        {
+          "name": "Therazane's Link",
+          "wowhead_link": "https://classic.wowhead.com/item=19380"
+        }
       ]
     },
-
     {
-      "name": "Trash",
-      "reaction": "",
+      "name": "T2 Chestpieces (Nefarian)",
+      "reaction": "👕",
       "items": [
         {
-          "name": "Cloak of Draconic Might",
-          "wowhead_link": "https://classic.wowhead.com/item=19436"
+          "name": "Bloodfang Chestpiece",
+          "wowhead_link": "https://classic.wowhead.com/item=16905"
         },
         {
-          "name": "Interlaced Shadow Jerkin",
-          "wowhead_link": "https://classic.wowhead.com/item=19439"
+          "name": "Breastplate of Ten Storms",
+          "wowhead_link": "https://classic.wowhead.com/item=16950"
+        },
+        {
+          "name": "Breastplate of Wrath",
+          "wowhead_link": "https://classic.wowhead.com/item=16966"
+        },
+        {
+          "name": "Dragonstalker's Breastplate",
+          "wowhead_link": "https://classic.wowhead.com/item=16942"
+        },
+        {
+          "name": "Nemesis Robes",
+          "wowhead_link": "https://classic.wowhead.com/item=16931"
+        },
+        {
+          "name": "Netherwind Robes",
+          "wowhead_link": "https://classic.wowhead.com/item=16916"
+        },
+        {
+          "name": "Robes of Transcendence",
+          "wowhead_link": "https://classic.wowhead.com/item=16923"
+        },
+        {
+          "name": "Stormrage Chestguard",
+          "wowhead_link": "https://classic.wowhead.com/item=16897"
+        }
+      ]
+    },
+    {
+      "name": "Trash",
+      "reaction": "🗑️",
+      "items": [
+        {
+          "name": "Band of Dark Dominion",
+          "wowhead_link": "https://classic.wowhead.com/item=19434"
         },
         {
           "name": "Boots of Pure Thought",
           "wowhead_link": "https://classic.wowhead.com/item=19437"
         },
         {
-          "name": "Ringo's Blizzard Boots",
-          "wowhead_link": "https://classic.wowhead.com/item=19438"
-        },
-        {
-          "name": "Band of Dark Dominion",
-          "wowhead_link": "https://classic.wowhead.com/item=19434"
-        },
-        {
-          "name": "Essence Gatherer",
-          "wowhead_link": "https://classic.wowhead.com/item=19435"
+          "name": "Cloak of Draconic Might",
+          "wowhead_link": "https://classic.wowhead.com/item=19436"
         },
         {
           "name": "Doom's Edge",
@@ -676,9 +627,20 @@
         {
           "name": "Draconic Maul",
           "wowhead_link": "https://classic.wowhead.com/item=19358"
+        },
+        {
+          "name": "Essence Gatherer",
+          "wowhead_link": "https://classic.wowhead.com/item=19435"
+        },
+        {
+          "name": "Interlaced Shadow Jerkin",
+          "wowhead_link": "https://classic.wowhead.com/item=19439"
+        },
+        {
+          "name": "Ringo's Blizzard Boots",
+          "wowhead_link": "https://classic.wowhead.com/item=19438"
         }
       ]
     }
-
   ]
 }
