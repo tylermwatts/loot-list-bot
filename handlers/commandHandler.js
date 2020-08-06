@@ -99,10 +99,13 @@ const makeNewLootTable = async (message, messageCommand, lootData) => {
 const printList = async (message, raidName) => {
 	const user = message.author
 	const channel = message.channel
-	const events = await dbService.retrieveEventsByRaid(raidName)
-	const eventSelectString = events
+	const eventsWithId = await dbService.retrieveEventsByRaid(raidName)
+	const eventSelectString = eventsWithId
 		.map((event, index) => {
-			return `${numberReacts[index]} ${returnFormattedDateString(event)}`
+			const [date, id] = event.split('_')
+			return `${numberReacts[index]} ${returnFormattedDateString(
+				date
+			)}, ID: \`${id}\``
 		})
 		.join('\n')
 
@@ -119,11 +122,12 @@ const printList = async (message, raidName) => {
 	eventReactionCollector.on('collect', async (reaction, user) => {
 		const emoji = reaction.emoji.name
 		const eventIndex = _.findKey(numberReacts, (r) => r === emoji)
-		const event = events[eventIndex]
+		const event = eventsWithId[eventIndex]
+		const [date, id] = event.split('_')
 		const eventVerifyMessage = await user.send(
-			`You have selected the event **${returnFormattedDateString(
-				event
-			)}**.\n\nWhen you react to confirm this, **the full item list will be printed in the public channel** so please be certain you are ready to print the list.\n\n:one: Yes\n:two: No`
+			`You have selected the event scheduled for **${returnFormattedDateString(
+				date
+			)}** with the ID of \`${id}\`.\n\nWhen you react to confirm this, **the full item list will be printed in the public channel** so please be certain you are ready to print the list.\n\n:one: Yes\n:two: No`
 		)
 
 		const eventVerifyReactionCollector = eventVerifyMessage.createReactionCollector(
@@ -133,7 +137,7 @@ const printList = async (message, raidName) => {
 
 		eventVerifyReactionCollector.on('collect', async (verifyReaction, user) => {
 			if (verifyReaction.emoji.name === '1️⃣') {
-				const raidEvent = `${raidName}-${event}`
+				const raidEvent = `${raidName}_${event}`
 				const dbList = await dbService.retrieveList(raidEvent)
 				const itemList = messageCreator(messageCommands.CREATE_ITEM_LIST, {
 					longName: getLongRaidName(raidName),
@@ -149,7 +153,7 @@ const printList = async (message, raidName) => {
 
 		eventVerifyMessage.react('1️⃣').then(() => eventVerifyMessage.react('2️⃣'))
 	})
-	events.forEach((e, i) => sentMessage.react(numberReacts[i]))
+	eventsWithId.forEach((e, i) => sentMessage.react(numberReacts[i]))
 	message.delete()
 }
 
@@ -158,7 +162,10 @@ const showUsersWithReservedItems = async (message, raidName) => {
 	const events = await dbService.retrieveEventsByRaid(raidName)
 	const eventSelectString = events
 		.map((event, index) => {
-			return `${numberReacts[index]} ${returnFormattedDateString(event)}`
+			const [date, id] = event.split('_')
+			return `${numberReacts[index]} ${returnFormattedDateString(
+				date
+			)}, ID: \`${id}\``
 		})
 		.join('\n')
 	const sentMessage = await user.send(
@@ -176,7 +183,8 @@ const showUsersWithReservedItems = async (message, raidName) => {
 		const emoji = reaction.emoji.name
 		const eventIndex = _.findKey(numberReacts, (r) => r === emoji)
 		const event = events[eventIndex]
-		const eventList = await dbService.retrieveList(`${raidName}-${event}`)
+		const [date, id] = event.split('_')
+		const eventList = await dbService.retrieveList(`${raidName}_${event}`)
 		const usersString = eventList
 			.filter((record) => message.guild.member(record.user))
 			.map((record, index) => {
@@ -192,7 +200,9 @@ const showUsersWithReservedItems = async (message, raidName) => {
 		user.send(
 			`Here is the list of users who have items reserved for **${getLongRaidName(
 				raidName
-			)} on ${returnFormattedDateString(event)}**\n\n${usersString}`
+			)} on ${returnFormattedDateString(
+				date
+			)}** with ID of \`${id}\`\n\n${usersString}`
 		)
 	})
 	events.forEach((e, i) => sentMessage.react(numberReacts[i]))
