@@ -387,6 +387,40 @@
           "wowhead_link": "https://classic.wowhead.com/item=21282"
         }
       ]
+    },
+    {
+      "name": "Ahn'Qiraj enchants",
+      "reaction": "⚡",
+      "items": [
+        {
+          "name": "Formula: Enchant Gloves - Frost Power",
+          "wowhead_link": "https://classic.wowhead.com/item=20728"
+        },
+        {
+          "name": "Formula: Enchant Gloves - Superior Agility",
+          "wowhead_link": "https://classic.wowhead.com/item=20731"
+        },
+        {
+          "name": "Formula: Enchant Cloak - Stealth",
+          "wowhead_link": "https://classic.wowhead.com/item=20734"
+        },
+        {
+          "name": "Formula: Enchant Gloves - Fire Power",
+          "wowhead_link": "https://classic.wowhead.com/item=20729"
+        },
+        {
+          "name": "Formula: Enchant Cloak - Dodge",
+          "wowhead_link": "https://classic.wowhead.com/item=20736"
+        },
+        {
+          "name": "Formula: Enchant Gloves - Healing Power",
+          "wowhead_link": "https://classic.wowhead.com/item=20730"
+        },
+        {
+          "name": "Formula: Enchant Gloves - Shadow Power",
+          "wowhead_link": "https://classic.wowhead.com/item=20727"
+        },
+      ]
     }
   ]
 }
