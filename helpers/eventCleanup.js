@@ -13,7 +13,7 @@ module.exports = {
 	clearOldEvents: async () => {
 		const events = await dbService.retrieveAllEvents()
 		events.forEach(async (e) => {
-			const eventDate = e.replace(/^(\w|\d)+-/, '')
+			const eventDate = e.split('_')[1]
 			if (isThreeDaysOrOlder(eventDate)) {
 				await dbService.deleteList(e)
 			}
