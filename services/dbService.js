@@ -41,7 +41,7 @@ const retrieveCollectionsByRaid = async (db, raidName) => {
 	const allCollections = await db.collections()
 	const filteredCollectionNames = allCollections
 		.filter((c) => raidRegex.test(c.collectionName))
-		.map((e) => e.collectionName.replace(/^(\w|\d)+-/, ''))
+		.map((e) => e.collectionName.replace(/^(\w|\d)+_/, ''))
 		.sort()
 	return filteredCollectionNames
 }

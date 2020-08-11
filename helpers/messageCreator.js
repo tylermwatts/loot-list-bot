@@ -1,5 +1,6 @@
 const messageCommands = require('../data/messageCommands')
 const moment = require('moment')
+const { v4: uuid } = require('uuid/')
 
 const defaultParams = {
 	date: null,
@@ -9,12 +10,13 @@ const defaultParams = {
 }
 
 const makeLootSelectMessage = (raidName, date, lootData) => {
+	const raidId = uuid()
 	const bossString = lootData.bosses
 		.map((boss) => {
 			return `**${boss.name}** - ${boss.reaction}`
 		})
 		.join('\n')
-	return `\`${raidName}-${date}\`\n__**${
+	return `\`${raidName}_${date}\`\n\`id: ${raidId}\`\n\n__**${
 		lootData.zone
 	} Loot Selection**__\nThis list is for the ${raidName} raid happening on **${moment(
 		date,
@@ -54,6 +56,7 @@ module.exports = (command, params = defaultParams) => {
 		}
 		case messageCommands.CREATE_ITEM_LIST: {
 			const { longName, event, list } = params
+			const [date, id] = event.split('_')
 			const lootListObj = {}
 			list.forEach((r) => {
 				if (!lootListObj.hasOwnProperty(r.boss)) {
@@ -84,9 +87,9 @@ module.exports = (command, params = defaultParams) => {
 				.join('')
 
 			const message =
-				`__**${longName} Loot List for ${moment(event, 'MM-DD-YYYY').format(
+				`__**${longName} Loot List for ${moment(date, 'MM-DD-YYYY').format(
 					'dddd, MMMM Do YYYY'
-				)}**__\n\n` + itemsByBoss
+				)}**__\n\`id: ${id}\`\n\n` + itemsByBoss
 
 			return message
 		}

@@ -45,7 +45,7 @@ bot.on('message', async (message) => {
 
 bot.on('messageReactionAdd', async (reaction, user) => {
 	if (user.bot) return
-	const startPattern = /^`(\w|\d)+-\d\d-\d\d-\d\d\d\d`/
+	const startPattern = /^`(\w|\d)+_\d\d-\d\d-\d\d\d\d/
 	if (reaction.partial) {
 		try {
 			await reaction.fetch()

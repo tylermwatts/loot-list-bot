@@ -47,7 +47,14 @@ const verifyItem = async (user, boss, item, raidEvent) => {
 }
 
 module.exports = async (reaction, user) => {
-	const raidEvent = reaction.message.content.split('\n')[0].replace(/`/g, '')
+	const [
+		raidNameAndDate,
+		raidIdInfo,
+		...garbage
+	] = reaction.message.content.replace(/`/g, '').split('\n')
+	const raidName = raidNameAndDate.split('_')[0]
+	const raidId = raidIdInfo.replace('id: ', '').replace(/`/g, '')
+	const raidEvent = `${raidNameAndDate}_${raidId}`
 	const userReactions = reaction.message.reactions.cache.filter((reaction) =>
 		reaction.users.cache.has(user.id)
 	)
@@ -84,7 +91,6 @@ module.exports = async (reaction, user) => {
 			break
 		}
 		default:
-			const raidName = raidEvent.slice(0, raidEvent.indexOf('-'))
 			const lootList = getLootList(raidName)
 			const boss = lootList.bosses.find(
 				(b) => b.reaction === reaction._emoji.name
