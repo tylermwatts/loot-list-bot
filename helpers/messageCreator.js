@@ -91,7 +91,18 @@ module.exports = (command, params = defaultParams) => {
 					'dddd, MMMM Do YYYY'
 				)}**__\n\`id: ${id}\`\n\n` + itemsByBoss
 
-			return message
+			if (message.length > 2000) {
+				let breakpoint = message.lastIndexOf('\n')
+				while (breakpoint > 2000) {
+					const shortenedString = message.slice(0, breakpoint)
+					breakpoint = shortenedString.lastIndexOf('\n')
+				}
+				const messageOne = message.slice(0, breakpoint)
+				const messageTwo = message.slice(breakpoint + 1)
+				return [messageOne, messageTwo]
+			} else {
+				return message
+			}
 		}
 		default:
 			return

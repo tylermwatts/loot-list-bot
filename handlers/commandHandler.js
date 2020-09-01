@@ -144,7 +144,11 @@ const printList = async (message, raidName) => {
 					event,
 					list: dbList,
 				})
-				channel.send(itemList)
+				if (Array.isArray(itemList)) {
+					itemList.forEach((msg) => channel.send(msg))
+				} else {
+					channel.send(itemList)
+				}
 			}
 			if (verifyReaction.emoji.name === '2️⃣') {
 				user.send('List printing aborted.')
